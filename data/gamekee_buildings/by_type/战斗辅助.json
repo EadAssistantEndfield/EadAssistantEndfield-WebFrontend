@@ -1,0 +1,631 @@
+{
+  "source": "https://www.gamekee.com/zmd/second/204958",
+  "category": "战斗辅助",
+  "count": 13,
+  "buildings": [
+    {
+      "name": "AF1“熔甲者”",
+      "url": "https://www.gamekee.com/zmd/697597.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "AF1“熔甲者” 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 AF1“熔甲者” 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：17252 攻击间隔 ：0秒 攻击范围 ：7米 攻击方式 ：当敌人靠近时，喷射火焰攻击敌人，对范围内的敌人持续造成灼热伤害。 能喷发出火焰射流的攻击型设备，其燃料由多种易燃液体混合而成，焚尽一切的气势能让人联想到泰拉历史中那些无情的火焰。"
+        }
+      ]
+    },
+    {
+      "name": "“毒沼”MK-I",
+      "url": "https://www.gamekee.com/zmd/692132.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "“毒沼”MK-I 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 “毒沼”MK-I 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：5485 攻击间隔 ：5秒 攻击范围 ：18米 攻击方式 ：发射特制毒雾弹，毒雾弹会在敌人附近地面爆炸并造成范围自然伤害，同时在地面留下一片毒雾区，对敌人造成伤害并降低移动速度。"
+        }
+      ]
+    },
+    {
+      "name": "全向声波塔",
+      "url": "https://www.gamekee.com/zmd/692127.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "全向声波塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 全向声波塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击间隔 ：5秒 攻击范围 ：6米 攻击方式 ：发射一道震荡波，对范围内的普通敌人和进阶敌人施加晕眩效果"
+        }
+      ]
+    },
+    {
+      "name": "医疗塔",
+      "url": "https://www.gamekee.com/zmd/692123.html",
+      "deviceType": "战斗辅助",
+      "power": "5",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "医疗塔 设备类型 战斗辅助 耗电功率值 5 占用面积 3x3 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "5"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 医疗塔 设备类型 战斗辅助 耗电功率值 5 占用面积 3x3 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 最小治疗间隔 ：5秒 治疗范围 ：15米"
+        }
+      ]
+    },
+    {
+      "name": "哨戒塔",
+      "url": "https://www.gamekee.com/zmd/692130.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "哨戒塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 哨戒塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：11634 攻击间隔 ：5秒 攻击范围 ：20米 攻击方式 ：拥有较大攻击范围，优先锁定范围内威胁更高的敌人，对敌人造成高额物理伤害。"
+        }
+      ]
+    },
+    {
+      "name": "射线塔",
+      "url": "https://www.gamekee.com/zmd/692128.html",
+      "deviceType": "战斗辅助",
+      "power": "10",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "射线塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 射线塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：22338 攻击间隔 ：8秒 攻击范围 ：12.5米 攻击方式 ：消耗大量充能向目标发射射线，对敌人造成高额电磁伤害。"
+        }
+      ]
+    },
+    {
+      "name": "扩装铳械塔",
+      "url": "https://www.gamekee.com/zmd/692126.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "扩装铳械塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 扩装铳械塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：2136 攻击间隔 ：2秒 攻击范围 ：15米 攻击方式 ：持续发射Ⅱ级能量弹，每第4次攻击会发射一次强力能量弹，对敌人造成物理伤害。"
+        }
+      ]
+    },
+    {
+      "name": "榴弹塔",
+      "url": "https://www.gamekee.com/zmd/692124.html",
+      "deviceType": "战斗辅助",
+      "power": "10",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "榴弹塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 榴弹塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：981 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：以抛物线发射榴弹攻击敌人，榴弹会在敌人附近地面爆炸并造成范围灼热伤害。"
+        }
+      ]
+    },
+    {
+      "name": "液氮塔",
+      "url": "https://www.gamekee.com/zmd/692125.html",
+      "deviceType": "战斗辅助",
+      "power": "10",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "液氮塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 液氮塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击间隔 ：5秒 攻击范围 ：15米 攻击方式 ：发射特殊液氮晶体，晶体爆裂后会降低范围内敌人的移动速度。"
+        }
+      ]
+    },
+    {
+      "name": "激流塔",
+      "url": "https://www.gamekee.com/zmd/697596.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "激流塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 激流塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：0 攻击间隔 ：5秒 攻击范围 ：7米 攻击方式 ：当敌人靠近时，发射一道激流，激流会使中型及小型敌人向攻击方向后退。 搭载了液体加压模块的干扰型设备。如果不想深陷江河潮涌的“大势”，还请不要直面它。"
+        }
+      ]
+    },
+    {
+      "name": "电涌塔",
+      "url": "https://www.gamekee.com/zmd/692129.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "电涌塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 电涌塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：4886 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：释放电能攻击敌人，攻击会弹射到附近敌人（至多2次），造成电磁伤害。"
+        }
+      ]
+    },
+    {
+      "name": "铳械塔",
+      "url": "https://www.gamekee.com/zmd/692040.html",
+      "deviceType": "战斗辅助",
+      "power": "5",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "铳械塔 设备类型 战斗辅助 耗电功率值 5 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "5"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 铳械塔 设备类型 战斗辅助 耗电功率值 5 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：609 攻击间隔 ：2秒 攻击范围 ：15米 攻击方式 ：持续发射能量弹，对敌人造成物理伤害"
+        }
+      ]
+    },
+    {
+      "name": "高爆榴弹塔",
+      "url": "https://www.gamekee.com/zmd/692131.html",
+      "deviceType": "战斗辅助",
+      "power": "20",
+      "purpose": "",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "高爆榴弹塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "战斗辅助"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "2x2"
+            }
+          ],
+          "text": "基础信息 高爆榴弹塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "战斗性能",
+          "attrs": [],
+          "text": "战斗性能 攻击力 ：5585 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：以抛物线发射I级榴弹攻击敌人，榴弹会在敌人附近地面爆炸并造成范围灼热伤害，同时在地面留下一片燃烧区域对敌人造成伤害。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2200 @@
+{
+  "request_index": "bpq-28c58bae3b6446d1",
+  "share_code": "EF01ao6548U2UAEoe5e",
+  "response_index": "bpq-28c58bae3b6446d1",
+  "blueprint_data": {
+    "name": "紫晶一键毕业",
+    "desc": "详见文档",
+    "bp_size": {
+      "x_len": 25,
+      "z_len": 32
+    },
+    "bp_icon": {
+      "icon": "item_quartz_powder",
+      "base_color": 105
+    },
+    "bp_tags": [],
+    "review_status": 2,
+    "review_status_name": "Approved",
+    "bp_param": {
+      "source_type": 2,
+      "source_type_name": "FbstGift",
+      "payload_type": "gift_bp_key",
+      "payload": {
+        "bp_uid": 17,
+        "target_role_id": 1000018898,
+        "share_idx": 1
+      }
+    },
+    "use_count": 0,
+    "creator_role_id": 1000018898,
+    "creator_user_id": "1249864613",
+    "nodes": [
+      {
+        "template_id": "furnance_1",
+        "product_icon": "item_quartz_glass",
+        "node_id": 1,
+        "transform": {
+          "position": {
+            "x": 8,
+            "y": 0,
+            "z": 8
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "log_splitter",
+        "product_icon": "",
+        "node_id": 2,
+        "transform": {
+          "position": {
+            "x": 7,
+            "y": 0,
+            "z": 4
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "log_splitter",
+        "product_icon": "",
+        "node_id": 3,
+        "transform": {
+          "position": {
+            "x": 24,
+            "y": 0,
+            "z": 15
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "storager_1",
+        "product_icon": "",
+        "node_id": 4,
+        "transform": {
+          "position": {
+            "x": 21,
+            "y": 0,
+            "z": 22
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "storager_1",
+        "product_icon": "",
+        "node_id": 5,
+        "transform": {
+          "position": {
+            "x": 8,
+            "y": 0,
+            "z": 31
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "winder_1",
+        "product_icon": "item_equip_script_1",
+        "node_id": 6,
+        "transform": {
+          "position": {
+            "x": 17,
+            "y": 0,
+            "z": 30
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "component_mc_1",
+        "product_icon": "item_glass_cmpt",
+        "node_id": 7,
+        "transform": {
+          "position": {
+            "x": 11,
+            "y": 0,
+            "z": 5
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "planter_1",
+        "product_icon": "item_plant_moss_1",
+        "node_id": 8,
+        "transform": {
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 13
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "seedcollector_1",
+        "product_icon": "item_plant_moss_seed_1",
+        "node_id": 9,
+        "transform": {
+          "position": {
+            "x": 5,
+            "y": 0,
+            "z": 4
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "furnance_1",
+        "product_icon": "item_quartz_glass",
+        "node_id": 10,
+        "transform": {
+          "position": {
+            "x": 9,
+            "y": 0,
+            "z": 24
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "tools_assebling_mc_1",
+        "product_icon": "item_proc_battery_1",
+        "node_id": 11,
+        "transform": {
+          "position": {
+            "x": 11,
+            "y": 0,
+            "z": 1
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "shaper_1",
+        "product_icon": "item_glass_bottle",
+        "node_id": 12,
+        "transform": {
+          "position": {
+            "x": 4,
+            "y": 0,
+            "z": 26
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "storager_1",
+        "product_icon": "",
+        "node_id": 13,
+        "transform": {
+          "position": {
+            "x": 3,
+            "y": 0,
+            "z": 14
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "grinder_1",
+        "product_icon": "item_originium_powder",
+        "node_id": 14,
+        "transform": {
+          "position": {
+            "x": 14,
+            "y": 0,
+            "z": 8
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "power_diffuser_1",
+        "product_icon": "",
+        "node_id": 15,
+        "transform": {
+          "position": {
+            "x": 8,
+            "y": 0,
+            "z": 26
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "power_diffuser_1",
+        "product_icon": "",
+        "node_id": 16,
+        "transform": {
+          "position": {
+            "x": 6,
+            "y": 0,
+            "z": 14
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "log_splitter",
+        "product_icon": "",
+        "node_id": 17,
+        "transform": {
+          "position": {
+            "x": 15,
+            "y": 0,
+            "z": 22
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "storager_1",
+        "product_icon": "",
+        "node_id": 18,
+        "transform": {
+          "position": {
+            "x": 8,
+            "y": 0,
+            "z": 2
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "component_mc_1",
+        "product_icon": "item_glass_cmpt",
+        "node_id": 19,
+        "transform": {
+          "position": {
+            "x": 19,
+            "y": 0,
+            "z": 24
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "power_diffuser_1",
+        "product_icon": "",
+        "node_id": 20,
+        "transform": {
+          "position": {
+            "x": 14,
+            "y": 0,
+            "z": 7
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "furnance_1",
+        "product_icon": "item_crystal_shell",
+        "node_id": 21,
+        "transform": {
+          "position": {
+            "x": 13,
+            "y": 0,
+            "z": 25
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "power_diffuser_1",
+        "product_icon": "",
+        "node_id": 22,
+        "transform": {
+          "position": {
+            "x": 18,
+            "y": 0,
+            "z": 23
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_plant_moss_1",
+        "node_id": 23,
+        "transform": {
+          "position": {
+            "x": 4,
+            "y": 0,
+            "z": 14
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_originium_ore",
+        "node_id": 24,
+        "transform": {
+          "position": {
+            "x": 12,
+            "y": 0,
+            "z": 11
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "log_splitter",
+        "product_icon": "",
+        "node_id": 25,
+        "transform": {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 14
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "furnance_1",
+        "product_icon": "item_quartz_glass",
+        "node_id": 26,
+        "transform": {
+          "position": {
+            "x": 16,
+            "y": 0,
+            "z": 25
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "furnance_1",
+        "product_icon": "item_carbon_mtl",
+        "node_id": 27,
+        "transform": {
+          "position": {
+            "x": 7,
+            "y": 0,
+            "z": 17
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "grinder_1",
+        "product_icon": "item_originium_powder",
+        "node_id": 28,
+        "transform": {
+          "position": {
+            "x": 11,
+            "y": 0,
+            "z": 8
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_quartz_sand",
+        "node_id": 29,
+        "transform": {
+          "position": {
+            "x": 9,
+            "y": 0,
+            "z": 11
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "grinder_1",
+        "product_icon": "item_plant_moss_powder_1",
+        "node_id": 30,
+        "transform": {
+          "position": {
+            "x": 2,
+            "y": 0,
+            "z": 20
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "grinder_1",
+        "product_icon": "item_plant_bbflower_powder_1",
+        "node_id": 31,
+        "transform": {
+          "position": {
+            "x": 24,
+            "y": 0,
+            "z": 18
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "tools_assebling_mc_1",
+        "product_icon": "item_proc_bomb_1",
+        "node_id": 32,
+        "transform": {
+          "position": {
+            "x": 18,
+            "y": 0,
+            "z": 21
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "power_station_1",
+        "product_icon": "",
+        "node_id": 33,
+        "transform": {
+          "position": {
+            "x": 10,
+            "y": 0,
+            "z": 3
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": []
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_originium_ore",
+        "node_id": 34,
+        "transform": {
+          "position": {
+            "x": 15,
+            "y": 0,
+            "z": 11
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_quartz_sand",
+        "node_id": 35,
+        "transform": {
+          "position": {
+            "x": 9,
+            "y": 0,
+            "z": 21
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_originium_ore",
+        "node_id": 36,
+        "transform": {
+          "position": {
+            "x": 12,
+            "y": 0,
+            "z": 21
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "log_conditioner",
+        "product_icon": "item_quartz_sand",
+        "node_id": 37,
+        "transform": {
+          "position": {
+            "x": 15,
+            "y": 0,
+            "z": 21
+          },
+          "direction": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 41,
+            "com_pos": 131,
+            "payload_type": "box_valve"
+          }
+        ]
+      },
+      {
+        "template_id": "filling_powder_mc_1",
+        "product_icon": "item_bottled_rec_hp_1",
+        "node_id": 38,
+        "transform": {
+          "position": {
+            "x": 6,
+            "y": 0,
+            "z": 18
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "planter_1",
+        "product_icon": "item_plant_moss_1",
+        "node_id": 39,
+        "transform": {
+          "position": {
+            "x": 22,
+            "y": 0,
+            "z": 9
+          },
+          "direction": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "seedcollector_1",
+        "product_icon": "item_plant_bbflower_seed_1",
+        "node_id": 40,
+        "transform": {
+          "position": {
+            "x": 18,
+            "y": 0,
+            "z": 8
+          },
+          "direction": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_in": null,
+          "direction_out": null,
+          "points": [],
+          "has_interactive_param": true
+        },
+        "components": [
+          {
+            "com_type": 9,
+            "com_pos": 18,
+            "payload_type": "formula_man"
+          }
+        ]
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 41,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 23,
+              "y": 0,
+              "z": 9
+            },
+            {
+              "x": 23,
+              "y": 0,
+              "z": 8
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 42,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 17,
+              "y": 0,
+              "z": 8
+            },
+            {
+              "x": 17,
+              "y": 0,
+              "z": 9
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 43,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 8,
+              "y": 0,
+              "z": 4
+            },
+            {
+              "x": 8,
+              "y": 0,
+              "z": 4
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 44,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 7,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 7,
+              "y": 0,
+              "z": 3
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 45,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 3,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 22
+            },
+            {
+              "x": 2,
+              "y": 0,
+              "z": 22
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 46,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 23,
+              "y": 0,
+              "z": 13
+            },
+            {
+              "x": 24,
+              "y": 0,
+              "z": 13
+            },
+            {
+              "x": 24,
+              "y": 0,
+              "z": 14
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 47,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 23,
+              "y": 0,
+              "z": 15
+            },
+            {
+              "x": 17,
+              "y": 0,
+              "z": 15
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 48,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 20,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 24,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 24,
+              "y": 0,
+              "z": 20
+            },
+            {
+              "x": 22,
+              "y": 0,
+              "z": 20
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 49,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 20,
+              "y": 0,
+              "z": 25
+            },
+            {
+              "x": 23,
+              "y": 0,
+              "z": 25
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 50,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 15,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 16,
+              "y": 0,
+              "z": 26
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 51,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 14,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 14,
+              "y": 0,
+              "z": 26
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 52,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 16,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 11,
+              "y": 0,
+              "z": 0
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 53,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 15
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 17
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 54,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 7,
+              "y": 0,
+              "z": 18
+            },
+            {
+              "x": 7,
+              "y": 0,
+              "z": 18
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 55,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 13
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 13
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 56,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 9
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 8
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 57,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 17,
+              "y": 0,
+              "z": 17
+            },
+            {
+              "x": 17,
+              "y": 0,
+              "z": 17
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 58,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 17,
+              "y": 0,
+              "z": 31
+            },
+            {
+              "x": 11,
+              "y": 0,
+              "z": 31
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 59,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 5,
+              "y": 0,
+              "z": 14
+            },
+            {
+              "x": 5,
+              "y": 0,
+              "z": 14
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 60,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 13,
+              "y": 0,
+              "z": 7
+            },
+            {
+              "x": 13,
+              "y": 0,
+              "z": 5
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 61,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 16,
+              "y": 0,
+              "z": 7
+            },
+            {
+              "x": 16,
+              "y": 0,
+              "z": 5
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 62,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 7,
+              "y": 0,
+              "z": 19
+            },
+            {
+              "x": 7,
+              "y": 0,
+              "z": 19
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 63,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 6,
+              "y": 0,
+              "z": 8
+            },
+            {
+              "x": 6,
+              "y": 0,
+              "z": 9
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 64,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 11,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 11,
+              "y": 0,
+              "z": 30
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 65,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 12,
+              "y": 0,
+              "z": 26
+            },
+            {
+              "x": 12,
+              "y": 0,
+              "z": 26
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 66,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 12,
+              "y": 0,
+              "z": 7
+            },
+            {
+              "x": 12,
+              "y": 0,
+              "z": 5
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 67,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 14,
+              "y": 0,
+              "z": 22
+            },
+            {
+              "x": 14,
+              "y": 0,
+              "z": 22
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 68,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 24,
+              "y": 0,
+              "z": 19
+            },
+            {
+              "x": 22,
+              "y": 0,
+              "z": 19
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 69,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 16,
+              "y": 0,
+              "z": 22
+            },
+            {
+              "x": 17,
+              "y": 0,
+              "z": 22
+            },
+            {
+              "x": 17,
+              "y": 0,
+              "z": 19
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 70,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 12,
+              "y": 0,
+              "z": 22
+            },
+            {
+              "x": 12,
+              "y": 0,
+              "z": 22
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 71,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 21
+            },
+            {
+              "x": 2,
+              "y": 0,
+              "z": 21
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 72,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 7,
+              "y": 0,
+              "z": 25
+            },
+            {
+              "x": 7,
+              "y": 0,
+              "z": 26
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      },
+      {
+        "template_id": "grid_belt_01",
+        "product_icon": "",
+        "node_id": 73,
+        "transform": {
+          "position": null,
+          "direction": null,
+          "direction_in": {
+            "x": 0,
+            "y": 180,
+            "z": 0
+          },
+          "direction_out": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+          },
+          "points": [
+            {
+              "x": 8,
+              "y": 0,
+              "z": 7
+            },
+            {
+              "x": 8,
+              "y": 0,
+              "z": 5
+            }
+          ],
+          "has_interactive_param": false
+        },
+        "components": []
+      }
+    ],
+    "is_new": false,
+    "fetch_time": 0,
+    "node_count": 73,
+    "component_count": 27
+  }
+}

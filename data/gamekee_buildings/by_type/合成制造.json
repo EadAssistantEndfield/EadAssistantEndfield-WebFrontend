@@ -1,0 +1,295 @@
+{
+  "source": "https://www.gamekee.com/zmd/second/204958",
+  "category": "合成制造",
+  "count": 6,
+  "buildings": [
+    {
+      "name": "天有烘炉",
+      "url": "https://www.gamekee.com/zmd/692099.html",
+      "deviceType": "合成制造",
+      "power": "50",
+      "purpose": "",
+      "footprint": "5x5",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "天有烘炉 设备类型 合成制造 耗电功率值 50 占用面积 5x5 设备使用建议 施工中",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "50"
+            },
+            {
+              "label": "占用面积",
+              "value": "5x5"
+            }
+          ],
+          "text": "基础信息 天有烘炉 设备类型 合成制造 耗电功率值 50 占用面积 5x5 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 2 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "封装机",
+      "url": "https://www.gamekee.com/zmd/692095.html",
+      "deviceType": "合成制造",
+      "power": "20",
+      "purpose": "",
+      "footprint": "6x4",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "封装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "6x4"
+            }
+          ],
+          "text": "基础信息 封装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 5 + 1 ▶▶▶▶ 10秒 1 5 + 10 ▶▶▶▶ 10秒 1 10 + 15 ▶▶▶▶ 10秒 1 10 + 15 ▶▶▶▶ 10秒 1 10 + 5 ▶▶▶▶ 10秒 1 10 + 5 ▶▶▶▶ 10秒 1 5 + 15 ▶▶▶▶ 10秒 1"
+        }
+      ]
+    },
+    {
+      "name": "拆解机",
+      "url": "https://www.gamekee.com/zmd/692101.html",
+      "deviceType": "合成制造",
+      "power": "20",
+      "purpose": "",
+      "footprint": "6x4",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "拆解机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "6x4"
+            }
+          ],
+          "text": "基础信息 拆解机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1"
+        }
+      ]
+    },
+    {
+      "name": "灌装机",
+      "url": "https://www.gamekee.com/zmd/692094.html",
+      "deviceType": "合成制造",
+      "power": "20",
+      "purpose": "",
+      "footprint": "6x4",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "灌装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "6x4"
+            }
+          ],
+          "text": "基础信息 灌装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 基础模式 5 + 5 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 5 + 5 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "研磨机",
+      "url": "https://www.gamekee.com/zmd/692097.html",
+      "deviceType": "合成制造",
+      "power": "50",
+      "purpose": "",
+      "footprint": "6x4",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "研磨机 设备类型 合成制造 耗电功率值 50 占用面积 6x4 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "50"
+            },
+            {
+              "label": "占用面积",
+              "value": "6x4"
+            }
+          ],
+          "text": "基础信息 研磨机 设备类型 合成制造 耗电功率值 50 占用面积 6x4 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业三期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "装备原件机",
+      "url": "https://www.gamekee.com/zmd/692032.html",
+      "deviceType": "合成制造",
+      "power": "10",
+      "purpose": "",
+      "footprint": "6x4",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "装备原件机 设备类型 合成制造 耗电功率值 10 占用面积 6x4 设备使用建议 施工中...",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "合成制造"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "6x4"
+            }
+          ],
+          "text": "基础信息 装备原件机 设备类型 合成制造 耗电功率值 10 占用面积 6x4 设备使用建议 施工中..."
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 + 5 5 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1"
+        }
+      ]
+    }
+  ]
+}

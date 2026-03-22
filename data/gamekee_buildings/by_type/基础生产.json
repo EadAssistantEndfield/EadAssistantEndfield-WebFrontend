@@ -1,0 +1,396 @@
+{
+  "source": "https://www.gamekee.com/zmd/second/204958",
+  "category": "基础生产",
+  "count": 8,
+  "buildings": [
+    {
+      "name": "反应池",
+      "url": "https://www.gamekee.com/zmd/692098.html",
+      "deviceType": "基础生产",
+      "power": "50",
+      "purpose": "",
+      "footprint": "5x5",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "反应池 设备类型 基础生产 耗电功率值 50 占用面积 5x5 设备使用建议 施工中",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "50"
+            },
+            {
+              "label": "占用面积",
+              "value": "5x5"
+            }
+          ],
+          "text": "基础信息 反应池 设备类型 基础生产 耗电功率值 50 占用面积 5x5 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "塑形机",
+      "url": "https://www.gamekee.com/zmd/692089.html",
+      "deviceType": "基础生产",
+      "power": "10",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "塑形机 设备类型 基础生产 耗电功率值 10 占用面积 3x3 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 塑形机 设备类型 基础生产 耗电功率值 10 占用面积 3x3 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "废水处理机",
+      "url": "https://www.gamekee.com/zmd/697598.html",
+      "deviceType": "基础生产",
+      "power": "50",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "废水处理机 设备类型 基础生产 耗电功率值 50 占用面积 3x3",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "50"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 废水处理机 设备类型 基础生产 耗电功率值 50 占用面积 3x3"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【武陵】武陵工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 ▶▶▶▶ 2秒 成功处理 1 ▶▶▶▶ 2秒 成功处理 1 ▶▶▶▶ 2秒 成功处理"
+        }
+      ]
+    },
+    {
+      "name": "种植机",
+      "url": "https://www.gamekee.com/zmd/692090.html",
+      "deviceType": "基础生产",
+      "power": "20",
+      "purpose": "",
+      "footprint": "5x5",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "种植机 设备类型 基础生产 耗电功率值 20 占用面积 5x5 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "5x5"
+            }
+          ],
+          "text": "基础信息 种植机 设备类型 基础生产 耗电功率值 20 占用面积 5x5 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20 10"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 基础模式 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 2 1 + 1 ▶▶▶▶ 2秒 2"
+        },
+        {
+          "title": "",
+          "attrs": [],
+          "text": "水管接口及传送带位置"
+        }
+      ]
+    },
+    {
+      "name": "粉碎机",
+      "url": "https://www.gamekee.com/zmd/690430.html",
+      "deviceType": "基础生产",
+      "power": "5",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "粉碎机 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "5"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 粉碎机 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 5"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 3 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2"
+        }
+      ]
+    },
+    {
+      "name": "精炼炉",
+      "url": "https://www.gamekee.com/zmd/690424.html",
+      "deviceType": "基础生产",
+      "power": "5",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "精炼炉 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 精炼炉是一种用于资源加工的关键设施，生产零件的基础材料。",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "5"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 精炼炉 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 精炼炉是一种用于资源加工的关键设施，生产零件的基础材料。"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 5"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 基础模式 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 1 + 1"
+        }
+      ]
+    },
+    {
+      "name": "配件机",
+      "url": "https://www.gamekee.com/zmd/692088.html",
+      "deviceType": "基础生产",
+      "power": "20",
+      "purpose": "",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "配件机 设备类型 基础生产 耗电功率值 20 占用面积 3x3 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "20"
+            },
+            {
+              "label": "占用面积",
+              "value": "3x3"
+            }
+          ],
+          "text": "基础信息 配件机 设备类型 基础生产 耗电功率值 20 占用面积 3x3 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业一期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 10"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1"
+        }
+      ]
+    },
+    {
+      "name": "采种机",
+      "url": "https://www.gamekee.com/zmd/692092.html",
+      "deviceType": "基础生产",
+      "power": "10",
+      "purpose": "",
+      "footprint": "5x5",
+      "protocolCapacity": "",
+      "wireLength": "",
+      "supplyRange": "",
+      "recommendation": "采种机 设备类型 基础生产 耗电功率值 10 占用面积 5x5 设备使用建议 施工中",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": [
+        {
+          "title": "基础信息",
+          "attrs": [
+            {
+              "label": "设备类型",
+              "value": "基础生产"
+            },
+            {
+              "label": "耗电功率值",
+              "value": "10"
+            },
+            {
+              "label": "占用面积",
+              "value": "5x5"
+            }
+          ],
+          "text": "基础信息 采种机 设备类型 基础生产 耗电功率值 10 占用面积 5x5 设备使用建议 施工中"
+        },
+        {
+          "title": "解锁条件",
+          "attrs": [],
+          "text": "解锁条件 【四号谷地】基础工业二期"
+        },
+        {
+          "title": "制造设备及所需材料",
+          "attrs": [],
+          "text": "制造设备及所需材料 协议核心-设备制造 20"
+        },
+        {
+          "title": "可用配方",
+          "attrs": [],
+          "text": "可用配方 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2"
+        }
+      ]
+    }
+  ]
+}

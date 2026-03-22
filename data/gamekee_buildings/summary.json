@@ -1,0 +1,52 @@
+{
+  "source": "https://www.gamekee.com/zmd/second/204958",
+  "count": 69,
+  "failureCount": 0,
+  "categories": [
+    {
+      "category": "仓储存取",
+      "count": 8,
+      "file": "by_type/仓储存取.json"
+    },
+    {
+      "category": "功能设备",
+      "count": 6,
+      "file": "by_type/功能设备.json"
+    },
+    {
+      "category": "合成制造",
+      "count": 6,
+      "file": "by_type/合成制造.json"
+    },
+    {
+      "category": "基础生产",
+      "count": 8,
+      "file": "by_type/基础生产.json"
+    },
+    {
+      "category": "战斗辅助",
+      "count": 13,
+      "file": "by_type/战斗辅助.json"
+    },
+    {
+      "category": "物流设备",
+      "count": 8,
+      "file": "by_type/物流设备.json"
+    },
+    {
+      "category": "电力供应",
+      "count": 5,
+      "file": "by_type/电力供应.json"
+    },
+    {
+      "category": "种植调配",
+      "count": 10,
+      "file": "by_type/种植调配.json"
+    },
+    {
+      "category": "资源开采",
+      "count": 5,
+      "file": "by_type/资源开采.json"
+    }
+  ]
+}
