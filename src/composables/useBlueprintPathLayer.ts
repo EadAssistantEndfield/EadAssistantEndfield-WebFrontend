@@ -7,6 +7,7 @@ import {
   toPolylinePoints,
   type PixelPoint,
 } from '@/utils/blueprintPathGeometry'
+import { pathPointKey } from '@/utils/geometry'
 
 type EndpointRole = 'start' | 'end'
 interface EndpointPeerState {
@@ -25,10 +26,6 @@ export function useBlueprintPathLayer(
   const renderMode = computed(() => toValue(renderModeSource))
   const pathNodes = computed(() => summary.value.nodes.filter((node) => node.path !== null))
   const buildingNodes = computed(() => summary.value.nodes.filter((node) => node.path === null))
-
-  function pathPointKey(point: { x: number; y: number; z: number }): string {
-    return `${Math.round(point.x * 1000)}:${Math.round(point.y * 1000)}:${Math.round(point.z * 1000)}`
-  }
 
   function endpointPoint(node: BlueprintSummaryNode, role: EndpointRole) {
     if (node.pathPoints.length === 0) {

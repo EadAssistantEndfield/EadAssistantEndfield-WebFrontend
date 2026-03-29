@@ -14,7 +14,7 @@ const props = defineProps<{
 const { t, itemLabel } = useBlueprintI18n()
 const renderMode = ref<BlueprintRenderLayoutMode>('normalized')
 const showDebug = ref(false)
-const summaryRef = () => props.summary
+const summaryRef = computed(() => props.summary)
 
 function layoutBox(node: BlueprintSummaryNode) {
   if (renderMode.value === 'source') {

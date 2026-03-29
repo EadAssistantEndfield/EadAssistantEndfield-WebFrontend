@@ -5,10 +5,7 @@ import type {
   BlueprintPoint,
   BlueprintPosition,
 } from '@/types'
-
-function toSafeNumber(value: number | null | undefined): number {
-  return typeof value === 'number' && Number.isFinite(value) ? value : 0
-}
+import { toSafeNumber, cardinalFromDelta, oppositeCardinal } from '@/utils/geometry'
 
 function samePoint(left: BlueprintPoint, right: BlueprintPoint): boolean {
   return left.x === right.x && left.y === right.y && left.z === right.z
@@ -28,18 +25,6 @@ function directionBetween(start: BlueprintPoint, end: BlueprintPoint): string {
     normalizeDirection(end.y - start.y),
     normalizeDirection(end.z - start.z),
   ].join(',')
-}
-
-function cardinalFromDelta(dx: number, dz: number): BlueprintCardinal | null {
-  if (dx === 0 && dz === 0) {
-    return null
-  }
-
-  if (Math.abs(dx) >= Math.abs(dz)) {
-    return dx >= 0 ? 'east' : 'west'
-  }
-
-  return dz >= 0 ? 'south' : 'north'
 }
 
 function normalizeRotationY(value: unknown): number | null {
@@ -80,19 +65,6 @@ function movePoint(point: BlueprintPoint, direction: BlueprintCardinal, distance
   }
 }
 
-function oppositeDirection(direction: BlueprintCardinal): BlueprintCardinal {
-  switch (direction) {
-    case 'north':
-      return 'south'
-    case 'east':
-      return 'west'
-    case 'south':
-      return 'north'
-    case 'west':
-      return 'east'
-  }
-}
-
 function segmentCardinal(points: BlueprintPoint[], role: 'start' | 'end'): BlueprintCardinal | null {
   if (points.length < 2) {
     return null
@@ -129,11 +101,11 @@ function orientationScore(points: BlueprintPoint[], flowIn: BlueprintCardinal | 
   let score = 0
 
   if (flowIn && startDirection) {
-    score += startDirection === flowIn ? 3 : oppositeDirection(startDirection) === flowIn ? 1 : -2
+    score += startDirection === flowIn ? 3 : oppositeCardinal(startDirection) === flowIn ? 1 : -2
   }
 
   if (flowOut && endDirection) {
-    score += endDirection === flowOut ? 3 : oppositeDirection(endDirection) === flowOut ? 1 : -2
+    score += endDirection === flowOut ? 3 : oppositeCardinal(endDirection) === flowOut ? 1 : -2
   }
 
   return score
@@ -176,7 +148,7 @@ function expandSinglePointTransportPath(
   }
 
   if (flowOut) {
-    return [movePoint(center, oppositeDirection(flowOut), edgeOffset), movePoint(center, flowOut, edgeOffset)]
+    return [movePoint(center, oppositeCardinal(flowOut), edgeOffset), movePoint(center, flowOut, edgeOffset)]
   }
 
   if (flowIn) {
