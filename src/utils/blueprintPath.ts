@@ -32,7 +32,7 @@ function normalizeRotationY(value: unknown): number | null {
     return null
   }
 
-  return ((Math.round(value / 90) * 90) % 360 + 360) % 360
+  return (((Math.round(value / 90) * 90) % 360) + 360) % 360
 }
 
 export function transportCardinalFromDirection(direction?: Record<string, unknown> | null): BlueprintCardinal | null {
@@ -95,7 +95,11 @@ function segmentCardinal(points: BlueprintPoint[], role: 'start' | 'end'): Bluep
   return null
 }
 
-function orientationScore(points: BlueprintPoint[], flowIn: BlueprintCardinal | null, flowOut: BlueprintCardinal | null): number {
+function orientationScore(
+  points: BlueprintPoint[],
+  flowIn: BlueprintCardinal | null,
+  flowOut: BlueprintCardinal | null,
+): number {
   const startDirection = segmentCardinal(points, 'start')
   const endDirection = segmentCardinal(points, 'end')
   let score = 0
@@ -111,7 +115,11 @@ function orientationScore(points: BlueprintPoint[], flowIn: BlueprintCardinal | 
   return score
 }
 
-function orientTransportPathPoints(pathPoints: BlueprintPoint[], flowIn: BlueprintCardinal | null, flowOut: BlueprintCardinal | null): BlueprintPoint[] {
+function orientTransportPathPoints(
+  pathPoints: BlueprintPoint[],
+  flowIn: BlueprintCardinal | null,
+  flowOut: BlueprintCardinal | null,
+): BlueprintPoint[] {
   if (pathPoints.length < 2 || (!flowIn && !flowOut)) {
     return pathPoints
   }

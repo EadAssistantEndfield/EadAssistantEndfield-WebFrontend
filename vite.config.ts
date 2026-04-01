@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
@@ -12,5 +12,9 @@ export default defineConfig({
   server: {
     host: '127.0.0.1',
     port: 4173,
+  },
+  test: {
+    environment: 'node',
+    include: ['tests/**/*.test.ts'],
   },
 })

@@ -44,7 +44,13 @@ function pointToPixel(point: { x: number; z: number }, context: AttachmentContex
   }
 }
 
-function candidateScore(node: BlueprintSummaryNode, kind: PathKind, endpointRole: EndpointRole, side: EdgeSide, context: AttachmentContext): number {
+function candidateScore(
+  node: BlueprintSummaryNode,
+  kind: PathKind,
+  endpointRole: EndpointRole,
+  side: EdgeSide,
+  context: AttachmentContext,
+): number {
   const rule = getTemplateConnectionRule(node.templateId, kind)
   const preferredSides = rule?.[endpointRole] ?? []
   const localSide = toLocalEdgeSide(side, node.rotation)
@@ -57,7 +63,12 @@ function candidateScore(node: BlueprintSummaryNode, kind: PathKind, endpointRole
   return preferencePenalty * 100 - priorityScore + areaPenalty
 }
 
-function isPointOnSideCenterSlot(point: { x: number; z: number }, node: BlueprintSummaryNode, side: EdgeSide, context: AttachmentContext): boolean {
+function isPointOnSideCenterSlot(
+  point: { x: number; z: number },
+  node: BlueprintSummaryNode,
+  side: EdgeSide,
+  context: AttachmentContext,
+): boolean {
   const layout = context.nodeLayout(node)
   const epsilon = 1e-6
   const maxCenterOffset = 0.5 + epsilon
@@ -71,7 +82,12 @@ function isPointOnSideCenterSlot(point: { x: number; z: number }, node: Blueprin
   return Math.abs(point.z - centerZ) <= maxCenterOffset
 }
 
-function snapPointToNodeEdge(point: { x: number; z: number }, node: BlueprintSummaryNode, side: EdgeSide, context: AttachmentContext): PixelPoint {
+function snapPointToNodeEdge(
+  point: { x: number; z: number },
+  node: BlueprintSummaryNode,
+  side: EdgeSide,
+  context: AttachmentContext,
+): PixelPoint {
   const layout = context.nodeLayout(node)
   const rectLeft = context.cellX(layout.x) + 4
   const rectTop = context.cellZ(layout.z) + 4
@@ -167,7 +183,10 @@ export function resolvePathAttachmentCandidate(
     }
 
     const localSide = toLocalEdgeSide(side, node.rotation)
-    if (requiresTemplateCenterSlot(node.templateId, pathKind, localSide) && !isPointOnSideCenterSlot(point, node, side, context)) {
+    if (
+      requiresTemplateCenterSlot(node.templateId, pathKind, localSide) &&
+      !isPointOnSideCenterSlot(point, node, side, context)
+    ) {
       continue
     }
 

@@ -34,11 +34,11 @@ function formatPosition(node: BlueprintSummary['nodes'][number]): string {
 }
 
 function formatLayout(node: BlueprintSummary['nodes'][number]): string {
-  return `layout: (${node.layoutX}, ${node.layoutZ}) ${node.layoutWidth}x${node.layoutHeight}`
+  return `${t('layoutLabel')}: (${node.layoutX}, ${node.layoutZ}) ${node.layoutWidth}x${node.layoutHeight}`
 }
 
 function formatSourceLayout(node: BlueprintSummary['nodes'][number]): string {
-  return `source: (${node.sourceLayoutX}, ${node.sourceLayoutZ}) ${node.sourceLayoutWidth}x${node.sourceLayoutHeight}`
+  return `${t('sourceLayoutLabel')}: (${node.sourceLayoutX}, ${node.sourceLayoutZ}) ${node.sourceLayoutWidth}x${node.sourceLayoutHeight}`
 }
 
 function formatFootprint(node: BlueprintSummary['nodes'][number]): string {
@@ -46,7 +46,7 @@ function formatFootprint(node: BlueprintSummary['nodes'][number]): string {
     return ''
   }
 
-  return `footprint: ${node.footprint.raw} → ${node.footprint.width}x${node.footprint.height}`
+  return `${t('footprintLabel')}: ${node.footprint.raw} → ${node.footprint.width}x${node.footprint.height}`
 }
 
 function formatPathDetails(node: BlueprintSummary['nodes'][number]): string {
@@ -55,7 +55,7 @@ function formatPathDetails(node: BlueprintSummary['nodes'][number]): string {
   }
 
   return [
-    `${t('pathRoute')}: ${formatPoint(node.path.start)} -> ${formatPoint(node.path.end)}`,
+    `${t('pathRoute')}: ${formatPoint(node.path.start)} → ${formatPoint(node.path.end)}`,
     `${t('pathPoints')}: ${node.path.points.length}`,
     `${t('pathSegments')}: ${node.path.segmentCount}`,
     `${t('pathTurns')}: ${node.path.turnCount}`,
@@ -67,6 +67,7 @@ function formatPathDetails(node: BlueprintSummary['nodes'][number]): string {
 <template>
   <section class="panel-card">
     <div class="panel-header">
+      <p class="panel-flag">{{ t('nodeMatrixFlag') }}</p>
       <h2>{{ t('nodeList') }}</h2>
       <p>{{ t('nodeListHint') }}</p>
     </div>
@@ -119,12 +120,10 @@ function formatPathDetails(node: BlueprintSummary['nodes'][number]): string {
 
 <style scoped>
 .panel-card {
-  background: rgba(15, 23, 42, 0.72);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 24px;
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.36);
-  padding: 20px 22px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .panel-header {
@@ -133,15 +132,32 @@ function formatPathDetails(node: BlueprintSummary['nodes'][number]): string {
   margin-bottom: 14px;
 }
 
+.panel-header h2,
+.panel-header p,
+.panel-flag {
+  margin: 0;
+}
+
+.panel-flag {
+  color: #c4a35a;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel-header h2 {
+  color: #ffffff;
+}
+
 .panel-header p,
 .node-template p {
-  color: #9fb0c8;
+  color: #a0a0a0;
 }
 
 .table-wrap {
   overflow: auto;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 18px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
   max-height: 420px;
 }
 
@@ -158,7 +174,7 @@ table {
 th,
 td {
   padding: 12px 14px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid #3a3a3a;
   vertical-align: top;
   text-align: left;
 }
@@ -166,8 +182,8 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.96);
-  color: #93c5fd;
+  background: #2a2a2a;
+  color: #c4a35a;
 }
 
 .node-template {
@@ -185,7 +201,7 @@ th {
 
 .table-subtext {
   margin-top: 4px;
-  color: #8fa3c0;
+  color: #a0a0a0;
   font-size: 12px;
   word-break: break-all;
 }

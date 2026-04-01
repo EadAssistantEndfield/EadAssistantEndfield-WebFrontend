@@ -1,0 +1,7 @@
+dist
+node_modules
+__pycache__
+.claude
+data
+HTML
+package-lock.json

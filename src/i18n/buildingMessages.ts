@@ -1,0 +1,81 @@
+export type BuildingLocale = 'zh-CN' | 'en-US' | 'ja-JP'
+
+export const buildingMessages: Record<BuildingLocale, Record<string, string>> = {
+  'zh-CN': {
+    power_station_1: '热电池',
+    power_diffuser_1: '供电桩',
+    grid_belt_01: '传送带',
+    unloader_1: '仓库取货口',
+    furnance_1: '精炼炉',
+    grinder_1: '粉碎机',
+    thickener_1: '研磨机',
+    xiranite_oven_1: '天有烘炉',
+    planter_1: '种植机',
+    seedcollector_1: '采种机',
+    storager_1: '协议储存箱',
+    shaper_1: '塑形机',
+    log_connector: '物流桥',
+    log_pipe_01: '管道',
+    log_pipe_splitter: '管道分流器',
+    log_pipe_conditioner: '管道汇流器',
+    log_conditioner: '物品准入口',
+    log_splitter: '分流器',
+    log_hongs_bus: '物流总线',
+    log_hongs_bus_source: '物品准入口',
+    unknown: '未知建筑',
+  },
+  'en-US': {
+    power_station_1: 'Thermal Battery',
+    power_diffuser_1: 'Power Post',
+    grid_belt_01: 'Conveyor Belt',
+    unloader_1: 'Storage Unloader',
+    furnance_1: 'Refining Furnace',
+    grinder_1: 'Crusher',
+    thickener_1: 'Grinder',
+    xiranite_oven_1: 'Sky Furnace',
+    planter_1: 'Planter',
+    seedcollector_1: 'Seed Collector',
+    storager_1: 'Storage Box',
+    shaper_1: 'Shaper',
+    log_connector: 'Logistics Bridge',
+    log_pipe_01: 'Pipe',
+    log_pipe_splitter: 'Pipe Splitter',
+    log_pipe_conditioner: 'Pipe Conditioner',
+    log_conditioner: 'Item Input Port',
+    log_splitter: 'Splitter',
+    log_hongs_bus: 'Logistics Bus',
+    log_hongs_bus_source: 'Item Input Port',
+    unknown: 'Unknown Building',
+  },
+  'ja-JP': {
+    power_station_1: '熱電池',
+    power_diffuser_1: '給電ポースト',
+    grid_belt_01: 'コンベアベルト',
+    unloader_1: '倉庫出品口',
+    furnance_1: '精錬炉',
+    grinder_1: '粉砕機',
+    thickener_1: 'グラインダー',
+    xiranite_oven_1: '天有烘炉',
+    planter_1: '植栽機',
+    seedcollector_1: '採種機',
+    storager_1: '協約貯蔵箱',
+    shaper_1: '塑形機',
+    log_connector: '物流ブリッジ',
+    log_pipe_01: 'パイプ',
+    log_pipe_splitter: 'パイプ分流器',
+    log_pipe_conditioner: 'パイプ汇流器',
+    log_conditioner: '物品準入口',
+    log_splitter: '分流器',
+    log_hongs_bus: '物流バス',
+    log_hongs_bus_source: '物品準入口',
+    unknown: '不明な建物',
+  },
+}
+
+export function lookupBuildingMessage(locale: BuildingLocale, templateId: string): string | undefined {
+  if (!templateId) {
+    return buildingMessages[locale].unknown
+  }
+
+  return buildingMessages[locale][templateId] ?? buildingMessages['en-US'][templateId]
+}

@@ -53,7 +53,8 @@ export function detectAdjacentSide(
   const maxZ = layoutZ + layoutHeight - 1
   const epsilon = 1e-6
   const adjacentDistance = 1 + epsilon
-  const inRange = (value: number, rangeMin: number, rangeMax: number) => value >= rangeMin - epsilon && value <= rangeMax + epsilon
+  const inRange = (value: number, rangeMin: number, rangeMax: number) =>
+    value >= rangeMin - epsilon && value <= rangeMax + epsilon
   const northDistance = layoutZ - point.z
   if (northDistance > epsilon && northDistance <= adjacentDistance && inRange(point.x, layoutX, maxX)) {
     return 'north'

@@ -35,6 +35,23 @@ export interface BlueprintTransform {
   direction_out?: Record<string, unknown> | null
   points?: BlueprintPosition[] | null
   has_interactive_param?: boolean
+  interactive_param?: BlueprintInteractiveParam | null
+  snap_hint?: BlueprintSnapHint | null
+}
+
+export interface BlueprintInteractiveParam {
+  position: BlueprintPoint
+  rotation: BlueprintPoint
+  properties: Record<string, unknown>
+  property_count?: number
+}
+
+export interface BlueprintSnapHint {
+  mode?: string
+  basis?: string[]
+  uses_grid_transform?: boolean
+  uses_interactive_param?: boolean
+  explicit_snap_flag_found?: boolean
 }
 
 export interface BlueprintComponent {
@@ -59,6 +76,19 @@ export interface BlueprintParam {
   payload?: Record<string, unknown> | null
 }
 
+export interface BlueprintSnapSummary {
+  explicit_snap_flag_found: boolean
+  logic_grid_size: number
+  node_mode_counts: Record<string, number>
+  interactive_param_node_count: number
+  interactive_property_total: number
+  component_payload_node_count: number
+  reverse_protocol: {
+    blueprint_transform_fields: string[]
+  }
+  notes?: string
+}
+
 export interface BlueprintData {
   name?: string
   desc?: string
@@ -80,12 +110,14 @@ export interface BlueprintData {
   nodes?: BlueprintNode[]
   node_count?: number
   component_count?: number
+  snap_summary?: BlueprintSnapSummary | null
 }
 
 export interface BlueprintFile {
   request_index?: string
   share_code?: string
   response_index?: string
+  snap_summary?: BlueprintSnapSummary | null
   blueprint_data: BlueprintData
 }
 
@@ -134,6 +166,8 @@ export interface BlueprintSummaryNode {
   componentCount: number
   payloadTypes: string[]
   interactive: boolean
+  interactiveParam: BlueprintInteractiveParam | null
+  snapHint: BlueprintSnapHint | null
 }
 
 export interface CountEntry {
@@ -156,7 +190,7 @@ export interface BlueprintSummary {
   templateCounts: CountEntry[]
   productCounts: CountEntry[]
   payloadCounts: CountEntry[]
+  templatePreviewUrls: Record<string, string>
   nodes: BlueprintSummaryNode[]
-  grid: Map<string, BlueprintSummaryNode[]>
-  rawJson: string
+  snapSummary: BlueprintSnapSummary | null
 }
