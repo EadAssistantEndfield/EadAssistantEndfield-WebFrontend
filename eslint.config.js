@@ -7,7 +7,7 @@ import vueParser from 'vue-eslint-parser'
 
 export default tseslint.config(
   {
-    ignores: ['dist/**', 'node_modules/**', '__pycache__/**', 'HTML/**'],
+    ignores: ['coverage/**', 'dist/**', 'node_modules/**', '__pycache__/**', 'HTML/**'],
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,tsx,vue}'],

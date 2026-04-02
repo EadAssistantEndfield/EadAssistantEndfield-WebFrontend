@@ -16,5 +16,23 @@ export default defineConfig({
   test: {
     environment: 'node',
     include: ['tests/**/*.test.ts'],
+    exclude: ['dist/**', 'node_modules/**'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html', 'json-summary'],
+      reportsDirectory: './coverage',
+      exclude: [
+        'coverage/**',
+        'data/**',
+        'dist/**',
+        'node_modules/**',
+        'scripts/**',
+        'tests/**',
+        '**/*.json',
+        '**/*.png',
+        'src/main.ts',
+        'src/vite-env.d.ts',
+      ],
+    },
   },
 })
