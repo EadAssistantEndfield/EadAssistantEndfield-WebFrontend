@@ -10,6 +10,7 @@ __pycache__/
 .vscode/
 .claude/
 .playwright-mcp/
+.qodana/
 
 .DS_Store
 Thumbs.db
