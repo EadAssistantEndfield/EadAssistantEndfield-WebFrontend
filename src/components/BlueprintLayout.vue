@@ -1,65 +1,52 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useBlueprintI18n } from '@/composables/useBlueprintI18n'
 import { useBlueprintLayout } from '@/composables/useBlueprintLayout'
+import { useBlueprintLayoutScene } from '@/composables/useBlueprintLayoutScene'
 import { useBlueprintPathLayer } from '@/composables/useBlueprintPathLayer'
-import type { BlueprintCell, BlueprintRenderLayoutMode, BlueprintSummary, BlueprintSummaryNode } from '@/types'
-import { shortTemplateName } from '@/utils/blueprint'
-import { getLayoutTheme } from '@/utils/layoutTheme'
+import type { BlueprintRenderLayoutMode, BlueprintSummary, BlueprintSummaryNode } from '@/types'
+import { pathMarkerRadius, pathStrokeDasharray, pathStrokeWidth } from '@/utils/blueprintPathPresentation'
 
 const props = defineProps<{
   summary: BlueprintSummary
 }>()
 
-const { t, itemLabel } = useBlueprintI18n()
+const { t, itemLabel, buildingLabel: translateBuildingLabel } = useBlueprintI18n()
 const renderMode = ref<BlueprintRenderLayoutMode>('normalized')
 const showDebug = ref(false)
-const summaryRef = () => props.summary
+const summaryRef = computed(() => props.summary)
+const scrollerRef = ref<HTMLElement | null>(null)
+const scrollerWidth = ref(0)
+const scrollerHeight = ref(0)
+let scrollerResizeObserver: ResizeObserver | null = null
 
-function layoutBox(node: BlueprintSummaryNode) {
-  if (renderMode.value === 'source') {
-    return {
-      x: node.sourceLayoutX,
-      z: node.sourceLayoutZ,
-      width: node.sourceLayoutWidth,
-      height: node.sourceLayoutHeight,
-    }
-  }
-
-  return {
-    x: node.layoutX,
-    z: node.layoutZ,
-    width: node.layoutWidth,
-    height: node.layoutHeight,
-  }
+function buildingLabel(node: BlueprintSummaryNode): string {
+  return translateBuildingLabel(node.templateId)
 }
 
-const displayBounds = computed(() => {
-  let maxX = props.summary.width - 1
-  let maxZ = props.summary.height - 1
-
-  for (const node of props.summary.nodes) {
-    if (node.path) {
-      for (const point of node.pathPoints) {
-        maxX = Math.max(maxX, point.x)
-        maxZ = Math.max(maxZ, point.z)
-      }
-      continue
-    }
-
-    const box = layoutBox(node)
-    maxX = Math.max(maxX, box.x + box.width - 1)
-    maxZ = Math.max(maxZ, box.z + box.height - 1)
-  }
-
-  return {
-    width: maxX + 1,
-    height: maxZ + 1,
-  }
-})
-
+const sceneForBounds = useBlueprintLayoutScene(summaryRef, renderMode, 28, (x) => 32 + x * 28, (z) => 32 + z * 28, buildingLabel, itemLabel)
+const displayBounds = sceneForBounds.displayBounds
 const { svgWidth, svgHeight, cellSize, cellX, cellZ } = useBlueprintLayout(displayBounds)
-const { pathNodes, polylinePoints, strokeWidth, strokeDasharray, markerRadius, beltArrowPoints, startMarker, endMarker } = useBlueprintPathLayer(
+const {
+  buildingNodes,
+  occupiedCells,
+  layoutBox,
+  clipId,
+  labelX,
+  labelY,
+  showImage,
+  showLabel,
+  showSubtitle,
+  anchorX,
+  anchorZ,
+  sourceAnchorX,
+  sourceAnchorZ,
+  imageBox,
+  imageTransform,
+  nodeTitle,
+  cellTheme,
+} = useBlueprintLayoutScene(summaryRef, renderMode, cellSize, cellX, cellZ, buildingLabel, itemLabel)
+const { pathNodes, polylinePoints, beltArrowPoints, startMarker, endMarker } = useBlueprintPathLayer(
   summaryRef,
   renderMode,
   cellSize,
@@ -70,134 +57,47 @@ const { pathNodes, polylinePoints, strokeWidth, strokeDasharray, markerRadius, b
 const underlayPathNodes = computed(() => pathNodes.value.filter((node) => node.path?.kind !== 'pipe'))
 const overlayPipeNodes = computed(() => pathNodes.value.filter((node) => node.path?.kind === 'pipe'))
 
-const buildingNodes = computed(() =>
-  [...props.summary.nodes]
-    .filter((node) => node.path === null)
-    .sort((left, right) => layoutBox(right).width * layoutBox(right).height - layoutBox(left).width * layoutBox(left).height || left.nodeId - right.nodeId),
-)
-
-const occupiedCells = computed(() => {
-  const cells: Array<{ key: string; cell: BlueprintCell; node: BlueprintSummaryNode }> = []
-
-  for (const node of buildingNodes.value) {
-    const box = layoutBox(node)
-    for (let x = box.x; x < box.x + box.width; x += 1) {
-      for (let z = box.z; z < box.z + box.height; z += 1) {
-        const cell = { x, z }
-        cells.push({ key: `${node.nodeId}-${x}-${z}-${renderMode.value}`, cell, node })
-      }
-    }
+function updateScrollerSize() {
+  const element = scrollerRef.value
+  if (!element) {
+    return
   }
 
-  return cells
+  scrollerWidth.value = Math.max(0, element.clientWidth)
+  scrollerHeight.value = Math.max(0, element.clientHeight)
+}
+
+onMounted(() => {
+  updateScrollerSize()
+
+  if (typeof ResizeObserver === 'undefined' || !scrollerRef.value) {
+    return
+  }
+
+  scrollerResizeObserver = new ResizeObserver(() => {
+    updateScrollerSize()
+  })
+
+  scrollerResizeObserver.observe(scrollerRef.value)
 })
 
-function buildingLabel(node: BlueprintSummaryNode): string {
-  return node.buildingMeta?.catalogName || shortTemplateName(node.templateId)
-}
+onBeforeUnmount(() => {
+  scrollerResizeObserver?.disconnect()
+})
 
-function clipId(node: BlueprintSummaryNode): string {
-  return `building-clip-${node.nodeId}`
-}
-
-function labelX(node: BlueprintSummaryNode): number {
-  return cellX(layoutBox(node).x) + 10
-}
-
-function labelY(node: BlueprintSummaryNode): number {
-  return cellZ(layoutBox(node).z) + 20
-}
-
-function showImage(node: BlueprintSummaryNode): boolean {
-  return Boolean(node.buildingMeta?.imageUrl)
-}
-
-function showLabel(node: BlueprintSummaryNode): boolean {
-  const box = layoutBox(node)
-  return box.width >= 2 || box.height >= 2
-}
-
-function showSubtitle(node: BlueprintSummaryNode): boolean {
-  const box = layoutBox(node)
-  return box.width >= 3 || box.height >= 3
-}
-
-function anchorX(node: BlueprintSummaryNode): number {
-  return cellX(node.x) + cellSize / 2
-}
-
-function anchorZ(node: BlueprintSummaryNode): number {
-  return cellZ(node.z) + cellSize / 2
-}
-
-function sourceAnchorX(node: BlueprintSummaryNode): number {
-  const box = layoutBox(node)
-  return cellX(box.x) + (box.width * cellSize) / 2
-}
-
-function sourceAnchorZ(node: BlueprintSummaryNode): number {
-  const box = layoutBox(node)
-  return cellZ(box.z) + (box.height * cellSize) / 2
-}
-
-function imageBox(node: BlueprintSummaryNode) {
-  const box = layoutBox(node)
-  const layoutPixelWidth = box.width * cellSize
-  const layoutPixelHeight = box.height * cellSize
-
-  if (renderMode.value === 'source') {
-    return {
-      x: cellX(box.x) + 4,
-      y: cellZ(box.z) + 4,
-      width: layoutPixelWidth - 8,
-      height: layoutPixelHeight - 8,
-    }
+const svgScale = computed(() => {
+  if (!svgWidth.value || !svgHeight.value) {
+    return 1
   }
 
-  const sourceWidth = node.footprint?.sourceWidth ?? box.width
-  const sourceHeight = node.footprint?.sourceHeight ?? box.height
-  const imageWidth = sourceWidth * cellSize - 8
-  const imageHeight = sourceHeight * cellSize - 8
+  const widthScale = scrollerWidth.value > 0 ? scrollerWidth.value / svgWidth.value : 1
+  const heightScale = scrollerHeight.value > 0 ? scrollerHeight.value / svgHeight.value : 1
 
-  return {
-    x: cellX(box.x) + (layoutPixelWidth - imageWidth) / 2,
-    y: cellZ(box.z) + (layoutPixelHeight - imageHeight) / 2,
-    width: imageWidth,
-    height: imageHeight,
-  }
-}
+  return Math.min(widthScale, heightScale)
+})
 
-function imageTransform(node: BlueprintSummaryNode): string | undefined {
-  if (renderMode.value === 'source' || node.rotation === 0) {
-    return undefined
-  }
-
-  const box = layoutBox(node)
-  const centerX = cellX(box.x) + (box.width * cellSize) / 2
-  const centerZ = cellZ(box.z) + (box.height * cellSize) / 2
-  const useDirectRotation = node.templateId === 'power_diffuser_1'
-  const screenRotation = useDirectRotation ? node.rotation : (360 - node.rotation) % 360
-
-  return `rotate(${screenRotation} ${centerX} ${centerZ})`
-}
-
-function nodeTitle(node: BlueprintSummaryNode): string {
-  const box = layoutBox(node)
-  return [
-    `#${node.nodeId}`,
-    buildingLabel(node),
-    node.templateId,
-    `anchor=(${node.x}, ${node.y}, ${node.z})`,
-    `layout=(${box.x}, ${box.z}) ${box.width}x${box.height}`,
-    node.productIcon !== '-' ? itemLabel(node.productIcon) : '',
-  ]
-    .filter(Boolean)
-    .join(' | ')
-}
-
-function cellTheme(node: BlueprintSummaryNode) {
-  return getLayoutTheme(node)
-}
+const renderedSvgWidth = computed(() => Math.max(0, Math.round(svgWidth.value * svgScale.value)))
+const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value * svgScale.value)))
 </script>
 
 <template>
@@ -205,29 +105,47 @@ function cellTheme(node: BlueprintSummaryNode) {
     <div class="panel-header">
       <div class="panel-header__row">
         <div>
+          <p class="panel-flag">{{ t('layoutViewFlag') }}</p>
           <h2>{{ t('layout') }}</h2>
-          <p>{{ t('layoutHint') }} · 游戏还原模式会结合 footprint、旋转和邻近路径自动推断占地。</p>
+          <p>{{ t('layoutHint') }} · {{ t('layoutInferenceHint') }}</p>
         </div>
         <div class="layout-toolbar">
           <div class="mode-switch">
-            <button type="button" class="mode-button" :class="{ 'mode-button--active': renderMode === 'normalized' }" @click="renderMode = 'normalized'">
-              游戏还原模式
-            </button>
-            <button type="button" class="mode-button" :class="{ 'mode-button--active': renderMode === 'source' }" @click="renderMode = 'source'">
-              JSON 原始模式
-            </button>
-          </div>
-          <label class="debug-toggle">
-            <input v-model="showDebug" type="checkbox" />
-            <span>调试覆盖</span>
-          </label>
+            <button
+              type="button"
+              class="mode-button"
+            :class="{ 'mode-button--active': renderMode === 'normalized' }"
+            @click="renderMode = 'normalized'"
+          >
+            {{ t('layoutModeNormalized') }}
+          </button>
+            <button
+              type="button"
+              class="mode-button"
+            :class="{ 'mode-button--active': renderMode === 'source' }"
+            @click="renderMode = 'source'"
+          >
+            {{ t('layoutModeSource') }}
+          </button>
         </div>
+        <label class="debug-toggle">
+          <input v-model="showDebug" type="checkbox" />
+          <span>{{ t('debugOverlay') }}</span>
+        </label>
+      </div>
       </div>
     </div>
 
-    <div class="svg-scroller">
-      <svg :viewBox="`0 0 ${svgWidth} ${svgHeight}`" class="blueprint-svg" role="img" aria-label="blueprint layout">
-        <rect :width="svgWidth" :height="svgHeight" rx="22" fill="#fffaf4" />
+    <div ref="scrollerRef" class="svg-scroller">
+      <svg
+        :viewBox="`0 0 ${svgWidth} ${svgHeight}`"
+        :width="renderedSvgWidth || svgWidth"
+        :height="renderedSvgHeight || svgHeight"
+        class="blueprint-svg"
+        role="img"
+        aria-label="blueprint layout"
+      >
+        <rect :width="svgWidth" :height="svgHeight" rx="22" fill="#0f0d0b" />
 
         <template v-for="xIndex in displayBounds.width + 1" :key="`x-line-${xIndex}`">
           <line
@@ -277,8 +195,8 @@ function cellTheme(node: BlueprintSummaryNode) {
           <polyline
             :points="polylinePoints(node)"
             :stroke="cellTheme(node).stroke"
-            :stroke-width="strokeWidth(node)"
-            :stroke-dasharray="strokeDasharray(node)"
+            :stroke-width="pathStrokeWidth(node.path?.kind)"
+            :stroke-dasharray="pathStrokeDasharray(node.path?.kind, cellSize)"
             class="path-line"
           >
             <title>
@@ -291,7 +209,7 @@ function cellTheme(node: BlueprintSummaryNode) {
             v-if="startMarker(node) && node.path?.kind !== 'belt'"
             :cx="startMarker(node)?.x"
             :cy="startMarker(node)?.y"
-            :r="markerRadius(node)"
+            :r="pathMarkerRadius(node.path?.kind)"
             :fill="cellTheme(node).stroke"
             class="path-marker path-marker--start"
           />
@@ -300,7 +218,7 @@ function cellTheme(node: BlueprintSummaryNode) {
             v-if="endMarker(node) && node.path?.kind !== 'belt'"
             :cx="endMarker(node)?.x"
             :cy="endMarker(node)?.y"
-            :r="markerRadius(node)"
+            :r="pathMarkerRadius(node.path?.kind)"
             :fill="cellTheme(node).stroke"
             class="path-marker path-marker--end"
           />
@@ -343,7 +261,7 @@ function cellTheme(node: BlueprintSummaryNode) {
               :width="layoutBox(node).width * cellSize - 10"
               :height="layoutBox(node).height * cellSize - 10"
               rx="10"
-              fill="rgba(15, 23, 42, 0.08)"
+              fill="rgba(0, 0, 0, 0.3)"
             />
 
             <rect
@@ -378,7 +296,7 @@ function cellTheme(node: BlueprintSummaryNode) {
               :width="layoutBox(node).width * cellSize - 8"
               :height="layoutBox(node).height * cellSize - 8"
               rx="10"
-              fill="rgba(255, 250, 244, 0.36)"
+              fill="rgba(8, 8, 8, 0.16)"
             />
 
             <text
@@ -401,7 +319,13 @@ function cellTheme(node: BlueprintSummaryNode) {
               #{{ node.nodeId }} · {{ layoutBox(node).width }}x{{ layoutBox(node).height }}
             </text>
 
-            <circle :cx="anchorX(node)" :cy="anchorZ(node)" r="3.5" :fill="cellTheme(node).stroke" class="anchor-marker" />
+            <circle
+              :cx="anchorX(node)"
+              :cy="anchorZ(node)"
+              r="3.5"
+              :fill="cellTheme(node).stroke"
+              class="anchor-marker"
+            />
             <circle
               v-if="showDebug && renderMode === 'normalized'"
               :cx="sourceAnchorX(node)"
@@ -417,8 +341,8 @@ function cellTheme(node: BlueprintSummaryNode) {
           <polyline
             :points="polylinePoints(node)"
             :stroke="cellTheme(node).stroke"
-            :stroke-width="strokeWidth(node)"
-            :stroke-dasharray="strokeDasharray(node)"
+            :stroke-width="pathStrokeWidth(node.path?.kind)"
+            :stroke-dasharray="pathStrokeDasharray(node.path?.kind, cellSize)"
             class="path-line"
           >
             <title>
@@ -431,7 +355,7 @@ function cellTheme(node: BlueprintSummaryNode) {
             v-if="startMarker(node)"
             :cx="startMarker(node)?.x"
             :cy="startMarker(node)?.y"
-            :r="markerRadius(node)"
+            :r="pathMarkerRadius(node.path?.kind)"
             :fill="cellTheme(node).stroke"
             class="path-marker path-marker--start"
           />
@@ -440,7 +364,7 @@ function cellTheme(node: BlueprintSummaryNode) {
             v-if="endMarker(node)"
             :cx="endMarker(node)?.x"
             :cy="endMarker(node)?.y"
-            :r="markerRadius(node)"
+            :r="pathMarkerRadius(node.path?.kind)"
             :fill="cellTheme(node).stroke"
             class="path-marker path-marker--end"
           />
@@ -452,18 +376,38 @@ function cellTheme(node: BlueprintSummaryNode) {
 
 <style scoped>
 .panel-card {
-  background: rgba(15, 23, 42, 0.72);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 24px;
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.36);
-  padding: 20px 22px;
+  background: var(--page-background);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 16px;
+  border-bottom: 1px solid #3a3a3a;
+  min-height: 100%;
+  height: 100%;
 }
 
 .panel-header {
   display: grid;
-  gap: 4px;
-  margin-bottom: 14px;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.panel-header h2,
+.panel-header p,
+.panel-flag {
+  margin: 0;
+}
+
+.panel-flag {
+  color: #c4a35a;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.panel-header h2 {
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .panel-header__row {
@@ -474,7 +418,8 @@ function cellTheme(node: BlueprintSummaryNode) {
 }
 
 .panel-header p {
-  color: #9fb0c8;
+  color: #a0a0a0;
+  font-size: 12px;
 }
 
 .layout-toolbar {
@@ -482,63 +427,73 @@ function cellTheme(node: BlueprintSummaryNode) {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .mode-switch {
   display: inline-flex;
   gap: 8px;
   padding: 4px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(196, 163, 90, 0.2);
+  background: #2a2a2a;
 }
 
 .mode-button {
   border: 0;
-  border-radius: 999px;
-  padding: 8px 12px;
+  border-radius: 6px;
+  padding: 6px 12px;
   background: transparent;
-  color: #64748b;
+  color: #a0a0a0;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.2s ease;
 }
 
 .mode-button--active {
-  background: rgba(15, 23, 42, 0.88);
-  color: #f8fafc;
+  background: rgba(196, 163, 90, 0.2);
+  color: #c4a35a;
 }
 
 .debug-toggle {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #64748b;
+  color: #a0a0a0;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .debug-toggle input {
-  accent-color: #0f172a;
+  accent-color: #c4a35a;
 }
 
 .svg-scroller {
-  overflow: auto;
-  border-radius: 22px;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  background: rgba(255, 250, 244, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  background: var(--page-background);
+  min-height: 320px;
+  height: 100%;
 }
 
 .blueprint-svg {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .grid-line {
-  stroke: rgba(100, 116, 139, 0.18);
+  stroke: rgba(196, 163, 90, 0.08);
   stroke-width: 1;
 }
 
 .axis-label {
-  fill: #64748b;
+  fill: #6e6559;
   font-size: 10px;
   text-anchor: middle;
 }
@@ -551,11 +506,11 @@ function cellTheme(node: BlueprintSummaryNode) {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  opacity: 0.94;
+  opacity: 0.96;
 }
 
 .path-marker {
-  stroke: rgba(255, 250, 244, 0.95);
+  stroke: rgba(12, 10, 9, 0.95);
   stroke-width: 2;
 }
 
@@ -576,7 +531,7 @@ function cellTheme(node: BlueprintSummaryNode) {
   font-size: 11px;
   font-weight: 700;
   paint-order: stroke;
-  stroke: rgba(255, 250, 244, 0.9);
+  stroke: rgba(10, 10, 10, 0.92);
   stroke-width: 3px;
   stroke-linejoin: round;
 }
@@ -588,7 +543,7 @@ function cellTheme(node: BlueprintSummaryNode) {
 }
 
 .anchor-marker {
-  stroke: rgba(255, 250, 244, 0.96);
+  stroke: rgba(10, 10, 10, 0.96);
   stroke-width: 2;
 }
 
@@ -600,13 +555,57 @@ function cellTheme(node: BlueprintSummaryNode) {
 }
 
 .source-anchor-marker {
-  stroke: rgba(255, 250, 244, 0.96);
+  stroke: rgba(10, 10, 10, 0.96);
   stroke-width: 1.5;
 }
 
 @media (max-width: 980px) {
   .panel-header__row {
     flex-direction: column;
+  }
+
+  .layout-toolbar {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .svg-scroller {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 720px) {
+  .panel-card {
+    padding: 12px;
+  }
+
+  .panel-header {
+    margin-bottom: 12px;
+  }
+
+  .panel-header h2 {
+    font-size: 16px;
+  }
+
+  .panel-header p {
+    font-size: 11px;
+  }
+
+  .mode-switch {
+    width: 100%;
+  }
+
+  .mode-button {
+    flex: 1;
+    padding: 7px 10px;
+  }
+
+  .debug-toggle {
+    font-size: 12px;
+  }
+
+  .svg-scroller {
+    min-height: 240px;
   }
 }
 </style>

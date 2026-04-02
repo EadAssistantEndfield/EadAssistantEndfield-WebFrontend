@@ -5,10 +5,7 @@ import type {
   BlueprintPoint,
   BlueprintPosition,
 } from '@/types'
-
-function toSafeNumber(value: number | null | undefined): number {
-  return typeof value === 'number' && Number.isFinite(value) ? value : 0
-}
+import { toSafeNumber, cardinalFromDelta, oppositeCardinal } from '@/utils/geometry'
 
 function samePoint(left: BlueprintPoint, right: BlueprintPoint): boolean {
   return left.x === right.x && left.y === right.y && left.z === right.z
@@ -30,24 +27,12 @@ function directionBetween(start: BlueprintPoint, end: BlueprintPoint): string {
   ].join(',')
 }
 
-function cardinalFromDelta(dx: number, dz: number): BlueprintCardinal | null {
-  if (dx === 0 && dz === 0) {
-    return null
-  }
-
-  if (Math.abs(dx) >= Math.abs(dz)) {
-    return dx >= 0 ? 'east' : 'west'
-  }
-
-  return dz >= 0 ? 'south' : 'north'
-}
-
 function normalizeRotationY(value: unknown): number | null {
   if (typeof value !== 'number' || !Number.isFinite(value)) {
     return null
   }
 
-  return ((Math.round(value / 90) * 90) % 360 + 360) % 360
+  return (((Math.round(value / 90) * 90) % 360) + 360) % 360
 }
 
 export function transportCardinalFromDirection(direction?: Record<string, unknown> | null): BlueprintCardinal | null {
@@ -77,19 +62,6 @@ function movePoint(point: BlueprintPoint, direction: BlueprintCardinal, distance
       return { ...point, z: point.z + distance }
     case 'west':
       return { ...point, x: point.x - distance }
-  }
-}
-
-function oppositeDirection(direction: BlueprintCardinal): BlueprintCardinal {
-  switch (direction) {
-    case 'north':
-      return 'south'
-    case 'east':
-      return 'west'
-    case 'south':
-      return 'north'
-    case 'west':
-      return 'east'
   }
 }
 
@@ -123,23 +95,31 @@ function segmentCardinal(points: BlueprintPoint[], role: 'start' | 'end'): Bluep
   return null
 }
 
-function orientationScore(points: BlueprintPoint[], flowIn: BlueprintCardinal | null, flowOut: BlueprintCardinal | null): number {
+function orientationScore(
+  points: BlueprintPoint[],
+  flowIn: BlueprintCardinal | null,
+  flowOut: BlueprintCardinal | null,
+): number {
   const startDirection = segmentCardinal(points, 'start')
   const endDirection = segmentCardinal(points, 'end')
   let score = 0
 
   if (flowIn && startDirection) {
-    score += startDirection === flowIn ? 3 : oppositeDirection(startDirection) === flowIn ? 1 : -2
+    score += startDirection === flowIn ? 3 : oppositeCardinal(startDirection) === flowIn ? 1 : -2
   }
 
   if (flowOut && endDirection) {
-    score += endDirection === flowOut ? 3 : oppositeDirection(endDirection) === flowOut ? 1 : -2
+    score += endDirection === flowOut ? 3 : oppositeCardinal(endDirection) === flowOut ? 1 : -2
   }
 
   return score
 }
 
-function orientTransportPathPoints(pathPoints: BlueprintPoint[], flowIn: BlueprintCardinal | null, flowOut: BlueprintCardinal | null): BlueprintPoint[] {
+function orientTransportPathPoints(
+  pathPoints: BlueprintPoint[],
+  flowIn: BlueprintCardinal | null,
+  flowOut: BlueprintCardinal | null,
+): BlueprintPoint[] {
   if (pathPoints.length < 2 || (!flowIn && !flowOut)) {
     return pathPoints
   }
@@ -176,7 +156,7 @@ function expandSinglePointTransportPath(
   }
 
   if (flowOut) {
-    return [movePoint(center, oppositeDirection(flowOut), edgeOffset), movePoint(center, flowOut, edgeOffset)]
+    return [movePoint(center, oppositeCardinal(flowOut), edgeOffset), movePoint(center, flowOut, edgeOffset)]
   }
 
   if (flowIn) {

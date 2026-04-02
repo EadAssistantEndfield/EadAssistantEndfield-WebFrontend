@@ -87,9 +87,7 @@ export function resolveBeltArrowPoints(points: PixelPoint[], cellSize: number): 
   const wingX = -uy * cellSize * 0.18
   const wingY = ux * cellSize * 0.18
 
-  return [
-    `${tipPoint.x},${tipPoint.y}`,
-    `${baseX + wingX},${baseY + wingY}`,
-    `${baseX - wingX},${baseY - wingY}`,
-  ].join(' ')
+  return [`${tipPoint.x},${tipPoint.y}`, `${baseX + wingX},${baseY + wingY}`, `${baseX - wingX},${baseY - wingY}`].join(
+    ' ',
+  )
 }

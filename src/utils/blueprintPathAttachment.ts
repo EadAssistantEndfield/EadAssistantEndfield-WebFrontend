@@ -1,4 +1,5 @@
 import type { BlueprintSummaryNode } from '@/types'
+import { detectAdjacentSide, isPointOnCenterlineForSide } from '@/utils/geometry'
 import {
   getTemplateConnectionRule,
   requiresTemplateCenterSlot,
@@ -43,7 +44,13 @@ function pointToPixel(point: { x: number; z: number }, context: AttachmentContex
   }
 }
 
-function candidateScore(node: BlueprintSummaryNode, kind: PathKind, endpointRole: EndpointRole, side: EdgeSide, context: AttachmentContext): number {
+function candidateScore(
+  node: BlueprintSummaryNode,
+  kind: PathKind,
+  endpointRole: EndpointRole,
+  side: EdgeSide,
+  context: AttachmentContext,
+): number {
   const rule = getTemplateConnectionRule(node.templateId, kind)
   const preferredSides = rule?.[endpointRole] ?? []
   const localSide = toLocalEdgeSide(side, node.rotation)
@@ -56,51 +63,12 @@ function candidateScore(node: BlueprintSummaryNode, kind: PathKind, endpointRole
   return preferencePenalty * 100 - priorityScore + areaPenalty
 }
 
-function detectAdjacentSide(point: { x: number; z: number }, node: BlueprintSummaryNode, context: AttachmentContext): EdgeSide | null {
-  const layout = context.nodeLayout(node)
-  const minX = layout.x
-  const maxX = layout.x + layout.width - 1
-  const minZ = layout.z
-  const maxZ = layout.z + layout.height - 1
-  const epsilon = 1e-6
-  const adjacentDistance = 1 + epsilon
-  const inRange = (value: number, rangeMin: number, rangeMax: number) => value >= rangeMin - epsilon && value <= rangeMax + epsilon
-  const northDistance = minZ - point.z
-  if (northDistance > epsilon && northDistance <= adjacentDistance && inRange(point.x, minX, maxX)) {
-    return 'north'
-  }
-
-  const eastDistance = point.x - maxX
-  if (eastDistance > epsilon && eastDistance <= adjacentDistance && inRange(point.z, minZ, maxZ)) {
-    return 'east'
-  }
-
-  const southDistance = point.z - maxZ
-  if (southDistance > epsilon && southDistance <= adjacentDistance && inRange(point.x, minX, maxX)) {
-    return 'south'
-  }
-
-  const westDistance = minX - point.x
-  if (westDistance > epsilon && westDistance <= adjacentDistance && inRange(point.z, minZ, maxZ)) {
-    return 'west'
-  }
-
-  return null
-}
-
-function isNearlyInteger(value: number, epsilon = 1e-6): boolean {
-  return Math.abs(value - Math.round(value)) <= epsilon
-}
-
-function isPointOnCenterlineForSide(point: { x: number; z: number }, side: EdgeSide): boolean {
-  if (side === 'north' || side === 'south') {
-    return isNearlyInteger(point.x)
-  }
-
-  return isNearlyInteger(point.z)
-}
-
-function isPointOnSideCenterSlot(point: { x: number; z: number }, node: BlueprintSummaryNode, side: EdgeSide, context: AttachmentContext): boolean {
+function isPointOnSideCenterSlot(
+  point: { x: number; z: number },
+  node: BlueprintSummaryNode,
+  side: EdgeSide,
+  context: AttachmentContext,
+): boolean {
   const layout = context.nodeLayout(node)
   const epsilon = 1e-6
   const maxCenterOffset = 0.5 + epsilon
@@ -114,7 +82,12 @@ function isPointOnSideCenterSlot(point: { x: number; z: number }, node: Blueprin
   return Math.abs(point.z - centerZ) <= maxCenterOffset
 }
 
-function snapPointToNodeEdge(point: { x: number; z: number }, node: BlueprintSummaryNode, side: EdgeSide, context: AttachmentContext): PixelPoint {
+function snapPointToNodeEdge(
+  point: { x: number; z: number },
+  node: BlueprintSummaryNode,
+  side: EdgeSide,
+  context: AttachmentContext,
+): PixelPoint {
   const layout = context.nodeLayout(node)
   const rectLeft = context.cellX(layout.x) + 4
   const rectTop = context.cellZ(layout.z) + 4
@@ -199,7 +172,8 @@ export function resolvePathAttachmentCandidate(
       continue
     }
 
-    const side = detectAdjacentSide(point, node, context)
+    const nodeLayout = context.nodeLayout(node)
+    const side = detectAdjacentSide(point, nodeLayout.x, nodeLayout.z, nodeLayout.width, nodeLayout.height)
     if (!side) {
       continue
     }
@@ -209,7 +183,10 @@ export function resolvePathAttachmentCandidate(
     }
 
     const localSide = toLocalEdgeSide(side, node.rotation)
-    if (requiresTemplateCenterSlot(node.templateId, pathKind, localSide) && !isPointOnSideCenterSlot(point, node, side, context)) {
+    if (
+      requiresTemplateCenterSlot(node.templateId, pathKind, localSide) &&
+      !isPointOnSideCenterSlot(point, node, side, context)
+    ) {
       continue
     }
 

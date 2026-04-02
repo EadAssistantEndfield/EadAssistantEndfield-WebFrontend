@@ -6,9 +6,12 @@ const { t } = useBlueprintI18n()
 </script>
 
 <template>
-  <section class="panel-card editor-card">
+  <section class="editor-card">
     <div class="panel-header">
-      <h2>{{ t('jsonInput') }}</h2>
+      <div>
+        <p class="panel-flag">//JSON View</p>
+        <h2>{{ t('jsonInput') }}</h2>
+      </div>
       <p>{{ t('jsonInputHint') }}</p>
     </div>
 
@@ -18,34 +21,81 @@ const { t } = useBlueprintI18n()
 
 <style scoped>
 .editor-card {
-  background: rgba(15, 23, 42, 0.72);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 24px;
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.36);
-  padding: 20px 22px;
+  display: grid;
+  gap: 14px;
+  min-height: 680px;
+  padding: 16px;
+  background: var(--page-background);
+  border-bottom: 1px solid #3a3a3a;
 }
 
 .panel-header {
   display: grid;
-  gap: 4px;
-  margin-bottom: 14px;
+  gap: 6px;
+}
+
+.panel-header h2,
+.panel-header p,
+.panel-flag {
+  margin: 0;
+}
+
+.panel-flag {
+  color: #c4a35a;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.panel-header h2 {
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .panel-header p {
-  color: #9fb0c8;
+  color: #a0a0a0;
 }
 
 .json-editor {
   width: 100%;
-  min-height: 580px;
+  min-height: 600px;
   resize: vertical;
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  border-radius: 20px;
-  background: rgba(2, 6, 23, 0.8);
-  color: #e2e8f0;
-  padding: 16px;
-  font-family: "Cascadia Code", Consolas, monospace;
-  line-height: 1.65;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: var(--page-background);
+  color: #ffffff;
+  padding: 18px 20px;
+  font-family: 'Cascadia Code', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.json-editor:focus {
+  outline: 1px solid rgba(196, 163, 90, 0.6);
+  outline-offset: 0;
+}
+
+@media (max-width: 720px) {
+  .editor-card {
+    min-height: 0;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .panel-header h2 {
+    font-size: 16px;
+  }
+
+  .panel-header p {
+    font-size: 12px;
+  }
+
+  .json-editor {
+    min-height: 320px;
+    padding: 14px 16px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
 }
 </style>

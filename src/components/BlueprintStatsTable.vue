@@ -2,10 +2,11 @@
 import { computed } from 'vue'
 import { useBlueprintI18n } from '@/composables/useBlueprintI18n'
 import type { CountEntry } from '@/types'
+import type { UiMessageKey } from '@/i18n/messages'
 
 const props = defineProps<{
-  titleKey: string
-  labelKey: string
+  titleKey: UiMessageKey
+  labelKey: UiMessageKey
   entries: CountEntry[]
   kind: 'item' | 'payload'
 }>()
@@ -13,15 +14,14 @@ const props = defineProps<{
 const { t, itemLabel, payloadLabel } = useBlueprintI18n()
 
 const translateEntry = computed(() =>
-  props.kind === 'item'
-    ? (name: string) => itemLabel(name)
-    : (name: string) => payloadLabel(name),
+  props.kind === 'item' ? (name: string) => itemLabel(name) : (name: string) => payloadLabel(name),
 )
 </script>
 
 <template>
   <section class="panel-card">
     <div class="panel-header">
+      <p class="panel-flag">//Stats</p>
       <h2>{{ t(titleKey) }}</h2>
     </div>
 
@@ -49,12 +49,10 @@ const translateEntry = computed(() =>
 
 <style scoped>
 .panel-card {
-  background: rgba(15, 23, 42, 0.72);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 24px;
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.36);
-  padding: 20px 22px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .panel-header {
@@ -63,10 +61,26 @@ const translateEntry = computed(() =>
   margin-bottom: 14px;
 }
 
+.panel-header h2,
+.panel-flag {
+  margin: 0;
+}
+
+.panel-flag {
+  color: #c4a35a;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel-header h2 {
+  color: #ffffff;
+}
+
 .table-wrap {
   overflow: auto;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 18px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
   max-height: 420px;
 }
 
@@ -79,7 +93,7 @@ table {
 th,
 td {
   padding: 12px 14px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid #3a3a3a;
   vertical-align: top;
   text-align: left;
 }
@@ -87,13 +101,13 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.96);
-  color: #93c5fd;
+  background: #2a2a2a;
+  color: #c4a35a;
 }
 
 .table-subtext {
   margin-top: 4px;
-  color: #8fa3c0;
+  color: #a0a0a0;
   font-size: 12px;
   word-break: break-all;
 }
