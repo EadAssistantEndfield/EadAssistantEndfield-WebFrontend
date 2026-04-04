@@ -19,7 +19,7 @@ export default defineConfig({
     exclude: ['dist/**', 'node_modules/**'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html', 'json-summary'],
+      reporter: ['text', 'html', 'json-summary', 'lcov'],
       reportsDirectory: './coverage',
       exclude: [
         'coverage/**',

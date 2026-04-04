@@ -60,3 +60,11 @@ npm run test:coverage
 - 会上传 Qodana 分析结果 artifact，避免把静态分析和普通测试绑在同一个 job
 
 如果仓库启用了 Qodana Cloud 或当前镜像需要鉴权，请在 GitHub Actions Secrets 中配置 `QODANA_TOKEN`。
+
+测试工作流也已接入 Codecov：
+
+- `npm run test:coverage` 会额外生成 `coverage/lcov.info`
+- GitHub Actions 会在存在 `CODECOV_TOKEN` 时自动上传覆盖率到 Codecov
+- 仓库根目录的 [`codecov.yml`](./codecov.yml) 定义了 project/patch 状态检查和 `frontend` flag
+
+如果要启用上传，请在 GitHub Actions Secrets 中配置 `CODECOV_TOKEN`。
