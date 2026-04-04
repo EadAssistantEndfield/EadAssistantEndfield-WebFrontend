@@ -1,0 +1,37 @@
+version: '1.0'
+profile:
+  name: qodana.recommended
+
+exclude:
+  - name: All
+    paths:
+      # 构建产物、缓存和本地工具目录
+      - .claude
+      - .playwright-mcp
+      - .qodana
+      - coverage
+      - dist
+      - build
+      - out
+      - release
+      - node_modules
+      - .vite_cache
+      - HTML
+
+      # 大体量静态数据和资源，不参与源码级静态分析
+      - data
+
+      # 自动生成或框架注入的类型文件
+      - src/auto-imports.d.ts
+      - src/components.d.ts
+      - src/vite-env.d.ts
+      - '**/*.d.ts'
+
+include:
+  - name: CheckDependencyLicenses
+
+bootstrap: |
+  export CI=true
+  npm ci --prefer-offline --no-audit
+
+linter: jetbrains/qodana-js:2025.3
