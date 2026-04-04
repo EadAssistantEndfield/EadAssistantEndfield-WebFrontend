@@ -31,7 +31,7 @@ jobs:
         with:
           artifact-name: qodana-report
           cache-default-branch-only: true
-          post-pr-comment: false
+          post-pr-comment: true
           pr-mode: ${{ github.event_name == 'pull_request' }}
           upload-result: true
         env:
