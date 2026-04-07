@@ -12,6 +12,13 @@ export default defineConfig({
   server: {
     host: '127.0.0.1',
     port: 4173,
+    proxy: {
+      '/api': {
+        target: 'https://beta-api.ead.jamyido.cn',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
   },
   test: {
     environment: 'node',

@@ -3,15 +3,25 @@ import { computed, ref } from 'vue'
 import { useBlueprintI18n } from '@/composables/useBlueprintI18n'
 import { colorForTemplate } from '@/utils/blueprint'
 import type { BlueprintSummary } from '@/types'
+import type { QueryStage } from '@/composables/useBlueprintParser'
 
 const props = defineProps<{
   summary: BlueprintSummary | null
   errorMessage: string
   sourceName: string
+  queryLoading: boolean
+  queryStage: QueryStage
+  qrcodeUrl: string
+}>()
+
+const emit = defineEmits<{
+  queryShareCode: [code: string]
+  cancelQuery: []
 }>()
 
 const { t, buildingLabel, itemLabel, payloadLabel } = useBlueprintI18n()
 const copyState = ref('')
+const queryInput = ref('')
 let copyTimer: number | undefined
 
 async function copyShareCode() {
@@ -25,6 +35,31 @@ async function copyShareCode() {
     copyState.value = ''
   }, 1800)
 }
+
+function submitQuery() {
+  const code = queryInput.value.trim()
+  if (!code || props.queryLoading) {
+    return
+  }
+  emit('queryShareCode', code)
+}
+
+const queryStageText = computed(() => {
+  switch (props.queryStage) {
+    case 'creating_session':
+      return t('queryCreatingSession')
+    case 'waiting_scan':
+      return t('queryWaitingScan')
+    case 'querying':
+      return t('queryScanned')
+    default:
+      return ''
+  }
+})
+
+const showQrOverlay = computed(() => {
+  return props.queryStage === 'waiting_scan' || props.queryStage === 'querying'
+})
 
 const overviewStats = computed(() => {
   if (!props.summary) {
@@ -99,9 +134,20 @@ const payloadStreams = computed(() => {
           <div class="share-card-content">
             <div class="share-card-info">
               <span class="share-label">{{ t('shareCode') }}</span>
-              <span class="share-value">{{ summary?.shareCode || 'EF0170IU6a20i5576O2Ai' }}</span>
+              <input
+                v-model="queryInput"
+                class="share-value share-value--input"
+                :placeholder="summary?.shareCode && summary.shareCode !== '-' ? summary.shareCode : t('queryPlaceholder')"
+                :disabled="queryLoading"
+                @keydown.enter="submitQuery"
+              />
             </div>
-            <button class="share-btn" @click="copyShareCode">
+            <button
+              type="button"
+              class="share-btn"
+              :disabled="queryLoading || !queryInput.trim()"
+              @click="submitQuery"
+            >
               <span class="share-btn-icon">&#9998;</span>
             </button>
           </div>
@@ -194,11 +240,28 @@ const payloadStreams = computed(() => {
         {{ errorMessage }}
       </div>
     </div>
+
+    <!-- QR Code overlay -->
+    <div v-if="showQrOverlay" class="qr-overlay">
+      <div class="qr-card">
+        <p class="qr-status">{{ queryStageText }}</p>
+        <div v-if="qrcodeUrl" class="qr-image-wrapper">
+          <img :src="qrcodeUrl" alt="QR Code" class="qr-image" />
+        </div>
+        <div v-else class="qr-placeholder">
+          <span class="qr-spinner"></span>
+        </div>
+        <button type="button" class="qr-cancel-btn" @click="emit('cancelQuery')">
+          {{ t('queryCancel') }}
+        </button>
+      </div>
+    </div>
   </aside>
 </template>
 
 <style scoped>
 .sidebar {
+  position: relative;
   background: rgba(0, 0, 0, 0.42);
   border-right: 1px solid rgba(255, 255, 255, 0.06);
   height: 100%;
@@ -305,6 +368,83 @@ const payloadStreams = computed(() => {
 
 .share-btn:hover .share-btn-icon {
   color: #1a1a1a;
+}
+
+.share-value--placeholder {
+  opacity: 0.4;
+}
+
+.share-value--input {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: text;
+  width: 100%;
+  caret-color: #f7d048;
+}
+
+.share-value--input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.share-value--input:disabled {
+  opacity: 0.5;
+}
+
+.share-query {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.share-query-input {
+  flex: 1;
+  min-width: 0;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #f7d048;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.share-query-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.share-query-input:focus {
+  border-color: #c4a35a;
+}
+
+.share-query-input:disabled {
+  opacity: 0.5;
+}
+
+.share-query-btn {
+  height: 32px;
+  padding: 0 14px;
+  border: 1px solid #c4a35a;
+  border-radius: 6px;
+  background: rgba(196, 163, 90, 0.15);
+  color: #c4a35a;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.share-query-btn:hover:not(:disabled) {
+  background: rgba(196, 163, 90, 0.3);
+}
+
+.share-query-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .metrics-grid {
@@ -433,6 +573,94 @@ const payloadStreams = computed(() => {
   font-size: 14px;
 }
 
+.qr-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  max-width: 280px;
+  width: 90%;
+}
+
+.qr-status {
+  color: #f7d048;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.qr-image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.qr-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #f7d048;
+  border-radius: 50%;
+  animation: qr-spin 0.8s linear infinite;
+}
+
+@keyframes qr-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.qr-cancel-btn {
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: transparent;
+  color: #a0a0a0;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qr-cancel-btn:hover {
+  border-color: #c4a35a;
+  color: #c4a35a;
+}
+
 @media (max-width: 1100px) {
   .sidebar {
     border-right: 0;
@@ -465,6 +693,19 @@ const payloadStreams = computed(() => {
     line-height: 22px;
     white-space: normal;
     overflow-wrap: anywhere;
+  }
+
+  .share-query {
+    flex-wrap: wrap;
+  }
+
+  .share-query-input {
+    font-size: 12px;
+  }
+
+  .share-query-btn {
+    font-size: 12px;
+    padding: 0 10px;
   }
 
   .facility-grid {

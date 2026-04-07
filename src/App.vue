@@ -11,7 +11,7 @@ import { useBlueprintParser } from '@/composables/useBlueprintParser'
 type BlueprintWorkbenchView = 'json' | 'layout'
 
 const { t } = useBlueprintI18n()
-const { rawText, sourceName, summary, errorMessage, rebuildSummary, loadFile } = useBlueprintParser(t)
+const { rawText, sourceName, summary, errorMessage, rebuildSummary, loadFile, queryLoading, queryStage, qrcodeUrl, loadFromShareCode, cancelQuery } = useBlueprintParser(t)
 const hasRenderableSummary = computed(() => Boolean(summary.value && !errorMessage.value))
 const workbenchView = ref<BlueprintWorkbenchView>(hasRenderableSummary.value ? 'layout' : 'json')
 const nodeTableExpanded = ref(false)
@@ -47,6 +47,11 @@ watch(hasRenderableSummary, (available) => {
         :summary="summary"
         :error-message="errorMessage"
         :source-name="sourceName"
+        :query-loading="queryLoading"
+        :query-stage="queryStage"
+        :qrcode-url="qrcodeUrl"
+        @query-share-code="loadFromShareCode"
+        @cancel-query="cancelQuery"
       />
 
       <section class="workspace-main">

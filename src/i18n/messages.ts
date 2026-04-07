@@ -77,6 +77,16 @@ interface UiMessages {
   layoutLabel: string
   sourceLayoutLabel: string
   footprintLabel: string
+  queryPlaceholder: string
+  queryButton: string
+  querying: string
+  queryErrorNetwork: string
+  queryErrorNoData: string
+  queryCreatingSession: string
+  queryWaitingScan: string
+  queryScanned: string
+  querySessionError: string
+  queryCancel: string
 }
 
 export const itemMessages: Record<Locale, Record<string, string>> = {
@@ -220,6 +230,16 @@ export const uiMessages: Record<Locale, UiMessages> = {
     layoutLabel: 'layout',
     sourceLayoutLabel: 'source',
     footprintLabel: 'footprint',
+    queryPlaceholder: '输入蓝图码查询...',
+    queryButton: '查询',
+    querying: '查询中...',
+    queryErrorNetwork: '网络请求失败，请检查网络连接。',
+    queryErrorNoData: '返回数据中缺少 blueprint_data。',
+    queryCreatingSession: '正在创建会话...',
+    queryWaitingScan: '请使用明日方舟：终末地扫描二维码登录',
+    queryScanned: '扫码成功，正在查询蓝图...',
+    querySessionError: '会话创建失败，请重试。',
+    queryCancel: '取消',
   },
   'en-US': {
     title: 'Blueprint Analysis Workbench',
@@ -296,6 +316,16 @@ export const uiMessages: Record<Locale, UiMessages> = {
     layoutLabel: 'layout',
     sourceLayoutLabel: 'source',
     footprintLabel: 'footprint',
+    queryPlaceholder: 'Enter share code to query...',
+    queryButton: 'Query',
+    querying: 'Querying...',
+    queryErrorNetwork: 'Network request failed. Please check your connection.',
+    queryErrorNoData: 'Response is missing blueprint_data.',
+    queryCreatingSession: 'Creating session...',
+    queryWaitingScan: 'Scan the QR code with Endfield to log in',
+    queryScanned: 'Scan successful, querying blueprint...',
+    querySessionError: 'Session creation failed. Please retry.',
+    queryCancel: 'Cancel',
   },
   'ja-JP': {
     title: 'ブループリント解析ワークベンチ',
@@ -372,6 +402,16 @@ export const uiMessages: Record<Locale, UiMessages> = {
     layoutLabel: 'layout',
     sourceLayoutLabel: 'source',
     footprintLabel: 'footprint',
+    queryPlaceholder: '共有コードを入力して検索...',
+    queryButton: '検索',
+    querying: '検索中...',
+    queryErrorNetwork: 'ネットワークリクエストに失敗しました。接続を確認してください。',
+    queryErrorNoData: 'レスポンスに blueprint_data がありません。',
+    queryCreatingSession: 'セッションを作成中...',
+    queryWaitingScan: 'エンドフィールドでQRコードをスキャンしてログインしてください',
+    queryScanned: 'スキャン成功、ブループリントを検索中...',
+    querySessionError: 'セッションの作成に失敗しました。再試行してください。',
+    queryCancel: 'キャンセル',
   },
 }
 
