@@ -11,7 +11,7 @@ import { useBlueprintParser } from '@/composables/useBlueprintParser'
 type BlueprintWorkbenchView = 'json' | 'layout'
 
 const { t } = useBlueprintI18n()
-const { rawText, sourceName, summary, errorMessage, rebuildSummary, loadFile } = useBlueprintParser(t)
+const { rawText, sourceName, summary, errorMessage, rebuildSummary, loadFile, queryLoading, queryStage, qrcodeUrl, loadFromShareCode, cancelQuery } = useBlueprintParser(t)
 const hasRenderableSummary = computed(() => Boolean(summary.value && !errorMessage.value))
 const workbenchView = ref<BlueprintWorkbenchView>(hasRenderableSummary.value ? 'layout' : 'json')
 const nodeTableExpanded = ref(false)
@@ -23,9 +23,7 @@ watch(hasRenderableSummary, (available) => {
     return
   }
 
-  if (workbenchView.value !== 'json') {
-    workbenchView.value = 'layout'
-  }
+  workbenchView.value = 'layout'
 })
 </script>
 
@@ -47,6 +45,11 @@ watch(hasRenderableSummary, (available) => {
         :summary="summary"
         :error-message="errorMessage"
         :source-name="sourceName"
+        :query-loading="queryLoading"
+        :query-stage="queryStage"
+        :qrcode-url="qrcodeUrl"
+        @query-share-code="loadFromShareCode"
+        @cancel-query="cancelQuery"
       />
 
       <section class="workspace-main">
@@ -170,10 +173,10 @@ watch(hasRenderableSummary, (available) => {
   justify-content: space-between;
   gap: 12px;
   padding: 14px 16px;
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--bg-hover);
   border-radius: 12px;
-  background: #2a2a2a;
-  color: #ffffff;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -183,12 +186,12 @@ watch(hasRenderableSummary, (available) => {
 }
 
 .node-toggle:hover {
-  border-color: #c4a35a;
+  border-color: var(--gold);
   background: #313131;
 }
 
 .node-toggle__meta {
-  color: #c4a35a;
+  color: var(--gold);
   font-size: 13px;
 }
 
@@ -211,7 +214,7 @@ watch(hasRenderableSummary, (available) => {
 
   .workspace-sidebar {
     max-height: min(46vh, 420px);
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid var(--bg-hover);
   }
 
   .workspace-main {
