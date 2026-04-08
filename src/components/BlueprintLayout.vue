@@ -74,6 +74,10 @@ const MIN_ZOOM = 0.5
 const MAX_ZOOM = 5
 
 function onWheel(e: WheelEvent) {
+  if (!e.ctrlKey && !e.metaKey) {
+    return
+  }
+
   e.preventDefault()
   const delta = e.deltaY > 0 ? -0.15 : 0.15
   userZoom.value = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Math.round((userZoom.value + delta) * 100) / 100))
@@ -89,7 +93,7 @@ function resetZoom() {
 }
 
 function onPanStart(e: MouseEvent) {
-  if (userZoom.value <= 1) return
+  if (e.button !== 0 || userZoom.value <= 1) return
   isPanning.value = true
   const el = scrollerRef.value!
   panStart.value = { x: e.clientX, y: e.clientY, scrollLeft: el.scrollLeft, scrollTop: el.scrollTop }
@@ -174,11 +178,13 @@ onBeforeUnmount(() => {
           <input v-model="showDebug" type="checkbox" />
           <span>{{ t('debugOverlay') }}</span>
         </label>
-          <div class="zoom-controls">
-            <span class="zoom-label">{{ zoomPercent }}%</span>
-            <button v-if="userZoom !== 1" type="button" class="zoom-reset" @click="resetZoom">{{ 'Reset' }}</button>
-          </div>
-      </div>
+        <div class="zoom-controls">
+          <span class="zoom-label">{{ zoomPercent }}%</span>
+          <button v-if="userZoom !== 1" type="button" class="zoom-reset" @click="resetZoom">
+            {{ t('resetZoom') }}
+          </button>
+        </div>
+        </div>
       </div>
     </div>
 
@@ -186,7 +192,7 @@ onBeforeUnmount(() => {
       ref="scrollerRef"
       class="svg-scroller"
       :class="{ 'svg-scroller--zoomed': userZoom > 1, 'svg-scroller--panning': isPanning }"
-      @wheel.prevent="onWheel"
+      @wheel="onWheel"
       @mousedown="onPanStart"
       @mousemove="onPanMove"
       @mouseup="onPanEnd"

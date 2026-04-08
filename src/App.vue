@@ -23,9 +23,7 @@ watch(hasRenderableSummary, (available) => {
     return
   }
 
-  if (available) {
-    workbenchView.value = 'layout'
-  }
+  workbenchView.value = 'layout'
 })
 </script>
 

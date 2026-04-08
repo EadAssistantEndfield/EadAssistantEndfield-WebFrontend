@@ -20,27 +20,13 @@ const emit = defineEmits<{
 }>()
 
 const { t, buildingLabel, itemLabel, payloadLabel } = useBlueprintI18n()
-const copyState = ref('')
 const queryInput = ref('')
-let copyTimer: number | undefined
 
 watch(() => props.summary?.shareCode, (code) => {
   if (code && code !== '-') {
     queryInput.value = code
   }
 })
-
-async function copyShareCode() {
-  if (!props.summary?.shareCode || typeof navigator === 'undefined' || !navigator.clipboard) {
-    return
-  }
-  await navigator.clipboard.writeText(props.summary.shareCode)
-  copyState.value = t('copied')
-  window.clearTimeout(copyTimer)
-  copyTimer = window.setTimeout(() => {
-    copyState.value = ''
-  }, 1800)
-}
 
 function submitQuery() {
   const code = queryInput.value.trim()

@@ -36,14 +36,24 @@ interface SessionSnapshot {
   error?: string | null
 }
 
+const SESSION_READY_TIMEOUT_MS = 2 * 60 * 1000
+const INITIAL_POLL_INTERVAL_MS = 1500
+const MAX_POLL_INTERVAL_MS = 5000
+
 function resolveApiUrl(path: string): string {
   if (path.startsWith('http')) {
     return path
   }
 
   const base = API_BASE || ''
+  if (!base) {
+    return path
+  }
 
-  return `${base}${path}`
+  const normalizedBase = base.endsWith('/') ? base.slice(0, -1) : base
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`
+
+  return `${normalizedBase}${normalizedPath}`
 }
 
 async function generateQrDataUrl(text: string): Promise<string> {
@@ -51,6 +61,28 @@ async function generateQrDataUrl(text: string): Promise<string> {
     width: 256,
     margin: 2,
     color: { dark: '#000000', light: '#ffffff' },
+  })
+}
+
+function waitWithAbort(ms: number, signal: AbortSignal): Promise<boolean> {
+  return new Promise((resolve) => {
+    if (signal.aborted) {
+      resolve(false)
+      return
+    }
+
+    const timer = setTimeout(() => {
+      signal.removeEventListener('abort', onAbort)
+      resolve(true)
+    }, ms)
+
+    const onAbort = () => {
+      clearTimeout(timer)
+      signal.removeEventListener('abort', onAbort)
+      resolve(false)
+    }
+
+    signal.addEventListener('abort', onAbort, { once: true })
   })
 }
 
@@ -88,6 +120,12 @@ export function useBlueprintParser(t: Translate) {
       return
     }
 
+    if (error.message === 'QUERY_SESSION_TIMEOUT') {
+      errorKey.value = 'querySessionTimeout'
+      errorFallback.value = ''
+      return
+    }
+
     errorKey.value = null
     errorFallback.value = error.message || t('parseError')
   }
@@ -105,12 +143,18 @@ export function useBlueprintParser(t: Translate) {
     sessionId: string,
     signal: AbortSignal,
   ): Promise<void> {
-    const pollInterval = 2000
+    const deadline = Date.now() + SESSION_READY_TIMEOUT_MS
+    let pollInterval = INITIAL_POLL_INTERVAL_MS
 
     while (!signal.aborted) {
-      await new Promise((resolve) => setTimeout(resolve, pollInterval))
+      const remaining = deadline - Date.now()
+      if (remaining <= 0) {
+        throw new Error('QUERY_SESSION_TIMEOUT')
+      }
 
-      if (signal.aborted) {
+      const didWait = await waitWithAbort(Math.min(pollInterval, remaining), signal)
+
+      if (!didWait || signal.aborted) {
         return
       }
 
@@ -132,6 +176,8 @@ export function useBlueprintParser(t: Translate) {
       if (session.ready) {
         return
       }
+
+      pollInterval = Math.min(MAX_POLL_INTERVAL_MS, Math.round(pollInterval * 1.5))
     }
   }
 
