@@ -152,7 +152,7 @@ async function copyShareCode() {
 }
 
 .header-title {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 24px;
   font-weight: 500;
   line-height: 28.13px;
@@ -178,7 +178,7 @@ async function copyShareCode() {
 }
 
 .status-text {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 14px;
   white-space: nowrap;
 }
@@ -206,7 +206,7 @@ async function copyShareCode() {
   border: 0;
   border-radius: 6px;
   background: transparent;
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -217,12 +217,12 @@ async function copyShareCode() {
 }
 
 .view-switch__button:hover:not(:disabled) {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .view-switch__button--active {
   background: rgba(196, 163, 90, 0.2);
-  color: #c4a35a;
+  color: var(--gold);
 }
 
 .view-switch__button:disabled {
@@ -247,8 +247,8 @@ async function copyShareCode() {
 
 .btn-gold {
   background: transparent;
-  border: 1px solid #c4a35a;
-  color: #c4a35a;
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 
 .btn-gold:hover {
@@ -258,12 +258,12 @@ async function copyShareCode() {
 .btn-outline {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .btn-outline:hover {
-  border-color: #c4a35a;
-  color: #c4a35a;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .btn-icon-text {
@@ -271,7 +271,7 @@ async function copyShareCode() {
 }
 
 .drop-zone--active {
-  border-color: #c4a35a !important;
+  border-color: var(--gold) !important;
   background: rgba(196, 163, 90, 0.1);
 }
 
@@ -293,13 +293,13 @@ async function copyShareCode() {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 14px;
   cursor: pointer;
 }
 
 .locale-select:hover {
-  border-color: #c4a35a;
+  border-color: var(--gold);
 }
 
 @media (max-width: 1180px) {

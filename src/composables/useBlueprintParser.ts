@@ -294,7 +294,21 @@ export function useBlueprintParser(t: Translate) {
 
   async function loadFile(file: File) {
     sourceName.value = file.name
-    rawText.value = await file.text()
+    const text = await file.text()
+    try {
+      const parsed = JSON.parse(text)
+      // If the file is already in { share_code, blueprint_data } format, use as-is
+      if (parsed && typeof parsed === 'object' && 'blueprint_data' in parsed) {
+        rawText.value = text
+      } else if (parsed && typeof parsed === 'object' && 'nodes' in parsed) {
+        // Bare blueprint data — wrap it
+        rawText.value = JSON.stringify({ share_code: '', blueprint_data: parsed })
+      } else {
+        rawText.value = text
+      }
+    } catch {
+      rawText.value = text
+    }
     rebuildSummary()
   }
 

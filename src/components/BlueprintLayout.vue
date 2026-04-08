@@ -14,6 +14,9 @@ const props = defineProps<{
 const { t, itemLabel, buildingLabel: translateBuildingLabel } = useBlueprintI18n()
 const renderMode = ref<BlueprintRenderLayoutMode>('normalized')
 const showDebug = ref(false)
+const userZoom = ref(1)
+const isPanning = ref(false)
+const panStart = ref({ x: 0, y: 0, scrollLeft: 0, scrollTop: 0 })
 const summaryRef = computed(() => props.summary)
 const scrollerRef = ref<HTMLElement | null>(null)
 const scrollerWidth = ref(0)
@@ -67,6 +70,59 @@ function updateScrollerSize() {
   scrollerHeight.value = Math.max(0, element.clientHeight)
 }
 
+const MIN_ZOOM = 0.5
+const MAX_ZOOM = 5
+
+function onWheel(e: WheelEvent) {
+  e.preventDefault()
+  const delta = e.deltaY > 0 ? -0.15 : 0.15
+  userZoom.value = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Math.round((userZoom.value + delta) * 100) / 100))
+}
+
+function resetZoom() {
+  userZoom.value = 1
+  const el = scrollerRef.value
+  if (el) {
+    el.scrollLeft = 0
+    el.scrollTop = 0
+  }
+}
+
+function onPanStart(e: MouseEvent) {
+  if (userZoom.value <= 1) return
+  isPanning.value = true
+  const el = scrollerRef.value!
+  panStart.value = { x: e.clientX, y: e.clientY, scrollLeft: el.scrollLeft, scrollTop: el.scrollTop }
+}
+
+function onPanMove(e: MouseEvent) {
+  if (!isPanning.value) return
+  const el = scrollerRef.value
+  if (!el) return
+  el.scrollLeft = panStart.value.scrollLeft - (e.clientX - panStart.value.x)
+  el.scrollTop = panStart.value.scrollTop - (e.clientY - panStart.value.y)
+}
+
+function onPanEnd() {
+  isPanning.value = false
+}
+
+const svgScale = computed(() => {
+  if (!svgWidth.value || !svgHeight.value) {
+    return 1
+  }
+
+  const widthScale = scrollerWidth.value > 0 ? scrollerWidth.value / svgWidth.value : 1
+  const heightScale = scrollerHeight.value > 0 ? scrollerHeight.value / svgHeight.value : 1
+
+  return Math.min(widthScale, heightScale) * userZoom.value
+})
+
+const zoomPercent = computed(() => Math.round(userZoom.value * 100))
+
+const renderedSvgWidth = computed(() => Math.max(0, Math.round(svgWidth.value * svgScale.value)))
+const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value * svgScale.value)))
+
 onMounted(() => {
   updateScrollerSize()
 
@@ -84,20 +140,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   scrollerResizeObserver?.disconnect()
 })
-
-const svgScale = computed(() => {
-  if (!svgWidth.value || !svgHeight.value) {
-    return 1
-  }
-
-  const widthScale = scrollerWidth.value > 0 ? scrollerWidth.value / svgWidth.value : 1
-  const heightScale = scrollerHeight.value > 0 ? scrollerHeight.value / svgHeight.value : 1
-
-  return Math.min(widthScale, heightScale)
-})
-
-const renderedSvgWidth = computed(() => Math.max(0, Math.round(svgWidth.value * svgScale.value)))
-const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value * svgScale.value)))
 </script>
 
 <template>
@@ -105,9 +147,9 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
     <div class="panel-header">
       <div class="panel-header__row">
         <div>
-          <p class="panel-flag">{{ t('layoutViewFlag') }}</p>
-          <h2>{{ t('layout') }}</h2>
-          <p>{{ t('layoutHint') }} · {{ t('layoutInferenceHint') }}</p>
+          <h2 class="section-title">{{ t('layout') }}</h2>
+          <span class="section-flag">{{ t('layoutViewFlag') }}</span>
+          <p class="section-hint">{{ t('layoutHint') }} · {{ t('layoutInferenceHint') }}</p>
         </div>
         <div class="layout-toolbar">
           <div class="mode-switch">
@@ -132,11 +174,24 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
           <input v-model="showDebug" type="checkbox" />
           <span>{{ t('debugOverlay') }}</span>
         </label>
+          <div class="zoom-controls">
+            <span class="zoom-label">{{ zoomPercent }}%</span>
+            <button v-if="userZoom !== 1" type="button" class="zoom-reset" @click="resetZoom">{{ 'Reset' }}</button>
+          </div>
       </div>
       </div>
     </div>
 
-    <div ref="scrollerRef" class="svg-scroller">
+    <div
+      ref="scrollerRef"
+      class="svg-scroller"
+      :class="{ 'svg-scroller--zoomed': userZoom > 1, 'svg-scroller--panning': isPanning }"
+      @wheel.prevent="onWheel"
+      @mousedown="onPanStart"
+      @mousemove="onPanMove"
+      @mouseup="onPanEnd"
+      @mouseleave="onPanEnd"
+    >
       <svg
         :viewBox="`0 0 ${svgWidth} ${svgHeight}`"
         :width="renderedSvgWidth || svgWidth"
@@ -379,35 +434,19 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
   background: var(--page-background);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  padding: 16px;
-  border-bottom: 1px solid #3a3a3a;
+  border-bottom: 1px solid var(--border-subtle);
   min-height: 100%;
   height: 100%;
 }
 
 .panel-header {
-  display: grid;
-  gap: 6px;
   margin-bottom: 16px;
 }
 
-.panel-header h2,
-.panel-header p,
-.panel-flag {
-  margin: 0;
-}
-
-.panel-flag {
-  color: #c4a35a;
+.section-hint {
+  color: var(--text-secondary);
   font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.panel-header h2 {
-  color: #ffffff;
-  font-size: 18px;
+  margin: 4px 0 0 0;
 }
 
 .panel-header__row {
@@ -415,11 +454,6 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
   gap: 16px;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.panel-header p {
-  color: #a0a0a0;
-  font-size: 12px;
 }
 
 .layout-toolbar {
@@ -436,7 +470,7 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
   padding: 4px;
   border-radius: 8px;
   border: 1px solid rgba(196, 163, 90, 0.2);
-  background: #2a2a2a;
+  background: var(--bg-panel);
 }
 
 .mode-button {
@@ -444,7 +478,7 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
   border-radius: 6px;
   padding: 6px 12px;
   background: transparent;
-  color: #a0a0a0;
+  color: var(--text-secondary);
   cursor: pointer;
   font-weight: 600;
   font-size: 12px;
@@ -452,21 +486,52 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
 }
 
 .mode-button--active {
-  background: rgba(196, 163, 90, 0.2);
-  color: #c4a35a;
+  background: var(--gold-border);
+  color: var(--gold);
 }
 
 .debug-toggle {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 13px;
   font-weight: 500;
 }
 
 .debug-toggle input {
-  accent-color: #c4a35a;
+  accent-color: var(--gold);
+}
+
+.zoom-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoom-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  min-width: 36px;
+  text-align: center;
+}
+
+.zoom-reset {
+  border: 0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: var(--gold-border);
+  color: var(--gold);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.zoom-reset:hover {
+  background: rgba(196, 163, 90, 0.35);
 }
 
 .svg-scroller {
@@ -475,16 +540,24 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
   justify-content: center;
   overflow: hidden;
   border-radius: 8px;
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--bg-hover);
   background: var(--page-background);
   min-height: 320px;
   height: 100%;
 }
 
+.svg-scroller--zoomed {
+  overflow: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.svg-scroller--panning {
+  cursor: grabbing;
+}
+
 .blueprint-svg {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .grid-line {
@@ -583,11 +656,11 @@ const renderedSvgHeight = computed(() => Math.max(0, Math.round(svgHeight.value 
     margin-bottom: 12px;
   }
 
-  .panel-header h2 {
+  .section-title {
     font-size: 16px;
   }
 
-  .panel-header p {
+  .section-hint {
     font-size: 11px;
   }
 

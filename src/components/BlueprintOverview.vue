@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useBlueprintI18n } from '@/composables/useBlueprintI18n'
 import { colorForTemplate } from '@/utils/blueprint'
 import type { BlueprintSummary } from '@/types'
@@ -23,6 +23,12 @@ const { t, buildingLabel, itemLabel, payloadLabel } = useBlueprintI18n()
 const copyState = ref('')
 const queryInput = ref('')
 let copyTimer: number | undefined
+
+watch(() => props.summary?.shareCode, (code) => {
+  if (code && code !== '-') {
+    queryInput.value = code
+  }
+})
 
 async function copyShareCode() {
   if (!props.summary?.shareCode || typeof navigator === 'undefined' || !navigator.clipboard) {
@@ -284,7 +290,7 @@ const payloadStreams = computed(() => {
 }
 
 .section-title {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 24px;
   font-weight: 500;
   line-height: 28.13px;
@@ -326,7 +332,7 @@ const payloadStreams = computed(() => {
 }
 
 .share-label {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 12px;
 }
 
@@ -357,12 +363,12 @@ const payloadStreams = computed(() => {
 }
 
 .share-btn:hover {
-  background: #c4a35a;
+  background: var(--gold);
 }
 
 .share-btn-icon {
   font-size: 14px;
-  color: #a0a0a0;
+  color: var(--text-secondary);
   transition: color 0.2s ease;
 }
 
@@ -417,7 +423,7 @@ const payloadStreams = computed(() => {
 }
 
 .share-query-input:focus {
-  border-color: #c4a35a;
+  border-color: var(--gold);
 }
 
 .share-query-input:disabled {
@@ -427,10 +433,10 @@ const payloadStreams = computed(() => {
 .share-query-btn {
   height: 32px;
   padding: 0 14px;
-  border: 1px solid #c4a35a;
+  border: 1px solid var(--gold);
   border-radius: 6px;
   background: rgba(196, 163, 90, 0.15);
-  color: #c4a35a;
+  color: var(--gold);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -464,12 +470,12 @@ const payloadStreams = computed(() => {
 }
 
 .metric-label {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 12px;
 }
 
 .metric-value {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 14px;
   font-weight: 500;
 }
@@ -521,7 +527,7 @@ const payloadStreams = computed(() => {
 }
 
 .facility-icon span {
-  color: #c4a35a;
+  color: var(--gold);
   font-weight: 700;
   font-size: 14px;
 }
@@ -534,7 +540,7 @@ const payloadStreams = computed(() => {
 }
 
 .facility-copy strong {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 13px;
   line-height: 1.2;
   overflow: hidden;
@@ -543,7 +549,7 @@ const payloadStreams = computed(() => {
 }
 
 .facility-count {
-  color: #c4a35a;
+  color: var(--gold);
   font-size: 12px;
 }
 
@@ -552,14 +558,14 @@ const payloadStreams = computed(() => {
 }
 
 .stream-label {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 12px;
   display: block;
   margin-bottom: 8px;
 }
 
 .empty-copy {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 12px;
   margin: 0;
 }
@@ -650,15 +656,15 @@ const payloadStreams = computed(() => {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
   background: transparent;
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .qr-cancel-btn:hover {
-  border-color: #c4a35a;
-  color: #c4a35a;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 @media (max-width: 1100px) {

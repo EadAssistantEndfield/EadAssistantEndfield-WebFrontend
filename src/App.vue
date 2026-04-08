@@ -23,7 +23,7 @@ watch(hasRenderableSummary, (available) => {
     return
   }
 
-  if (workbenchView.value !== 'json') {
+  if (available) {
     workbenchView.value = 'layout'
   }
 })
@@ -175,10 +175,10 @@ watch(hasRenderableSummary, (available) => {
   justify-content: space-between;
   gap: 12px;
   padding: 14px 16px;
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--bg-hover);
   border-radius: 12px;
-  background: #2a2a2a;
-  color: #ffffff;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -188,12 +188,12 @@ watch(hasRenderableSummary, (available) => {
 }
 
 .node-toggle:hover {
-  border-color: #c4a35a;
+  border-color: var(--gold);
   background: #313131;
 }
 
 .node-toggle__meta {
-  color: #c4a35a;
+  color: var(--gold);
   font-size: 13px;
 }
 
@@ -216,7 +216,7 @@ watch(hasRenderableSummary, (available) => {
 
   .workspace-sidebar {
     max-height: min(46vh, 420px);
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid var(--bg-hover);
   }
 
   .workspace-main {
