@@ -36,9 +36,25 @@ interface SessionSnapshot {
   error?: string | null
 }
 
+interface SessionPassportCredentials {
+  token: string
+  deviceToken: string
+}
+
+interface SessionPassportCredentialsResponse {
+  available?: boolean
+  token?: string
+  device_token?: string
+}
+
 const SESSION_READY_TIMEOUT_MS = 2 * 60 * 1000
+const SESSION_CREDENTIALS_READY_TIMEOUT_MS = 5 * 1000
+const SESSION_CREDENTIALS_POLL_INTERVAL_MS = 500
+const SESSION_STOP_TIMEOUT_MS = 5 * 1000
 const INITIAL_POLL_INTERVAL_MS = 1500
 const MAX_POLL_INTERVAL_MS = 5000
+const PASSPORT_COOKIE_NAME = 'ead_passport_credentials'
+const PASSPORT_COOKIE_MAX_AGE_SECONDS = 30 * 24 * 60 * 60
 
 function resolveApiUrl(path: string): string {
   if (path.startsWith('http')) {
@@ -62,6 +78,90 @@ async function generateQrDataUrl(text: string): Promise<string> {
     margin: 2,
     color: { dark: '#000000', light: '#ffffff' },
   })
+}
+
+function readCookie(name: string): string | null {
+  if (typeof document === 'undefined') {
+    return null
+  }
+
+  const prefix = `${name}=`
+  const target = document.cookie
+    .split(';')
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(prefix))
+
+  if (!target) {
+    return null
+  }
+
+  return target.slice(prefix.length)
+}
+
+function writeCookie(name: string, value: string, maxAgeSeconds: number) {
+  if (typeof document === 'undefined') {
+    return
+  }
+
+  const secure = typeof window !== 'undefined' && window.location.protocol === 'https:'
+  document.cookie = [
+    `${name}=${value}`,
+    'Path=/',
+    `Max-Age=${maxAgeSeconds}`,
+    'SameSite=Lax',
+    secure ? 'Secure' : '',
+  ]
+    .filter(Boolean)
+    .join('; ')
+}
+
+function clearCookie(name: string) {
+  if (typeof document === 'undefined') {
+    return
+  }
+
+  document.cookie = `${name}=; Path=/; Max-Age=0; SameSite=Lax`
+}
+
+function loadStoredPassportCredentials(): SessionPassportCredentials | null {
+  const raw = readCookie(PASSPORT_COOKIE_NAME)
+  if (!raw) {
+    return null
+  }
+
+  try {
+    const parsed = JSON.parse(decodeURIComponent(raw))
+    if (
+      parsed &&
+      typeof parsed === 'object' &&
+      typeof parsed.token === 'string' &&
+      typeof parsed.deviceToken === 'string' &&
+      parsed.token &&
+      parsed.deviceToken
+    ) {
+      return {
+        token: parsed.token,
+        deviceToken: parsed.deviceToken,
+      }
+    }
+  } catch {
+    // Ignore malformed cookie values and fall back to QR login.
+  }
+
+  clearCookie(PASSPORT_COOKIE_NAME)
+  return null
+}
+
+function storePassportCredentials(credentials: SessionPassportCredentials) {
+  writeCookie(
+    PASSPORT_COOKIE_NAME,
+    encodeURIComponent(JSON.stringify(credentials)),
+    PASSPORT_COOKIE_MAX_AGE_SECONDS,
+  )
+}
+
+function clearStoredPassportCredentials() {
+  clearCookie(PASSPORT_COOKIE_NAME)
 }
 
 function waitWithAbort(ms: number, signal: AbortSignal): Promise<boolean> {
@@ -97,7 +197,7 @@ export function useBlueprintParser(t: Translate) {
   const qrcodeUrl = ref('')
 
   let pollAbortController: AbortController | null = null
-  let cachedSessionId: string | null = null
+  let activeSessionId: string | null = null
 
   const errorMessage = computed(() => {
     if (errorKey.value) {
@@ -137,6 +237,35 @@ export function useBlueprintParser(t: Translate) {
       pollAbortController.abort()
       pollAbortController = null
     }
+  }
+
+  async function stopSession(sessionId: string): Promise<void> {
+    const controller = new AbortController()
+    const timer = setTimeout(() => {
+      controller.abort()
+    }, SESSION_STOP_TIMEOUT_MS)
+
+    try {
+      await fetch(resolveApiUrl(`/api/v1/sessions/${sessionId}/stop`), {
+        method: 'POST',
+        signal: controller.signal,
+      })
+    } catch {
+      // Closing the backend session is best-effort cleanup.
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  async function stopActiveSession(): Promise<void> {
+    const sessionId = activeSessionId
+    activeSessionId = null
+
+    if (!sessionId) {
+      return
+    }
+
+    await stopSession(sessionId)
   }
 
   async function pollUntilReady(
@@ -181,32 +310,75 @@ export function useBlueprintParser(t: Translate) {
     }
   }
 
-  async function getReadySessionId(signal: AbortSignal): Promise<string | null> {
-    if (!cachedSessionId) {
-      return null
+  async function syncPassportCredentials(
+    sessionId: string,
+    signal: AbortSignal,
+  ): Promise<void> {
+    try {
+      const deadline = Date.now() + SESSION_CREDENTIALS_READY_TIMEOUT_MS
+
+      while (!signal.aborted) {
+        const response = await fetch(
+          resolveApiUrl(`/api/v1/sessions/${sessionId}/passport-credentials`),
+          { signal },
+        )
+
+        if (!response.ok) {
+          return
+        }
+
+        const data: SessionPassportCredentialsResponse = await response.json()
+        if (data.available && data.token && data.device_token) {
+          storePassportCredentials({
+            token: data.token,
+            deviceToken: data.device_token,
+          })
+          return
+        }
+
+        if (Date.now() >= deadline) {
+          return
+        }
+
+        const didWait = await waitWithAbort(SESSION_CREDENTIALS_POLL_INTERVAL_MS, signal)
+        if (!didWait || signal.aborted) {
+          return
+        }
+      }
+    } catch {
+      // Persisting passport credentials is best-effort and should not break the query flow.
+      return
+    }
+  }
+
+  async function createFreshSession(signal: AbortSignal): Promise<{
+    sessionId: string
+    usedStoredCredentials: boolean
+    requiredScan: boolean
+  }> {
+    const storedCredentials = loadStoredPassportCredentials()
+
+    if (!storedCredentials) {
+      return createSessionAndWait(signal, null)
     }
 
     try {
-      const response = await fetch(resolveApiUrl(`/api/v1/sessions/${cachedSessionId}`), { signal })
-      if (!response.ok) {
-        cachedSessionId = null
-        return null
-      }
-
-      const session: SessionSnapshot = await response.json()
-      if (session.ready && !session.session_closed) {
-        return cachedSessionId
-      }
-
-      cachedSessionId = null
+      return await createSessionAndWait(signal, storedCredentials)
     } catch {
-      cachedSessionId = null
-    }
+      clearStoredPassportCredentials()
+      await stopActiveSession()
+      if (signal.aborted) {
+        throw new Error('QUERY_ABORTED')
+      }
 
-    return null
+      return createSessionAndWait(signal, null)
+    }
   }
 
-  async function createSessionAndWait(signal: AbortSignal): Promise<string> {
+  async function createSessionAndWait(
+    signal: AbortSignal,
+    credentials: SessionPassportCredentials | null,
+  ): Promise<{ sessionId: string; usedStoredCredentials: boolean; requiredScan: boolean }> {
     queryStage.value = 'creating_session'
     const sessionResponse = await fetch(resolveApiUrl('/api/v1/sessions'), {
       method: 'POST',
@@ -214,6 +386,12 @@ export function useBlueprintParser(t: Translate) {
       body: JSON.stringify({
         user_id: 'web_query',
         server_id: 'web',
+        ...(credentials
+          ? {
+              passport_token: credentials.token,
+              passport_device_token: credentials.deviceToken,
+            }
+          : {}),
         enabled_plugins: ['blueprint-query'],
       }),
       signal,
@@ -224,30 +402,56 @@ export function useBlueprintParser(t: Translate) {
     }
 
     const session: SessionSnapshot = await sessionResponse.json()
-    const sessionId = session.session_id
-
-    // Wait for login task to initialize
-    queryStage.value = 'waiting_scan'
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    if (signal.aborted) {
-      return sessionId
+    if (session.session_closed || session.error) {
+      throw new Error(session.error ?? t('querySessionError'))
     }
 
-    // Fetch session to get scan_url for QR code generation
-    const pollResponse = await fetch(resolveApiUrl(`/api/v1/sessions/${sessionId}`), { signal })
-    if (pollResponse.ok) {
-      const pollData: SessionSnapshot = await pollResponse.json()
-      if (pollData.scan_url) {
-        qrcodeUrl.value = await generateQrDataUrl(pollData.scan_url)
+    const sessionId = session.session_id
+    activeSessionId = sessionId
+
+    if (session.ready) {
+      return {
+        sessionId,
+        usedStoredCredentials: Boolean(credentials),
+        requiredScan: false,
       }
     }
 
-    // Wait for user to scan QR code
+    // Wait for login task to initialize
+    queryStage.value = 'waiting_scan'
+    if (session.scan_url) {
+      qrcodeUrl.value = await generateQrDataUrl(session.scan_url)
+    } else {
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+    }
+
+    if (signal.aborted) {
+      return {
+        sessionId,
+        usedStoredCredentials: Boolean(credentials),
+        requiredScan: true,
+      }
+    }
+
+    if (!session.scan_url) {
+      // Fetch session to get scan_url for QR code generation.
+      const pollResponse = await fetch(resolveApiUrl(`/api/v1/sessions/${sessionId}`), { signal })
+      if (pollResponse.ok) {
+        const pollData: SessionSnapshot = await pollResponse.json()
+        if (pollData.scan_url) {
+          qrcodeUrl.value = await generateQrDataUrl(pollData.scan_url)
+        }
+      }
+    }
+
+    // Wait for user to scan QR code.
     await pollUntilReady(sessionId, signal)
 
-    cachedSessionId = sessionId
-    return sessionId
+    return {
+      sessionId,
+      usedStoredCredentials: Boolean(credentials),
+      requiredScan: true,
+    }
   }
 
   async function loadFromShareCode(shareCode: string) {
@@ -260,25 +464,31 @@ export function useBlueprintParser(t: Translate) {
     const { signal } = pollAbortController
 
     try {
-      // Step 1: Try to reuse existing session
-      let sessionId = await getReadySessionId(signal)
+      const session = await createFreshSession(signal)
 
-      // Step 2: If no valid session, create one and wait for QR scan
-      if (!sessionId) {
-        sessionId = await createSessionAndWait(signal)
+      if (session.usedStoredCredentials && session.requiredScan) {
+        clearStoredPassportCredentials()
       }
 
       if (signal.aborted) {
         return
       }
 
-      // Step 3: Query blueprint
+      if (session.requiredScan) {
+        await syncPassportCredentials(session.sessionId, signal)
+      }
+
+      if (signal.aborted) {
+        return
+      }
+
+      // Query blueprint once the scan has completed.
       queryStage.value = 'querying'
       const bpResponse = await fetch(resolveApiUrl('/api/v1/blueprints/query'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          session_id: sessionId,
+          session_id: session.sessionId,
           share_code: shareCode,
           timeout: 30,
         }),
@@ -319,12 +529,14 @@ export function useBlueprintParser(t: Translate) {
       queryStage.value = 'idle'
       qrcodeUrl.value = ''
       pollAbortController = null
+      await stopActiveSession()
     }
   }
 
   function cancelQuery() {
     resetQueryState()
     queryLoading.value = false
+    void stopActiveSession()
   }
 
   function rebuildSummary() {

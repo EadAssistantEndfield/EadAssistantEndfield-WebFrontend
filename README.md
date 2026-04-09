@@ -30,6 +30,61 @@ npm run build
 npm run preview
 ```
 
+## 环境变量
+
+项目根目录提供了 [`.env.example`](./.env.example)。
+
+- `VITE_API_BASE_URL`
+  - 默认留空，前端会请求同域 `/api/...`
+  - 推荐部署方式也是保留为空，再由部署平台把 `/api` 反向代理到后端
+  - 只有后端已经正确开启浏览器 CORS 时，才应该改成完整后端地址
+- `VITE_PUBLIC_BASE_PATH`
+  - 默认是 `/`
+  - 如果站点部署在子路径，例如 `https://example.com/blueprint_analysis/`，设为 `/blueprint_analysis/`
+
+## 部署
+
+推荐使用“同域静态站点 + `/api` 反向代理”：
+
+1. 前端静态资源直接部署 `dist/`
+2. 浏览器继续请求同域 `/api/...`
+3. 由 Nginx、Vercel 或其他网关把 `/api` 转发到 `https://beta-api.ead.jamyido.cn`
+
+### Vercel
+
+仓库里的 [`vercel.json`](./vercel.json) 已经包含：
+
+- `npm run build`
+- `dist` 作为输出目录
+- `/api/:path* -> https://beta-api.ead.jamyido.cn/api/:path*` 的 rewrite
+
+这意味着 Vercel 根路径部署时，`VITE_API_BASE_URL` 可以保持为空，避免浏览器直接跨域访问后端。
+
+### 子路径部署
+
+如果不是部署在站点根路径，而是类似：
+
+```text
+https://example.com/blueprint_analysis/
+```
+
+请在构建前设置：
+
+```bash
+VITE_PUBLIC_BASE_PATH=/blueprint_analysis/
+```
+
+这样 Vite 会把产物里的资源路径改写到正确的子路径下。
+
+### 非 Vercel 部署
+
+如果你自己配 Nginx、Caddy 或其他反向代理，至少要满足两件事：
+
+1. 静态资源从 `VITE_PUBLIC_BASE_PATH` 对应的路径提供
+2. 同域 `/api/` 请求被反向代理到 `https://beta-api.ead.jamyido.cn/api/`
+
+如果部署方案必须让浏览器直接访问后端域名，请先确认后端已经允许对应前端域名的 CORS 预检请求，否则分享码查询仍然会失败。
+
 ## 测试
 
 ```bash
