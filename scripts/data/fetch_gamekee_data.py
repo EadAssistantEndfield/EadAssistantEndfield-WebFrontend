@@ -12,8 +12,6 @@
 """
 
 import json
-import re
-import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -169,8 +167,8 @@ def download_image(name: str, url: str, category: str, session: requests.Session
             if resp.status_code == 200 and len(resp.content) > 100:
                 img_path.write_bytes(resp.content)
                 return True
-        except requests.RequestException:
-            pass
+        except requests.RequestException as exc:
+            print(f"  图片下载异常 [{attempt}/{RETRY_COUNT}] {name}: {exc}")
         if attempt < RETRY_COUNT:
             time.sleep(RETRY_DELAY)
 

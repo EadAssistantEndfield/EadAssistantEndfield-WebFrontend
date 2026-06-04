@@ -58,9 +58,32 @@ function makeJsonResponse(body: unknown, ok = true): Response {
   } as unknown as Response
 }
 
+function createDeferred<T>() {
+  let resolve!: (value: T | PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise
+    reject = rejectPromise
+  })
+
+  return { promise, resolve, reject }
+}
+
+async function flushPromises(times = 6) {
+  for (let index = 0; index < times; index += 1) {
+    await Promise.resolve()
+  }
+}
+
 function parseRequestBody(callIndex: number, fetchMock: ReturnType<typeof vi.fn>) {
   const [, init] = fetchMock.mock.calls[callIndex] as [string, RequestInit]
   return JSON.parse(String(init.body))
+}
+
+function parseCreateSessionBodies(fetchMock: ReturnType<typeof vi.fn>) {
+  return fetchMock.mock.calls
+    .filter(([url]) => url === '/api/v1/sessions')
+    .map(([, init]) => JSON.parse(String((init as RequestInit).body)))
 }
 
 function createCookieJar(initialCookies: Record<string, string> = {}) {
@@ -388,6 +411,7 @@ describe('useBlueprintParser session credentials', () => {
           error: 'expired credentials',
         }),
       )
+      .mockResolvedValueOnce(makeJsonResponse({ session_id: 'session-stale', stage: 'stopped' }))
       .mockResolvedValueOnce(
         makeJsonResponse({
           session_id: 'session-3',
@@ -421,18 +445,20 @@ describe('useBlueprintParser session credentials', () => {
     await vi.advanceTimersByTimeAsync(1500)
     await loadPromise
 
-    expect(parseRequestBody(0, fetchMock)).toEqual({
+    const createSessionBodies = parseCreateSessionBodies(fetchMock)
+    expect(createSessionBodies[0]).toEqual({
       user_id: 'web_query',
       server_id: 'web',
       passport_token: 'stale-token',
       passport_device_token: 'stale-device',
       enabled_plugins: ['blueprint-query'],
     })
-    expect(parseRequestBody(1, fetchMock)).toEqual({
+    expect(createSessionBodies[1]).toEqual({
       user_id: 'web_query',
       server_id: 'web',
       enabled_plugins: ['blueprint-query'],
     })
+    expect(fetchMock.mock.calls.map(([url]) => url)).toContain('/api/v1/sessions/session-stale/stop')
     expect(cookieJar.get('ead_passport_credentials')).toBe(
       encodeURIComponent(JSON.stringify({ token: 'fresh-token', deviceToken: 'fresh-device' })),
     )
@@ -468,5 +494,143 @@ describe('useBlueprintParser session credentials', () => {
     )
     expect(parser.queryLoading.value).toBe(false)
     expect(parser.queryStage.value).toBe('idle')
+  })
+
+  it('does not let cancelled query cleanup stop a newer session', async () => {
+    createCookieJar()
+    const firstQuery = createDeferred<Response>()
+    const secondQuery = createDeferred<Response>()
+    const prematureNewSessionStops: string[] = []
+    let createSessionCount = 0
+    let secondQueryResolved = false
+
+    fetchMock.mockImplementation(async (input, init) => {
+      const url = String(input)
+
+      if (url === '/api/v1/sessions') {
+        createSessionCount += 1
+        return makeJsonResponse({
+          session_id: createSessionCount === 1 ? 'session-old' : 'session-new',
+          ready: true,
+          stage: 'ready',
+        })
+      }
+
+      if (url.endsWith('/passport-credentials')) {
+        return makeJsonResponse({ available: false })
+      }
+
+      if (url === '/api/v1/blueprints/query') {
+        const body = JSON.parse(String(init?.body))
+        if (body.session_id === 'session-old') {
+          return firstQuery.promise
+        }
+        if (body.session_id === 'session-new') {
+          return secondQuery.promise
+        }
+      }
+
+      if (url === '/api/v1/sessions/session-old/stop') {
+        return makeJsonResponse({ session_id: 'session-old', stage: 'stopped' })
+      }
+
+      if (url === '/api/v1/sessions/session-new/stop') {
+        if (!secondQueryResolved) {
+          prematureNewSessionStops.push(url)
+        }
+        return makeJsonResponse({ session_id: 'session-new', stage: 'stopped' })
+      }
+
+      throw new Error(`Unexpected fetch call: ${url}`)
+    })
+
+    const parser = useBlueprintParser(makeTranslator)
+    const firstLoadPromise = parser.loadFromShareCode('share-old')
+
+    await flushPromises()
+    parser.cancelQuery()
+
+    const secondLoadPromise = parser.loadFromShareCode('share-new')
+    await flushPromises()
+
+    firstQuery.reject(new DOMException('Aborted', 'AbortError'))
+    await firstLoadPromise
+    await flushPromises()
+
+    expect(prematureNewSessionStops).toEqual([])
+
+    secondQueryResolved = true
+    secondQuery.resolve(makeJsonResponse(makeBlueprintResponse('share-new')))
+    await secondLoadPromise
+
+    expect(fetchMock.mock.calls.filter(([url]) => url === '/api/v1/sessions/session-new/stop')).toHaveLength(1)
+    expect(parser.summary.value?.shareCode).toBe('share-new')
+  })
+
+  it('keeps stored passport credentials when session start is aborted', async () => {
+    const storedCookie = encodeURIComponent(JSON.stringify({ token: 'saved-token', deviceToken: 'saved-device' }))
+    const cookieJar = createCookieJar({
+      ead_passport_credentials: storedCookie,
+    })
+
+    fetchMock.mockImplementation((input, init) => {
+      const url = String(input)
+      if (url !== '/api/v1/sessions') {
+        throw new Error(`Unexpected fetch call: ${url}`)
+      }
+
+      return new Promise<Response>((_resolve, reject) => {
+        const signal = init?.signal as AbortSignal | undefined
+        signal?.addEventListener('abort', () => reject(new DOMException('Aborted', 'AbortError')), { once: true })
+      })
+    })
+
+    const parser = useBlueprintParser(makeTranslator)
+    const loadPromise = parser.loadFromShareCode('share-abort')
+
+    await flushPromises()
+    parser.cancelQuery()
+    await loadPromise
+
+    expect(cookieJar.get('ead_passport_credentials')).toBe(storedCookie)
+  })
+
+  it('keeps stored passport credentials when credential-backed session start has a network error', async () => {
+    const storedCookie = encodeURIComponent(JSON.stringify({ token: 'saved-token', deviceToken: 'saved-device' }))
+    const cookieJar = createCookieJar({
+      ead_passport_credentials: storedCookie,
+    })
+
+    fetchMock
+      .mockRejectedValueOnce(new TypeError('Failed to fetch'))
+      .mockResolvedValueOnce(
+        makeJsonResponse({
+          session_id: 'session-network-fallback',
+          ready: true,
+          stage: 'ready',
+        }),
+      )
+      .mockResolvedValueOnce(makeJsonResponse({ available: false }))
+      .mockResolvedValueOnce(makeJsonResponse(makeBlueprintResponse('share-network')))
+      .mockResolvedValueOnce(makeJsonResponse({ session_id: 'session-network-fallback', stage: 'stopped' }))
+
+    const parser = useBlueprintParser(makeTranslator)
+    await parser.loadFromShareCode('share-network')
+
+    const createSessionBodies = parseCreateSessionBodies(fetchMock)
+    expect(createSessionBodies[0]).toEqual({
+      user_id: 'web_query',
+      server_id: 'web',
+      passport_token: 'saved-token',
+      passport_device_token: 'saved-device',
+      enabled_plugins: ['blueprint-query'],
+    })
+    expect(createSessionBodies[1]).toEqual({
+      user_id: 'web_query',
+      server_id: 'web',
+      enabled_plugins: ['blueprint-query'],
+    })
+    expect(cookieJar.get('ead_passport_credentials')).toBe(storedCookie)
+    expect(parser.summary.value?.shareCode).toBe('share-network')
   })
 })

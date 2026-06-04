@@ -16,6 +16,10 @@ import {
 export type QueryStage = 'idle' | 'checking_cache' | 'creating_session' | 'waiting_scan' | 'querying'
 
 type Translate = (key: UiMessageKey) => string
+type QueryContext = {
+  controller: AbortController
+  sessionId: string | null
+}
 
 const SESSION_READY_TIMEOUT_MS = 2 * 60 * 1000
 const SESSION_CREDENTIALS_READY_TIMEOUT_MS = 30 * 1000
@@ -51,22 +55,50 @@ function isAbortError(error: unknown, signal: AbortSignal): boolean {
   return signal.aborted || (error instanceof DOMException && error.name === 'AbortError')
 }
 
+function isStoredCredentialRejection(error: unknown): boolean {
+  if (!(error instanceof Error)) {
+    return false
+  }
+
+  const message = error.message.toLowerCase()
+  return ['credential', 'passport', 'token', 'expired', 'unauthorized', 'forbidden', 'invalid'].some((marker) =>
+    message.includes(marker),
+  )
+}
+
 export function useShareQuerySession(t: Translate) {
   const queryLoading = ref(false)
   const queryStage = ref<QueryStage>('idle')
   const qrcodeUrl = ref('')
 
-  let pollAbortController: AbortController | null = null
-  let activeSessionId: string | null = null
+  let activeQuery: QueryContext | null = null
+
+  function isCurrentQuery(query: QueryContext, signal: AbortSignal): boolean {
+    return activeQuery === query && !signal.aborted
+  }
+
+  function setQueryStage(query: QueryContext, signal: AbortSignal, stage: QueryStage) {
+    if (isCurrentQuery(query, signal)) {
+      queryStage.value = stage
+    }
+  }
+
+  async function setQrCodeFromScanUrl(query: QueryContext, signal: AbortSignal, scanUrl: string) {
+    const dataUrl = await generateQrDataUrl(scanUrl)
+    if (isCurrentQuery(query, signal)) {
+      qrcodeUrl.value = dataUrl
+    }
+  }
 
   function resetQueryState() {
     queryStage.value = 'idle'
     qrcodeUrl.value = ''
-    if (pollAbortController) {
-      pollAbortController.abort()
-      pollAbortController = null
+    const query = activeQuery
+    if (query) {
+      query.controller.abort()
+      activeQuery = null
     }
-    void stopActiveSession()
+    void stopQuerySession(query)
   }
 
   async function stopSession(sessionId: string): Promise<void> {
@@ -87,9 +119,13 @@ export function useShareQuerySession(t: Translate) {
     }
   }
 
-  async function stopActiveSession(): Promise<void> {
-    const sessionId = activeSessionId
-    activeSessionId = null
+  async function stopQuerySession(query: QueryContext | null): Promise<void> {
+    if (!query) {
+      return
+    }
+
+    const sessionId = query.sessionId
+    query.sessionId = null
 
     if (!sessionId) {
       return
@@ -98,7 +134,7 @@ export function useShareQuerySession(t: Translate) {
     await stopSession(sessionId)
   }
 
-  async function pollUntilReady(sessionId: string, signal: AbortSignal): Promise<void> {
+  async function pollUntilReady(query: QueryContext, sessionId: string, signal: AbortSignal): Promise<void> {
     const deadline = Date.now() + SESSION_READY_TIMEOUT_MS
     let pollInterval = INITIAL_POLL_INTERVAL_MS
 
@@ -125,8 +161,8 @@ export function useShareQuerySession(t: Translate) {
         throw new Error(session.error ?? t('querySessionError'))
       }
 
-      if (session.scan_url && !qrcodeUrl.value) {
-        qrcodeUrl.value = await generateQrDataUrl(session.scan_url)
+      if (session.scan_url && !qrcodeUrl.value && isCurrentQuery(query, signal)) {
+        await setQrCodeFromScanUrl(query, signal, session.scan_url)
       }
 
       if (session.ready) {
@@ -196,7 +232,7 @@ export function useShareQuerySession(t: Translate) {
     })
   }
 
-  async function createFreshSession(signal: AbortSignal): Promise<{
+  async function createFreshSession(query: QueryContext, signal: AbortSignal): Promise<{
     sessionId: string
     usedStoredCredentials: boolean
     requiredScan: boolean
@@ -204,27 +240,31 @@ export function useShareQuerySession(t: Translate) {
     const storedCredentials = loadStoredPassportCredentials()
 
     if (!storedCredentials) {
-      return createSessionAndWait(signal, null)
+      return createSessionAndWait(query, signal, null)
     }
 
     try {
-      return await createSessionAndWait(signal, storedCredentials)
-    } catch {
-      clearStoredPassportCredentials()
-      await stopActiveSession()
-      if (signal.aborted) {
-        throw new Error('QUERY_ABORTED')
+      return await createSessionAndWait(query, signal, storedCredentials)
+    } catch (error) {
+      await stopQuerySession(query)
+      if (isAbortError(error, signal)) {
+        throw error
       }
 
-      return createSessionAndWait(signal, null)
+      if (isStoredCredentialRejection(error)) {
+        clearStoredPassportCredentials()
+      }
+
+      return createSessionAndWait(query, signal, null)
     }
   }
 
   async function createSessionAndWait(
+    query: QueryContext,
     signal: AbortSignal,
     credentials: SessionPassportCredentials | null,
   ): Promise<{ sessionId: string; usedStoredCredentials: boolean; requiredScan: boolean }> {
-    queryStage.value = 'creating_session'
+    setQueryStage(query, signal, 'creating_session')
     const sessionResponse = await fetch(resolveApiUrl('/api/v1/sessions'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -247,12 +287,16 @@ export function useShareQuerySession(t: Translate) {
     }
 
     const session: SessionSnapshot = await sessionResponse.json()
+    const sessionId = session.session_id
+    query.sessionId = sessionId
+
+    if (signal.aborted) {
+      throw new DOMException('Aborted', 'AbortError')
+    }
+
     if (session.session_closed || session.error) {
       throw new Error(session.error ?? t('querySessionError'))
     }
-
-    const sessionId = session.session_id
-    activeSessionId = sessionId
 
     if (session.ready) {
       return {
@@ -262,9 +306,9 @@ export function useShareQuerySession(t: Translate) {
       }
     }
 
-    queryStage.value = 'waiting_scan'
+    setQueryStage(query, signal, 'waiting_scan')
     if (session.scan_url) {
-      qrcodeUrl.value = await generateQrDataUrl(session.scan_url)
+      await setQrCodeFromScanUrl(query, signal, session.scan_url)
     } else {
       const scanDeadline = Date.now() + 10 * 1000
       while (!signal.aborted && Date.now() < scanDeadline) {
@@ -277,7 +321,7 @@ export function useShareQuerySession(t: Translate) {
         if (pollResponse.ok) {
           const pollData: SessionSnapshot = await pollResponse.json()
           if (pollData.scan_url) {
-            qrcodeUrl.value = await generateQrDataUrl(pollData.scan_url)
+            await setQrCodeFromScanUrl(query, signal, pollData.scan_url)
             break
           }
           if (pollData.ready || pollData.session_closed || pollData.error) {
@@ -295,7 +339,7 @@ export function useShareQuerySession(t: Translate) {
       }
     }
 
-    await pollUntilReady(sessionId, signal)
+    await pollUntilReady(query, sessionId, signal)
 
     return {
       sessionId,
@@ -304,8 +348,13 @@ export function useShareQuerySession(t: Translate) {
     }
   }
 
-  async function queryBlueprint(sessionId: string, shareCode: string, signal: AbortSignal): Promise<unknown> {
-    queryStage.value = 'querying'
+  async function queryBlueprint(
+    query: QueryContext,
+    sessionId: string,
+    shareCode: string,
+    signal: AbortSignal,
+  ): Promise<unknown> {
+    setQueryStage(query, signal, 'querying')
     const bpResponse = await fetch(resolveApiUrl('/api/v1/blueprints/query'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -338,11 +387,15 @@ export function useShareQuerySession(t: Translate) {
     queryLoading.value = true
     resetQueryState()
 
-    pollAbortController = new AbortController()
-    const { signal } = pollAbortController
+    const query: QueryContext = {
+      controller: new AbortController(),
+      sessionId: null,
+    }
+    activeQuery = query
+    const { signal } = query.controller
 
     try {
-      const session = await createFreshSession(signal)
+      const session = await createFreshSession(query, signal)
 
       if (signal.aborted) {
         throw new DOMException('Aborted', 'AbortError')
@@ -364,7 +417,7 @@ export function useShareQuerySession(t: Translate) {
         throw new DOMException('Aborted', 'AbortError')
       }
 
-      return await queryBlueprint(session.sessionId, shareCode, signal)
+      return await queryBlueprint(query, session.sessionId, shareCode, signal)
     } catch (error) {
       if (isAbortError(error, signal)) {
         return null
@@ -372,11 +425,13 @@ export function useShareQuerySession(t: Translate) {
 
       throw error
     } finally {
-      queryLoading.value = false
-      queryStage.value = 'idle'
-      qrcodeUrl.value = ''
-      pollAbortController = null
-      await stopActiveSession()
+      if (activeQuery === query) {
+        queryLoading.value = false
+        queryStage.value = 'idle'
+        qrcodeUrl.value = ''
+        activeQuery = null
+      }
+      await stopQuerySession(query)
     }
   }
 
