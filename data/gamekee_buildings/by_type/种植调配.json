@@ -1,397 +1,141 @@
 {
-  "source": "https://www.gamekee.com/zmd/second/204958",
   "category": "种植调配",
-  "count": 10,
+  "count": 9,
   "buildings": [
+    {
+      "name": "荞花田块",
+      "url": "https://www.gamekee.com/zmd/692042.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/761179.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
     {
       "name": "柑实田块",
       "url": "https://www.gamekee.com/zmd/692133.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "柑实（大量） 黯银柑实（高概率获得）",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/163123.png",
       "footprint": "",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "柑实田块 设备类型 种植调配 收获资源 柑实（大量） 黯银柑实（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "柑实（大量） 黯银柑实（高概率获得）"
-            }
-          ],
-          "text": "基础信息 柑实田块 设备类型 种植调配 收获资源 柑实（大量） 黯银柑实（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获柑实"
-        }
-      ]
-    },
-    {
-      "name": "灰芦麦田块",
-      "url": "https://www.gamekee.com/zmd/692140.html",
       "deviceType": "种植调配",
-      "power": "",
-      "purpose": "灰芦麦",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
       "supplyRange": "",
-      "recommendation": "灰芦麦田块 设备类型 种植调配 收获资源 灰芦麦 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "灰芦麦"
-            }
-          ],
-          "text": "基础信息 灰芦麦田块 设备类型 种植调配 收获资源 灰芦麦 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获灰芦麦"
-        }
-      ]
-    },
-    {
-      "name": "琼叶参田块",
-      "url": "https://www.gamekee.com/zmd/692142.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "琼叶参",
-      "footprint": "",
-      "protocolCapacity": "",
+      "purpose": "",
       "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "琼叶参田块 设备类型 种植调配 收获资源 琼叶参 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "琼叶参"
-            }
-          ],
-          "text": "基础信息 琼叶参田块 设备类型 种植调配 收获资源 琼叶参 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 喷洒器多次浇水、成长、收获琼叶参"
-        }
-      ]
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
     },
     {
       "name": "砂叶田块",
       "url": "https://www.gamekee.com/zmd/692136.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "砂叶（大量）",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/725317.png",
       "footprint": "",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "砂叶田块 设备类型 种植调配 收获资源 砂叶（大量） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "砂叶（大量）"
-            }
-          ],
-          "text": "基础信息 砂叶田块 设备类型 种植调配 收获资源 砂叶（大量） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获砂叶"
-        }
-      ]
-    },
-    {
-      "name": "芽针田块",
-      "url": "https://www.gamekee.com/zmd/692139.html",
       "deviceType": "种植调配",
-      "power": "",
-      "purpose": "芽针（大量） 荆刺芽针（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
       "supplyRange": "",
-      "recommendation": "芽针田块 设备类型 种植调配 收获资源 芽针（大量） 荆刺芽针（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "芽针（大量） 荆刺芽针（高概率获得）"
-            }
-          ],
-          "text": "基础信息 芽针田块 设备类型 种植调配 收获资源 芽针（大量） 荆刺芽针（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获芽针"
-        }
-      ]
-    },
-    {
-      "name": "苦叶椒田块",
-      "url": "https://www.gamekee.com/zmd/692141.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "苦叶椒",
-      "footprint": "",
-      "protocolCapacity": "",
+      "purpose": "",
       "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "苦叶椒田块 设备类型 种植调配 收获资源 苦叶椒 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "苦叶椒"
-            }
-          ],
-          "text": "基础信息 苦叶椒田块 设备类型 种植调配 收获资源 苦叶椒 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获苦叶椒"
-        }
-      ]
-    },
-    {
-      "name": "荞花田块",
-      "url": "https://www.gamekee.com/zmd/692042.html",
-      "deviceType": "种植调配",
       "power": "",
-      "purpose": "荞花（大量） 映火荞花（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "荞花田块 设备类型 种植调配 收获资源 荞花（大量） 映火荞花（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "荞花（大量） 映火荞花（高概率获得）"
-            }
-          ],
-          "text": "基础信息 荞花田块 设备类型 种植调配 收获资源 荞花（大量） 映火荞花（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获荞花"
-        }
-      ]
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
     },
     {
       "name": "酮化灌木田块",
       "url": "https://www.gamekee.com/zmd/692137.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "酮化灌木（大量）",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_194/50248/103682/2026/0/17/592639.png",
       "footprint": "",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "酮化灌木田块 设备类型 种植调配 收获资源 酮化灌木（大量） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "酮化灌木（大量）"
-            }
-          ],
-          "text": "基础信息 酮化灌木田块 设备类型 种植调配 收获资源 酮化灌木（大量） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获酮化灌木"
-        }
-      ]
-    },
-    {
-      "name": "金石稻田块",
-      "url": "https://www.gamekee.com/zmd/692143.html",
       "deviceType": "种植调配",
-      "power": "",
-      "purpose": "金石稻",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
       "supplyRange": "",
-      "recommendation": "金石稻田块 设备类型 种植调配 收获资源 金石稻 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "金石稻"
-            }
-          ],
-          "text": "基础信息 金石稻田块 设备类型 种植调配 收获资源 金石稻 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 喷洒器多次浇水、成长、收获金石稻"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
     },
     {
       "name": "锦草田块",
       "url": "https://www.gamekee.com/zmd/692138.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "锦草（大量） 蓬茸锦草（高概率获得）",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_192/50248/103682/2026/0/17/582451.png",
       "footprint": "",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "种植调配",
       "supplyRange": "",
-      "recommendation": "锦草田块 设备类型 种植调配 收获资源 锦草（大量） 蓬茸锦草（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "锦草（大量） 蓬茸锦草（高概率获得）"
-            }
-          ],
-          "text": "基础信息 锦草田块 设备类型 种植调配 收获资源 锦草（大量） 蓬茸锦草（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获锦草"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针田块",
+      "url": "https://www.gamekee.com/zmd/692139.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/981637.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "苦叶椒田块",
+      "url": "https://www.gamekee.com/zmd/692141.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/953263.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "琼叶参田块",
+      "url": "https://www.gamekee.com/zmd/692142.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_182/h_191/50248/103682/2026/0/17/130257.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "金石稻田块",
+      "url": "https://www.gamekee.com/zmd/692143.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_192/50248/103682/2026/0/17/268769.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
     }
   ]
 }

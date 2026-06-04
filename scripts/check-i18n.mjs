@@ -3,8 +3,9 @@ import path from 'node:path'
 import ts from 'typescript'
 
 const rootDir = process.cwd()
-const messagesPath = path.join(rootDir, 'src', 'i18n', 'messages.ts')
-const buildingMessagesPath = path.join(rootDir, 'src', 'i18n', 'buildingMessages.ts')
+const blueprintI18nDir = path.join(rootDir, 'src', 'features', 'blueprint', 'i18n')
+const messagesPath = path.join(blueprintI18nDir, 'messages.ts')
+const buildingMessagesPath = path.join(blueprintI18nDir, 'buildingMessages.ts')
 
 /**
  * @param {string} filePath

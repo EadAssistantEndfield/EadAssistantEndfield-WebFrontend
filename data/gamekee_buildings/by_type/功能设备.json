@@ -1,303 +1,96 @@
 {
-  "source": "https://www.gamekee.com/zmd/second/204958",
   "category": "功能设备",
   "count": 6,
   "buildings": [
     {
       "name": "便携存取站",
       "url": "https://www.gamekee.com/zmd/692038.html",
-      "deviceType": "功能设备",
-      "power": "5",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_191/50248/103682/2026/0/17/525321.png",
       "footprint": "3x3",
       "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
       "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携存取站 设备类型 功能设备 耗电功率值 5 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 便携存取站 设备类型 功能设备 耗电功率值 5 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 便捷存取站直接连接当地的仓库，可用于野外便捷地通过仓库存取物品。"
-        }
-      ]
-    },
-    {
-      "name": "洒水机",
-      "url": "https://www.gamekee.com/zmd/692120.html",
-      "deviceType": "功能设备",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携存取站 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 便携存取站 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 洒水机在接入水源后可为需要浇灌的目标进行液体喷洒。"
-        }
-      ]
-    },
-    {
-      "name": "滑索架",
-      "url": "https://www.gamekee.com/zmd/692118.html",
-      "deviceType": "功能设备",
       "power": "5",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "80m",
-      "supplyRange": "",
-      "recommendation": "滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 80m 设备使用建议 施工中...",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
       "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "链接范围",
-              "value": "80m"
-            }
-          ],
-          "text": "基础信息 滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 80m 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 滑索架用于在两地之间快速移动，靠近即可使用。可以选定其他滑索架作为目标，快速前往该处地点。"
-        }
-      ]
+      "sections": []
     },
     {
       "name": "留言信标",
       "url": "https://www.gamekee.com/zmd/692117.html",
-      "deviceType": "功能设备",
-      "power": "/",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_194/50248/103682/2026/0/17/736790.png",
       "footprint": "1x1",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "功能设备",
       "supplyRange": "",
-      "recommendation": "留言信标 设备类型 功能设备 耗电功率值 / 占用面积 1x1 设备使用建议 施工中...",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 功能设备 耗电功率值 / 耗电功率 / 占用面积 1x1",
       "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "1x1"
-            }
-          ],
-          "text": "基础信息 留言信标 设备类型 功能设备 耗电功率值 / 占用面积 1x1 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 留言信标会留下一些图标和文字内容，记录了他人在这里想传达的信息。"
-        }
-      ]
+      "sections": []
     },
     {
-      "name": "给水器",
-      "url": "https://www.gamekee.com/zmd/692121.html",
-      "deviceType": "功能设备",
-      "power": "10",
-      "purpose": "",
+      "name": "滑索架",
+      "url": "https://www.gamekee.com/zmd/692118.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/561576.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "功能设备",
       "supplyRange": "",
-      "recommendation": "给水器 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 给水器 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 给水器只能在湖泊或水池附近建造，且给水器的输水口必须悬于液面上方。给水器接入电网后，可以将液体输出到对应的场景内。"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
     },
     {
       "name": "长距滑索架",
       "url": "https://www.gamekee.com/zmd/692119.html",
-      "deviceType": "功能设备",
-      "power": "5",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/422258.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "110m",
+      "deviceType": "功能设备",
       "supplyRange": "",
-      "recommendation": "长距滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 110m 设备使用建议 施工中...",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
       "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "链接范围",
-              "value": "110m"
-            }
-          ],
-          "text": "基础信息 长距滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 110m 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 长距滑索架是一种改良后的滑索架。长距滑索架不仅可以增加传输距离，而且可支持一次性通过多个长距滑索架。"
-        }
-      ]
+      "sections": []
+    },
+    {
+      "name": "洒水机",
+      "url": "https://www.gamekee.com/zmd/692120.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_191/50248/103682/2026/0/17/839156.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 功能设备 耗电功率值 10 耗电功率 10 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "给水器",
+      "url": "https://www.gamekee.com/zmd/692121.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_188/50248/103682/2026/0/17/799543.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 功能设备 耗电功率值 10 耗电功率 10 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
     }
   ]
 }

@@ -1,7 +1,8 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vite-plus'
 import { loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
+import type { ConfigEnv, PluginOption, UserConfig } from 'vite-plus'
 
 function normalizePublicBasePath(rawBasePath?: string): string {
   const basePath = rawBasePath?.trim()
@@ -22,13 +23,13 @@ function normalizePublicBasePath(rawBasePath?: string): string {
   return withLeadingSlash.endsWith('/') ? withLeadingSlash : `${withLeadingSlash}/`
 }
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd(), '')
 
-  return {
+  const config: UserConfig = {
     // Vite rewrites built asset URLs against `base`, which is required for subpath deployments.
     base: normalizePublicBasePath(env.VITE_PUBLIC_BASE_PATH),
-    plugins: [vue()],
+    plugins: [vue() as unknown as PluginOption],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -45,27 +46,6 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    test: {
-      environment: 'node',
-      include: ['tests/**/*.test.ts'],
-      exclude: ['dist/**', 'node_modules/**'],
-      coverage: {
-        provider: 'v8',
-        reporter: ['text', 'html', 'json-summary', 'lcov'],
-        reportsDirectory: './coverage',
-        exclude: [
-          'coverage/**',
-          'data/**',
-          'dist/**',
-          'node_modules/**',
-          'scripts/**',
-          'tests/**',
-          '**/*.json',
-          '**/*.png',
-          'src/main.ts',
-          'src/vite-env.d.ts',
-        ],
-      },
-    },
   }
+  return config
 })

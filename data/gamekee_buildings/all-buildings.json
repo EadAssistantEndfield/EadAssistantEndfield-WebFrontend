@@ -1,3252 +1,3679 @@
 {
   "source": "https://www.gamekee.com/zmd/second/204958",
-  "count": 69,
+  "count": 244,
   "failureCount": 0,
   "failures": [],
   "categories": [
-    "仓储存取",
-    "功能设备",
-    "合成制造",
     "基础生产",
+    "合成制造",
     "战斗辅助",
-    "物流设备",
+    "资源开采",
+    "仓储存取",
     "电力供应",
+    "功能设备",
     "种植调配",
-    "资源开采"
+    "未分类"
   ],
   "buildings": [
     {
-      "name": "AF1“熔甲者”",
-      "url": "https://www.gamekee.com/zmd/697597.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
+      "name": "扩容反应池",
+      "url": "https://www.gamekee.com/zmd/702472.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_189/50248/103682/2026/3/18/855305.png",
+      "footprint": "6x5",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "AF1“熔甲者” 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2",
-      "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 AF1“熔甲者” 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：17252 攻击间隔 ：0秒 攻击范围 ：7米 攻击方式 ：当敌人靠近时，喷射火焰攻击敌人，对范围内的敌人持续造成灼热伤害。 能喷发出火焰射流的攻击型设备，其燃料由多种易燃液体混合而成，焚尽一切的气势能让人联想到泰拉历史中那些无情的火焰。"
-        }
-      ]
-    },
-    {
-      "name": "“毒沼”MK-I",
-      "url": "https://www.gamekee.com/zmd/692132.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "“毒沼”MK-I 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 “毒沼”MK-I 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：5485 攻击间隔 ：5秒 攻击范围 ：18米 攻击方式 ：发射特制毒雾弹，毒雾弹会在敌人附近地面爆炸并造成范围自然伤害，同时在地面留下一片毒雾区，对敌人造成伤害并降低移动速度。"
-        }
-      ]
-    },
-    {
-      "name": "中继器",
-      "url": "https://www.gamekee.com/zmd/692113.html",
-      "deviceType": "电力供应",
-      "power": "",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "1",
-      "wireLength": "80m",
-      "supplyRange": "7x7",
-      "recommendation": "中继器 设备类型 电力供应 协议容量消耗 1 占用面积 3x3 电线长度 80m 供电范围 7x7 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "电力供应"
-            },
-            {
-              "label": "协议容量消耗",
-              "value": "1"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "电线长度",
-              "value": "80m"
-            },
-            {
-              "label": "供电范围",
-              "value": "7x7"
-            }
-          ],
-          "text": "基础信息 中继器 设备类型 电力供应 协议容量消耗 1 占用面积 3x3 电线长度 80m 供电范围 7x7 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 中继器是运输电力的重要连接设备。电力可通过中继器运输至其他的中继器、供电桩以及供电终端，使其接入电网。"
-        }
-      ]
-    },
-    {
-      "name": "二型电驱矿机",
-      "url": "https://www.gamekee.com/zmd/690571.html",
-      "deviceType": "资源开采",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "二型电驱矿机 设备类型 资源开采 耗电功率值 10 占用面积 3x3 设备使用建议 二型电驱矿机是电驱矿机加强版，能够采集源矿/紫晶矿/蓝铁矿 电驱矿机是一种地区采矿设备，其作用是将矿物采集后自动运回主核心，收集各种矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 二型电驱矿机 设备类型 资源开采 耗电功率值 10 占用面积 3x3 设备使用建议 二型电驱矿机是电驱矿机加强版，能够采集源矿/紫晶矿/蓝铁矿 电驱矿机是一种地区采矿设备，其作用是将矿物采集后自动运回主核心，收集各种矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿 紫晶矿 蓝铁矿"
-        }
-      ]
-    },
-    {
-      "name": "仓库取货口",
-      "url": "https://www.gamekee.com/zmd/690854.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "原料取出",
-      "footprint": "3x1",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库取货口 设备类型 仓储存取 耗电功率值 / 占用面积 3x1 用途 原料取出 设备使用建议 仓库取货口是一种产物取出装置，其作用是连接仓库存取线取出基建产物",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x1"
-            },
-            {
-              "label": "用途",
-              "value": "原料取出"
-            }
-          ],
-          "text": "基础信息 仓库取货口 设备类型 仓储存取 耗电功率值 / 占用面积 3x1 用途 原料取出 设备使用建议 仓库取货口是一种产物取出装置，其作用是连接仓库存取线取出基建产物"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 可使用仓库取货口选择仓库中的物品，连接传送带后，就会从仓库中自动输出。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存取线基段",
-      "url": "https://www.gamekee.com/zmd/692084.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "8×4",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存取线基段 设备类型 仓储存取 耗电功率值 / 占用面积 8×4 用途 输出原料 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "8×4"
-            },
-            {
-              "label": "用途",
-              "value": "输出原料"
-            }
-          ],
-          "text": "基础信息 仓库存取线基段 设备类型 仓储存取 耗电功率值 / 占用面积 8×4 用途 输出原料 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 仓库存取线基段和仓库存取线源桩或其他生效的仓库存取线基段相连后，其上可贴靠放置仓库存货口和仓库取货口。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存取线源桩",
-      "url": "https://www.gamekee.com/zmd/692085.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "存取基段核心",
-      "footprint": "4x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存取线源桩 设备类型 仓储存取 耗电功率值 / 占用面积 4x4 用途 存取基段核心 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "4x4"
-            },
-            {
-              "label": "用途",
-              "value": "存取基段核心"
-            }
-          ],
-          "text": "基础信息 仓库存取线源桩 设备类型 仓储存取 耗电功率值 / 占用面积 4x4 用途 存取基段核心 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 50"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 可以在集成核心区域放置仓库存取线源桩，仓库存取线基段和仓库存取线源桩或其他生效的仓库存取线基段相连后，其上可贴靠放置仓库存货口和仓库取货口。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存货口",
-      "url": "https://www.gamekee.com/zmd/690853.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "3×1",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存货口 设备类型 仓储存取 耗电功率值 / 占用面积 3×1 用途 产物回收 设备使用建议 仓库存货口是一种产物回收装置 ，其作用是连接仓库存取线回收基建产物",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×1"
-            },
-            {
-              "label": "用途",
-              "value": "产物回收"
-            }
-          ],
-          "text": "基础信息 仓库存货口 设备类型 仓储存取 耗电功率值 / 占用面积 3×1 用途 产物回收 设备使用建议 仓库存货口是一种产物回收装置 ，其作用是连接仓库存取线回收基建产物"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 将物品通过传送带输入进仓库存货口后，物品就会存放进仓库。"
-        }
-      ]
-    },
-    {
-      "name": "供电桩",
-      "url": "https://www.gamekee.com/zmd/692037.html",
-      "deviceType": "电力供应",
-      "power": "",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "1",
-      "wireLength": "30m",
-      "supplyRange": "12x12",
-      "recommendation": "供电桩 设备类型 电力供应 协议容量消耗 1 占用面积 2x2 电线长度 30m 供电范围 12x12 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "电力供应"
-            },
-            {
-              "label": "协议容量消耗",
-              "value": "1"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            },
-            {
-              "label": "电线长度",
-              "value": "30m"
-            },
-            {
-              "label": "供电范围",
-              "value": "12x12"
-            }
-          ],
-          "text": "基础信息 供电桩 设备类型 电力供应 协议容量消耗 1 占用面积 2x2 电线长度 30m 供电范围 12x12 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 供电桩只要放置在协议核心的集成核心区域内，就会自动接入电网，为其供电范围内的设备供电。"
-        }
-      ]
-    },
-    {
-      "name": "便捷源石矿机",
-      "url": "https://www.gamekee.com/zmd/690574.html",
-      "deviceType": "资源开采",
-      "power": "/",
-      "purpose": "",
-      "footprint": "1x1",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携源石矿机 设备类型 资源开采 耗电功率值 / 占用面积 1x1 设备使用建议 便捷式原石矿机是一种地区采矿设备，其作用是将矿物手动采集后运回主核心，收集原矿作为生产零件的原材料 这个设备不需要连接电缆就能启动，但也只能用于采集源矿，并且需要手动去矿点收回采集的材料 （前期不建议放多了，后期解锁电驱矿机后矿物会自动输送到仓库中，便捷源石矿机则是手动运回）",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "1x1"
-            }
-          ],
-          "text": "基础信息 便携源石矿机 设备类型 资源开采 耗电功率值 / 占用面积 1x1 设备使用建议 便捷式原石矿机是一种地区采矿设备，其作用是将矿物手动采集后运回主核心，收集原矿作为生产零件的原材料 这个设备不需要连接电缆就能启动，但也只能用于采集源矿，并且需要手动去矿点收回采集的材料 （前期不建议放多了，后期解锁电驱矿机后矿物会自动输送到仓库中，便捷源石矿机则是手动运回）"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿"
-        }
-      ]
-    },
-    {
-      "name": "便携存取站",
-      "url": "https://www.gamekee.com/zmd/692038.html",
-      "deviceType": "功能设备",
-      "power": "5",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携存取站 设备类型 功能设备 耗电功率值 5 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 便携存取站 设备类型 功能设备 耗电功率值 5 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 便捷存取站直接连接当地的仓库，可用于野外便捷地通过仓库存取物品。"
-        }
-      ]
-    },
-    {
-      "name": "储液罐",
-      "url": "https://www.gamekee.com/zmd/692081.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "储存/运输",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "储液罐 设备类型 仓储存取 耗电功率值 / 占用面积 3x3 用途 储存/运输 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "用途",
-              "value": "储存/运输"
-            }
-          ],
-          "text": "基础信息 储液罐 设备类型 仓储存取 耗电功率值 / 占用面积 3x3 用途 储存/运输 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 储液罐可储存管道输入的单一类型液体。"
-        }
-      ]
-    },
-    {
-      "name": "全向声波塔",
-      "url": "https://www.gamekee.com/zmd/692127.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "全向声波塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 全向声波塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击间隔 ：5秒 攻击范围 ：6米 攻击方式 ：发射一道震荡波，对范围内的普通敌人和进阶敌人施加晕眩效果"
-        }
-      ]
-    },
-    {
-      "name": "分流器",
-      "url": "https://www.gamekee.com/zmd/690588.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "物流分散",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "分流器 设备类型 物流设备 耗电功率值 / 用途 物流分散 设备使用建议 分流器可以将一条传送带上的物品平均分拣到多条传送带上，最多可支持分流成三条传送带。",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "物流分散"
-            }
-          ],
-          "text": "基础信息 分流器 设备类型 物流设备 耗电功率值 / 用途 物流分散 设备使用建议 分流器可以将一条传送带上的物品平均分拣到多条传送带上，最多可支持分流成三条传送带。"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        }
-      ]
-    },
-    {
-      "name": "医疗塔",
-      "url": "https://www.gamekee.com/zmd/692123.html",
-      "deviceType": "战斗辅助",
-      "power": "5",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "医疗塔 设备类型 战斗辅助 耗电功率值 5 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 医疗塔 设备类型 战斗辅助 耗电功率值 5 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 最小治疗间隔 ：5秒 治疗范围 ：15米"
-        }
-      ]
-    },
-    {
-      "name": "协议储存箱",
-      "url": "https://www.gamekee.com/zmd/690851.html",
-      "deviceType": "仓储存取",
-      "power": "5",
-      "purpose": "储存/运输",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "协议储存箱 设备类型 仓储存取 耗电功率值 5 占用面积 3x3 用途 储存/运输 设备使用建议 协议储存箱是一种资源回收和资源储存设施，其作用是将产物储存或自动回收核心 协议储存箱可以储存6格产物，可以设置回收开关每三秒协议储存箱的产物会自动回收回主核心，若主核心产物已满或关闭回收开关后，产物会储存在协议储存箱内。",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "用途",
-              "value": "储存/运输"
-            }
-          ],
-          "text": "基础信息 协议储存箱 设备类型 仓储存取 耗电功率值 5 占用面积 3x3 用途 储存/运输 设备使用建议 协议储存箱是一种资源回收和资源储存设施，其作用是将产物储存或自动回收核心 协议储存箱可以储存6格产物，可以设置回收开关每三秒协议储存箱的产物会自动回收回主核心，若主核心产物已满或关闭回收开关后，产物会储存在协议储存箱内。"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 30"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 协议储存箱可存放物品，并在通电后可以将储存物品以一定间隔传输回仓库。"
-        }
-      ]
-    },
-    {
-      "name": "反应池",
-      "url": "https://www.gamekee.com/zmd/692098.html",
       "deviceType": "基础生产",
-      "power": "50",
+      "supplyRange": "",
       "purpose": "",
+      "wireLength": "",
+      "power": "50",
+      "recommendation": "设备类型 基础生产 耗电功率值 50 耗电功率 50 占用面积 6x5",
+      "unlock": "【武陵】武陵工业三期",
+      "sections": []
+    },
+    {
+      "name": "提纯机",
+      "url": "https://www.gamekee.com/zmd/702431.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/3/18/570642.png",
       "footprint": "5x5",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "反应池 设备类型 基础生产 耗电功率值 50 占用面积 5x5 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "50"
-            },
-            {
-              "label": "占用面积",
-              "value": "5x5"
-            }
-          ],
-          "text": "基础信息 反应池 设备类型 基础生产 耗电功率值 50 占用面积 5x5 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
-        }
-      ]
-    },
-    {
-      "name": "哨戒塔",
-      "url": "https://www.gamekee.com/zmd/692130.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "哨戒塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 哨戒塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：11634 攻击间隔 ：5秒 攻击范围 ：20米 攻击方式 ：拥有较大攻击范围，优先锁定范围内威胁更高的敌人，对敌人造成高额物理伤害。"
-        }
-      ]
-    },
-    {
-      "name": "塑形机",
-      "url": "https://www.gamekee.com/zmd/692089.html",
-      "deviceType": "基础生产",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "塑形机 设备类型 基础生产 耗电功率值 10 占用面积 3x3 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 塑形机 设备类型 基础生产 耗电功率值 10 占用面积 3x3 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1 2 ▶▶▶▶ 2秒 1"
-        }
-      ]
-    },
-    {
-      "name": "天有烘炉",
-      "url": "https://www.gamekee.com/zmd/692099.html",
       "deviceType": "合成制造",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "50",
-      "purpose": "",
-      "footprint": "5x5",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "天有烘炉 设备类型 合成制造 耗电功率值 50 占用面积 5x5 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "50"
-            },
-            {
-              "label": "占用面积",
-              "value": "5x5"
-            }
-          ],
-          "text": "基础信息 天有烘炉 设备类型 合成制造 耗电功率值 50 占用面积 5x5 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 2 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
-        }
-      ]
+      "recommendation": "设备类型 合成制造 耗电功率值 50 耗电功率 50 占用面积 5x5",
+      "unlock": "【武陵】武陵工业三期",
+      "sections": []
     },
     {
-      "name": "封装机",
-      "url": "https://www.gamekee.com/zmd/692095.html",
-      "deviceType": "合成制造",
-      "power": "20",
-      "purpose": "",
-      "footprint": "6x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "封装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "6x4"
-            }
-          ],
-          "text": "基础信息 封装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 5 + 1 ▶▶▶▶ 10秒 1 5 + 10 ▶▶▶▶ 10秒 1 10 + 15 ▶▶▶▶ 10秒 1 10 + 15 ▶▶▶▶ 10秒 1 10 + 5 ▶▶▶▶ 10秒 1 10 + 5 ▶▶▶▶ 10秒 1 5 + 15 ▶▶▶▶ 10秒 1"
-        }
-      ]
-    },
-    {
-      "name": "射线塔",
-      "url": "https://www.gamekee.com/zmd/692128.html",
-      "deviceType": "战斗辅助",
-      "power": "10",
-      "purpose": "",
+      "name": "“酸洗”MK-1",
+      "url": "https://www.gamekee.com/zmd/702516.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_188/50248/103682/2026/3/18/391815.png",
       "footprint": "2x2",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "战斗辅助",
       "supplyRange": "",
-      "recommendation": "射线塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 射线塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：22338 攻击间隔 ：8秒 攻击范围 ：12.5米 攻击方式 ：消耗大量充能向目标发射射线，对敌人造成高额电磁伤害。"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业三期",
+      "sections": []
     },
     {
-      "name": "废水处理机",
-      "url": "https://www.gamekee.com/zmd/697598.html",
-      "deviceType": "基础生产",
-      "power": "50",
+      "name": "高能射线塔",
+      "url": "https://www.gamekee.com/zmd/702515.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_187/50248/103682/2026/3/18/801312.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
       "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业三期",
+      "sections": []
+    },
+    {
+      "name": "重锤迫击炮",
+      "url": "https://www.gamekee.com/zmd/702430.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_190/50248/103682/2026/3/18/724752.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "废水处理机 设备类型 基础生产 耗电功率值 50 占用面积 3x3",
-      "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "50"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 废水处理机 设备类型 基础生产 耗电功率值 50 占用面积 3x3"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 ▶▶▶▶ 2秒 成功处理 1 ▶▶▶▶ 2秒 成功处理 1 ▶▶▶▶ 2秒 成功处理"
-        }
-      ]
-    },
-    {
-      "name": "息壤中继器",
-      "url": "https://www.gamekee.com/zmd/692114.html",
-      "deviceType": "电力供应",
-      "power": "",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "1",
-      "wireLength": "80m",
-      "supplyRange": "7x7",
-      "recommendation": "息壤中继器 设备类型 电力供应 协议容量消耗 1 占用面积 3x3 电线长度 80m 供电范围 7x7 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "电力供应"
-            },
-            {
-              "label": "协议容量消耗",
-              "value": "1"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "电线长度",
-              "value": "80m"
-            },
-            {
-              "label": "供电范围",
-              "value": "7x7"
-            }
-          ],
-          "text": "基础信息 息壤中继器 设备类型 电力供应 协议容量消耗 1 占用面积 3x3 电线长度 80m 供电范围 7x7 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 息壤中继器是武陵地区特有的设备，在中继器原有的电力传输和小范围供电的功能基础上，可自动连接80M内的协议核心与集成核心区域外的息壤电力设备。"
-        }
-      ]
-    },
-    {
-      "name": "息壤供电桩",
-      "url": "https://www.gamekee.com/zmd/692112.html",
-      "deviceType": "电力供应",
-      "power": "",
-      "purpose": "30m（附近有中继器的话相当于80m）",
-      "footprint": "2x2",
-      "protocolCapacity": "1",
-      "wireLength": "",
-      "supplyRange": "12x12",
-      "recommendation": "息壤供电桩 设备类型 电力供应 协议容量消耗 1 占用面积 2x2 电线长度 30m（附近有中继器的话相当于80m） 供电范围 12x12 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "电力供应"
-            },
-            {
-              "label": "协议容量消耗",
-              "value": "1"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            },
-            {
-              "label": "电线长度",
-              "value": "30m（附近有中继器的话相当于80m）"
-            },
-            {
-              "label": "供电范围",
-              "value": "12x12"
-            }
-          ],
-          "text": "基础信息 息壤供电桩 设备类型 电力供应 协议容量消耗 1 占用面积 2x2 电线长度 30m（附近有中继器的话相当于80m） 供电范围 12x12 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 息壤供电桩也是武陵地区特有的设备，在供电桩原有的范围供电与短距离电力传输功能基础上，可自动连接80M内的协议核心与集成核心区域外的息壤中继器、30M内集成核心区域外的息壤供电桩与其他电力设备。"
-        }
-      ]
-    },
-    {
-      "name": "扩装铳械塔",
-      "url": "https://www.gamekee.com/zmd/692126.html",
       "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "扩装铳械塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 扩装铳械塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：2136 攻击间隔 ：2秒 攻击范围 ：15米 攻击方式 ：持续发射Ⅱ级能量弹，每第4次攻击会发射一次强力能量弹，对敌人造成物理伤害。"
-        }
-      ]
-    },
-    {
-      "name": "拆解机",
-      "url": "https://www.gamekee.com/zmd/692101.html",
-      "deviceType": "合成制造",
-      "power": "20",
-      "purpose": "",
-      "footprint": "6x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "拆解机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "6x4"
-            }
-          ],
-          "text": "基础信息 拆解机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1 1 ▶▶▶▶ 2秒 1 + 1"
-        }
-      ]
-    },
-    {
-      "name": "暗管入口",
-      "url": "https://www.gamekee.com/zmd/697600.html",
-      "deviceType": "仓储存取",
-      "power": "",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "/",
-      "wireLength": "200m",
-      "supplyRange": "",
-      "recommendation": "暗管入口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m",
-      "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            },
-            {
-              "label": "用途",
-              "value": "远距离输送液体"
-            },
-            {
-              "label": "运输长度",
-              "value": "200m"
-            }
-          ],
-          "text": "基础信息 暗管入口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 使用暗管，可将液体自动从暗管入口输送到对应的暗管出口，能够更方便的进行远距离的液体输送。"
-        }
-      ]
-    },
-    {
-      "name": "暗管出口",
-      "url": "https://www.gamekee.com/zmd/697599.html",
-      "deviceType": "仓储存取",
-      "power": "",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "/",
-      "wireLength": "200m",
-      "supplyRange": "",
-      "recommendation": "暗管出口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m",
-      "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            },
-            {
-              "label": "用途",
-              "value": "远距离输送液体"
-            },
-            {
-              "label": "运输长度",
-              "value": "200m"
-            }
-          ],
-          "text": "基础信息 暗管出口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 使用暗管，可将液体自动从暗管入口输送到对应的暗管出口，能够更方便的进行远距离的液体输送。"
-        }
-      ]
-    },
-    {
-      "name": "柑实田块",
-      "url": "https://www.gamekee.com/zmd/692133.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "柑实（大量） 黯银柑实（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "柑实田块 设备类型 种植调配 收获资源 柑实（大量） 黯银柑实（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "柑实（大量） 黯银柑实（高概率获得）"
-            }
-          ],
-          "text": "基础信息 柑实田块 设备类型 种植调配 收获资源 柑实（大量） 黯银柑实（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获柑实"
-        }
-      ]
-    },
-    {
-      "name": "榴弹塔",
-      "url": "https://www.gamekee.com/zmd/692124.html",
-      "deviceType": "战斗辅助",
-      "power": "10",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "榴弹塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 榴弹塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：981 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：以抛物线发射榴弹攻击敌人，榴弹会在敌人附近地面爆炸并造成范围灼热伤害。"
-        }
-      ]
-    },
-    {
-      "name": "水泵",
-      "url": "https://www.gamekee.com/zmd/690576.html",
-      "deviceType": "资源开采",
-      "power": "10",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "水泵 设备类型 资源开采 耗电功率值 10 占用面积 3×3 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            }
-          ],
-          "text": "基础信息 水泵 设备类型 资源开采 耗电功率值 10 占用面积 3×3 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间1秒 芽针溶液 锦草溶液 液化息壤 清水"
-        }
-      ]
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 3x3",
+      "unlock": "【武陵】武陵工业三期",
+      "sections": []
     },
     {
       "name": "水驱矿机",
       "url": "https://www.gamekee.com/zmd/697595.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_141/h_145/50248/103682/2026/2/13/346480.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
       "deviceType": "资源开采",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "水驱矿机 设备类型 资源开采 占用面积 3x3",
+      "recommendation": "设备类型 资源开采 占用面积 3x3",
       "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 水驱矿机 设备类型 资源开采 占用面积 3x3"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集 1 + 源矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 紫晶矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 蓝铁矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 赤铜矿矿点 ▶▶▶▶ 3秒 1"
-        }
-      ]
-    },
-    {
-      "name": "汇流器",
-      "url": "https://www.gamekee.com/zmd/690611.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "物流合并",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "汇流器 设备类型 物流设备 耗电功率值 / 用途 物流合并 设备使用建议 汇流器是一种物流设施，其作用和分流器相反，将三条以下及三条传送带汇入一条传送带 汇流器会将三条传送带的产物汇集在一条传送带，但注意的是，物品通过不会加快，而是一条传送带的流动速度",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "物流合并"
-            }
-          ],
-          "text": "基础信息 汇流器 设备类型 物流设备 耗电功率值 / 用途 物流合并 设备使用建议 汇流器是一种物流设施，其作用和分流器相反，将三条以下及三条传送带汇入一条传送带 汇流器会将三条传送带的产物汇集在一条传送带，但注意的是，物品通过不会加快，而是一条传送带的流动速度"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        }
-      ]
-    },
-    {
-      "name": "洒水机",
-      "url": "https://www.gamekee.com/zmd/692120.html",
-      "deviceType": "功能设备",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携存取站 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 便携存取站 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 洒水机在接入水源后可为需要浇灌的目标进行液体喷洒。"
-        }
-      ]
-    },
-    {
-      "name": "液氮塔",
-      "url": "https://www.gamekee.com/zmd/692125.html",
-      "deviceType": "战斗辅助",
-      "power": "10",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "液氮塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 液氮塔 设备类型 战斗辅助 耗电功率值 10 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击间隔 ：5秒 攻击范围 ：15米 攻击方式 ：发射特殊液氮晶体，晶体爆裂后会降低范围内敌人的移动速度。"
-        }
-      ]
-    },
-    {
-      "name": "滑索架",
-      "url": "https://www.gamekee.com/zmd/692118.html",
-      "deviceType": "功能设备",
-      "power": "5",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "80m",
-      "supplyRange": "",
-      "recommendation": "滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 80m 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "链接范围",
-              "value": "80m"
-            }
-          ],
-          "text": "基础信息 滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 80m 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 滑索架用于在两地之间快速移动，靠近即可使用。可以选定其他滑索架作为目标，快速前往该处地点。"
-        }
-      ]
+      "sections": []
     },
     {
       "name": "激流塔",
       "url": "https://www.gamekee.com/zmd/697596.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_138/h_143/50248/103682/2026/2/13/671583.png",
       "footprint": "2x2",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "战斗辅助",
       "supplyRange": "",
-      "recommendation": "激流塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
       "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 激流塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：0 攻击间隔 ：5秒 攻击范围 ：7米 攻击方式 ：当敌人靠近时，发射一道激流，激流会使中型及小型敌人向攻击方向后退。 搭载了液体加压模块的干扰型设备。如果不想深陷江河潮涌的“大势”，还请不要直面它。"
-        }
-      ]
+      "sections": []
     },
     {
-      "name": "灌装机",
-      "url": "https://www.gamekee.com/zmd/692094.html",
-      "deviceType": "合成制造",
-      "power": "20",
-      "purpose": "",
-      "footprint": "6x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "灌装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "6x4"
-            }
-          ],
-          "text": "基础信息 灌装机 设备类型 合成制造 耗电功率值 20 占用面积 6x4 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 基础模式 5 + 5 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 5 + 5 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 10 + 10 ▶▶▶▶ 10秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1 1 + 1 ▶▶▶▶ 2秒 1"
-        }
-      ]
-    },
-    {
-      "name": "灰芦麦田块",
-      "url": "https://www.gamekee.com/zmd/692140.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "灰芦麦",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "灰芦麦田块 设备类型 种植调配 收获资源 灰芦麦 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "灰芦麦"
-            }
-          ],
-          "text": "基础信息 灰芦麦田块 设备类型 种植调配 收获资源 灰芦麦 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获灰芦麦"
-        }
-      ]
-    },
-    {
-      "name": "热能池",
-      "url": "https://www.gamekee.com/zmd/692116.html",
-      "deviceType": "电力供应",
-      "power": "2",
-      "purpose": "",
+      "name": "AF1“熔甲者”",
+      "url": "https://www.gamekee.com/zmd/697597.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_139/h_143/50248/103682/2026/2/13/925996.png",
       "footprint": "2x2",
       "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "热能池 设备类型 电力供应 协议容量消耗 2 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "电力供应"
-            },
-            {
-              "label": "协议容量消耗",
-              "value": "2"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 热能池 设备类型 电力供应 协议容量消耗 2 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 1 ▶▶▶▶ 8秒 功率值 50 1 ▶▶▶▶ 40秒 功率值 220 1 ▶▶▶▶ 40秒 功率值 420 1 ▶▶▶▶ 40秒 功率值 1100 1 ▶▶▶▶ 40秒 功率值 1600"
-        }
-      ]
-    },
-    {
-      "name": "物品准入口",
-      "url": "https://www.gamekee.com/zmd/690581.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "限制物品流动",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "物品准入口 设备类型 物流设备 耗电功率值 / 用途 限制物品流动 设备使用建议 物品准入口是一种物流设施，其作用是限制物品流动/限制物品种类 准入口以可通过物品数量/种类为限制当物品通过设定可通过数量或不是同一物品后，将停止该传送带运输",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "限制物品流动"
-            }
-          ],
-          "text": "基础信息 物品准入口 设备类型 物流设备 耗电功率值 / 用途 限制物品流动 设备使用建议 物品准入口是一种物流设施，其作用是限制物品流动/限制物品种类 准入口以可通过物品数量/种类为限制当物品通过设定可通过数量或不是同一物品后，将停止该传送带运输"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 物品准入口可限制传送带上允许通过的物品。 可通过物品准入口限制通过物品的数量，并在蓝图中标记此段传送带运送的物品。"
-        }
-      ]
-    },
-    {
-      "name": "物流桥",
-      "url": "https://www.gamekee.com/zmd/690608.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "物流交叉",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "物流桥 设备类型 物流设备 耗电功率值 / 用途 物流交叉 设备使用建议 物流桥是一种物流设施，其作用是可以让传送带交叉流动 基建时传输带交叉怎么办……物流桥很好解决了这一大难题！（进行放置传送带时交叉它会自动放置，并不需要独自放置）",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "物流交叉"
-            }
-          ],
-          "text": "基础信息 物流桥 设备类型 物流设备 耗电功率值 / 用途 物流交叉 设备使用建议 物流桥是一种物流设施，其作用是可以让传送带交叉流动 基建时传输带交叉怎么办……物流桥很好解决了这一大难题！（进行放置传送带时交叉它会自动放置，并不需要独自放置）"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 物流桥可以使得两条相交的传送带各自独立地运输物品而互不影响。"
-        }
-      ]
-    },
-    {
-      "name": "琼叶参田块",
-      "url": "https://www.gamekee.com/zmd/692142.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "琼叶参",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "琼叶参田块 设备类型 种植调配 收获资源 琼叶参 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "琼叶参"
-            }
-          ],
-          "text": "基础信息 琼叶参田块 设备类型 种植调配 收获资源 琼叶参 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 喷洒器多次浇水、成长、收获琼叶参"
-        }
-      ]
-    },
-    {
-      "name": "电涌塔",
-      "url": "https://www.gamekee.com/zmd/692129.html",
       "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "20",
-      "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "电涌塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 电涌塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：4886 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：释放电能攻击敌人，攻击会弹射到附近敌人（至多2次），造成电磁伤害。"
-        }
-      ]
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": []
     },
     {
-      "name": "电驱矿机",
-      "url": "https://www.gamekee.com/zmd/690431.html",
-      "deviceType": "资源开采",
-      "power": "5",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "电驱矿机 设备类型 资源开采 耗电功率值 5 占用面积 3×3 设备使用建议 电驱矿机是一种地区采矿设备，其作用是将矿物采集后运回主核心，收集矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            }
-          ],
-          "text": "基础信息 电驱矿机 设备类型 资源开采 耗电功率值 5 占用面积 3×3 设备使用建议 电驱矿机是一种地区采矿设备，其作用是将矿物采集后运回主核心，收集矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 5"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿 紫晶矿"
-        }
-      ]
-    },
-    {
-      "name": "留言信标",
-      "url": "https://www.gamekee.com/zmd/692117.html",
-      "deviceType": "功能设备",
-      "power": "/",
-      "purpose": "",
-      "footprint": "1x1",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "留言信标 设备类型 功能设备 耗电功率值 / 占用面积 1x1 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "1x1"
-            }
-          ],
-          "text": "基础信息 留言信标 设备类型 功能设备 耗电功率值 / 占用面积 1x1 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 留言信标会留下一些图标和文字内容，记录了他人在这里想传达的信息。"
-        }
-      ]
-    },
-    {
-      "name": "砂叶田块",
-      "url": "https://www.gamekee.com/zmd/692136.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "砂叶（大量）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "砂叶田块 设备类型 种植调配 收获资源 砂叶（大量） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "砂叶（大量）"
-            }
-          ],
-          "text": "基础信息 砂叶田块 设备类型 种植调配 收获资源 砂叶（大量） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获砂叶"
-        }
-      ]
-    },
-    {
-      "name": "研磨机",
-      "url": "https://www.gamekee.com/zmd/692097.html",
-      "deviceType": "合成制造",
-      "power": "50",
-      "purpose": "",
-      "footprint": "6x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "研磨机 设备类型 合成制造 耗电功率值 50 占用面积 6x4 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "50"
-            },
-            {
-              "label": "占用面积",
-              "value": "6x4"
-            }
-          ],
-          "text": "基础信息 研磨机 设备类型 合成制造 耗电功率值 50 占用面积 6x4 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1 2 + 1 ▶▶▶▶ 2秒 1"
-        }
-      ]
-    },
-    {
-      "name": "种植机",
-      "url": "https://www.gamekee.com/zmd/692090.html",
-      "deviceType": "基础生产",
-      "power": "20",
-      "purpose": "",
-      "footprint": "5x5",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "种植机 设备类型 基础生产 耗电功率值 20 占用面积 5x5 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "5x5"
-            }
-          ],
-          "text": "基础信息 种植机 设备类型 基础生产 耗电功率值 20 占用面积 5x5 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20 10"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 基础模式 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 2 1 + 1 ▶▶▶▶ 2秒 2"
-        },
-        {
-          "title": "",
-          "attrs": [],
-          "text": "水管接口及传送带位置"
-        }
-      ]
-    },
-    {
-      "name": "管道准入口",
-      "url": "https://www.gamekee.com/zmd/690612.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "限制水流流动",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "管道准入口 设备类型 物流设备 耗电功率值 / 用途 限制水流流动 设备使用建议 管道准入口是一种水源设施，其作用是限制水源数量的流动 管道准入口以可通过水源为限制，当水源数量通过设定可通过数量后，将该水流管道停止运输水源",
-      "unlock": "【武陵】工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "限制水流流动"
-            }
-          ],
-          "text": "基础信息 管道准入口 设备类型 物流设备 耗电功率值 / 用途 限制水流流动 设备使用建议 管道准入口是一种水源设施，其作用是限制水源数量的流动 管道准入口以可通过水源为限制，当水源数量通过设定可通过数量后，将该水流管道停止运输水源"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】工业一期"
-        }
-      ]
-    },
-    {
-      "name": "管道分流器",
-      "url": "https://www.gamekee.com/zmd/690614.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "水流分流",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "管道分流器 设备类型 物流设备 耗电功率值 / 用途 水流分流 设备使用建议 管道分流器是一种水源设施，其作用是将水源分至其他管道 管道分流器会将一条管道的水源分至上限三条管道，但注意的是水源通过不会加快，而是一条管道的流动速度",
-      "unlock": "【武陵】工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "水流分流"
-            }
-          ],
-          "text": "基础信息 管道分流器 设备类型 物流设备 耗电功率值 / 用途 水流分流 设备使用建议 管道分流器是一种水源设施，其作用是将水源分至其他管道 管道分流器会将一条管道的水源分至上限三条管道，但注意的是水源通过不会加快，而是一条管道的流动速度"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】工业一期"
-        }
-      ]
-    },
-    {
-      "name": "管道桥",
-      "url": "https://www.gamekee.com/zmd/690615.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "水流交叉",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "管道桥 设备类型 物流设备 耗电功率值 / 用途 水流交叉 设备使用建议 管道桥是一种水源设施，其作用是让管道交叉流动 基建时管道又交叉怎么办呢…管道桥很好解决了这一大难题！（进行放置管道时交叉它会自动放置，不需要独自放置该设备）",
-      "unlock": "【武陵】工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "水流交叉"
-            }
-          ],
-          "text": "基础信息 管道桥 设备类型 物流设备 耗电功率值 / 用途 水流交叉 设备使用建议 管道桥是一种水源设施，其作用是让管道交叉流动 基建时管道又交叉怎么办呢…管道桥很好解决了这一大难题！（进行放置管道时交叉它会自动放置，不需要独自放置该设备）"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】工业一期"
-        }
-      ]
-    },
-    {
-      "name": "管道汇流器",
-      "url": "https://www.gamekee.com/zmd/690616.html",
-      "deviceType": "物流设备",
-      "power": "/",
-      "purpose": "水流合并",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "管道汇流器 设备类型 物流设备 耗电功率值 / 用途 水流合并 设备使用建议 管道汇流器是一种水源设备，其作用和管道分流器相反 将三条及三条以下管道汇入一条管道 管道汇流器会将三条管道的水源汇聚在一条管道，但注意的是，水源通过不会加快，而是一条管道的流动速度",
-      "unlock": "【武陵】工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "物流设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "用途",
-              "value": "水流合并"
-            }
-          ],
-          "text": "基础信息 管道汇流器 设备类型 物流设备 耗电功率值 / 用途 水流合并 设备使用建议 管道汇流器是一种水源设备，其作用和管道分流器相反 将三条及三条以下管道汇入一条管道 管道汇流器会将三条管道的水源汇聚在一条管道，但注意的是，水源通过不会加快，而是一条管道的流动速度"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】工业一期"
-        }
-      ]
-    },
-    {
-      "name": "粉碎机",
-      "url": "https://www.gamekee.com/zmd/690430.html",
-      "deviceType": "基础生产",
-      "power": "5",
-      "purpose": "",
+      "name": "废水处理机",
+      "url": "https://www.gamekee.com/zmd/697598.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_140/h_143/50248/103682/2026/2/13/439418.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "基础生产",
       "supplyRange": "",
-      "recommendation": "粉碎机 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 施工中",
+      "purpose": "",
+      "wireLength": "",
+      "power": "50",
+      "recommendation": "设备类型 基础生产 耗电功率值 50 耗电功率 50 占用面积 3x3",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": []
+    },
+    {
+      "name": "暗管出口",
+      "url": "https://www.gamekee.com/zmd/697599.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_142/h_143/50248/103682/2026/2/13/14744.png",
+      "footprint": "3×3",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3×3",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": []
+    },
+    {
+      "name": "暗管入口",
+      "url": "https://www.gamekee.com/zmd/697600.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_139/h_144/50248/103682/2026/2/13/893476.png",
+      "footprint": "3×3",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3×3",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": []
+    },
+    {
+      "name": "old",
+      "url": "https://www.gamekee.com/zmd/690574.html",
+      "image_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAaCAYAAADi4p8jAAAFB0lEQVR4AdSXf0yVZRTH79qgjUAb987JjwzXciMhAQdXujDmpWi1e10DU3At8Y9ACmt0bSaL4UaDrY1oS0N0KTi3lq7WhDL7tVX8SM1hC6VuEXj7Qbl7XfxyAf/0fF59Xi+v73vvKzBB9px7nnOe85xzvs95nx/cZQn/Fy9M1gpyCyoRVLbAtFXEJ5dHBLcJCtlCAQQYjlzCAwDjBI8RtNDtbpEAuaQIXiiIHMlVdG9uegBxkC1MAYYj0V3UjRzJlZzJfUayWoBUCOPUGVZ3hkDO5A4GNeNggKAvECNWQaaa3e4wbWvK4dyNyAcMYFG8BQPMEBoMBDNuW7eVrTr5eafnbK+3qeXdo/Xn+wZbvvrmbM3e5kNue7Y+4MNtxzYxB8rKcoQ8GFwbChOx09JHHV9UvNG4z2kUIyhjMIBFUUmAbFJKrCiNft473l5a5dntiYtLWBUREREl7WJjbYk5uetdbzbt9+glsDw+/j7mQHKOEbdabVHYaSkp6YG0gsef3Nxy8Gg9i2kJ/QcWMFkkQE7JkFP2Nre6k5NT2MiK3fDwn96uzq/bf+q/0D0xPh5AeU90tBWQK5KSVPDoZ0v4JUb/xb4e+tIPi8lXIWUDrmACIJ8MJ5GBncVCVXJy89jAis2pTz8+9sRjOY0vbC/tKH7a1fZy1fZGmQAgd71a61QM5/gzOjYSIEbJJnerY11qNXGly/S1mflsFynrcDDFA/BBncEZqqKNW9ZIRf/FCz27dlZ+KWX46Z6uwIGWt1vpQ1l2Rz58vom4VFT6Ld7yLHegFPV4HACpoN6gqkt9eE26FL473dkr+8G87fAB7/T09FV07M9whwl2s6EjbQd75DybbVmi7BtwpYKcOgbj19RLlt4be61nsQz84lX2m5SD+djoyBUpJ69erc6RuvngfC23sJDRVDDyVgJf/vuf/4zsJ6cmlQoyvuL+lWEXDrvZ0NT0lBonzPwYAIaxmd2w79KgYaVn5/HGrMiISNOnNADHbkzV742O/Kt+etm5uQn6VhZL8J4IBPxmV9nIna6eE509ziCf6pkzXX76BjQFwHGDQVX928CvP0thnd2hHjhSB+fIloG5MjpOfPgH+vmmwqKSNOnT778cLkYAgH/JCUb85CcnfpBjyQ+lZANGynAu9rLyHaX0IZ/vkhc+30RcZ36Beh93d33bHSaGAnA4jJFFVOP33nPfq3df5Ys7Kw4deX8zAWv2NGS3th33cMHjh+q91dTQTl+PKna85Ny3v9WlJRZJa78kZqkV/7xBeZvyTJRfCS+puj271StDO/e67JUVDAuytuaVjisBv/JJECQjI8tJwKKNxaWxVptyH7EnGupr3+Eovx7gJpaenpnvyMlza2n5soQorTGLhn/eoLxN5Tjgyp97plnKBhxMfgAyfo6fUOTzDV115mXW8ZKgSlpbglY+v+11UW1lEbTjc5UnJsYDQ4MD55saGxp5JvqGhsIdYgomCZB9+KOZJHgb8i58rdpTRzD4Btf6KoIaVY6xtJSV5aFInoa8iPTsHPbU6qfcjzYzbiLPPmEDJvW/CSFbQGz67qJSBIObWE383y7iSgOLEk9WEGFK/HwmyDRIYbvYGuBOiaQmBSktGCAKLn1OQFOfKxMWEfFZkjsY1LS0ABmgkhy/HULgJBJsUTdyJFfuRLVyMmM9gHKMTcqKfCAUrA6OAC/EBW1UiFzYZwAjR3LVTep/AAAA//8Ad3UiAAAABklEQVQDAOi+5PGawSXBAAAAAElFTkSuQmCC",
+      "footprint": "1x1",
+      "protocolCapacity": "",
+      "deviceType": "资源开采",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 资源开采 耗电功率值 / 耗电功率 / 占用面积 1x1",
       "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 粉碎机 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 3 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2"
-        }
-      ]
+      "sections": []
+    },
+    {
+      "name": "协议储存箱",
+      "url": "https://www.gamekee.com/zmd/690851.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_194/50248/103682/2026/0/17/444299.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 仓储存取 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": []
+    },
+    {
+      "name": "储液罐",
+      "url": "https://www.gamekee.com/zmd/692081.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/667735.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "仓库存取线基段",
+      "url": "https://www.gamekee.com/zmd/692084.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/310350.png",
+      "footprint": "8×4",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 8×4",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
     },
     {
       "name": "精炼炉",
       "url": "https://www.gamekee.com/zmd/690424.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_181/h_193/50248/103682/2026/0/17/982408.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
       "deviceType": "基础生产",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "5",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "精炼炉 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 精炼炉是一种用于资源加工的关键设施，生产零件的基础材料。",
+      "recommendation": "设备类型 基础生产 耗电功率值 5 耗电功率 5 占用面积 3x3",
       "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 精炼炉 设备类型 基础生产 耗电功率值 5 占用面积 3x3 设备使用建议 精炼炉是一种用于资源加工的关键设施，生产零件的基础材料。"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 基础模式 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 液体模式 1 + 1 ▶▶▶▶ 2秒 1 + 1"
-        }
-      ]
+      "sections": []
     },
     {
-      "name": "给水器",
-      "url": "https://www.gamekee.com/zmd/692121.html",
-      "deviceType": "功能设备",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "给水器 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中...",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 给水器 设备类型 功能设备 耗电功率值 10 占用面积 3x3 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 给水器只能在湖泊或水池附近建造，且给水器的输水口必须悬于液面上方。给水器接入电网后，可以将液体输出到对应的场景内。"
-        }
-      ]
-    },
-    {
-      "name": "芽针田块",
-      "url": "https://www.gamekee.com/zmd/692139.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "芽针（大量） 荆刺芽针（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "芽针田块 设备类型 种植调配 收获资源 芽针（大量） 荆刺芽针（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "芽针（大量） 荆刺芽针（高概率获得）"
-            }
-          ],
-          "text": "基础信息 芽针田块 设备类型 种植调配 收获资源 芽针（大量） 荆刺芽针（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获芽针"
-        }
-      ]
-    },
-    {
-      "name": "苦叶椒田块",
-      "url": "https://www.gamekee.com/zmd/692141.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "苦叶椒",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "苦叶椒田块 设备类型 种植调配 收获资源 苦叶椒 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "苦叶椒"
-            }
-          ],
-          "text": "基础信息 苦叶椒田块 设备类型 种植调配 收获资源 苦叶椒 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获苦叶椒"
-        }
-      ]
-    },
-    {
-      "name": "荞花田块",
-      "url": "https://www.gamekee.com/zmd/692042.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "荞花（大量） 映火荞花（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "荞花田块 设备类型 种植调配 收获资源 荞花（大量） 映火荞花（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "荞花（大量） 映火荞花（高概率获得）"
-            }
-          ],
-          "text": "基础信息 荞花田块 设备类型 种植调配 收获资源 荞花（大量） 映火荞花（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获荞花"
-        }
-      ]
-    },
-    {
-      "name": "装备原件机",
-      "url": "https://www.gamekee.com/zmd/692032.html",
-      "deviceType": "合成制造",
-      "power": "10",
-      "purpose": "",
-      "footprint": "6x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "装备原件机 设备类型 合成制造 耗电功率值 10 占用面积 6x4 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "合成制造"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "6x4"
-            }
-          ],
-          "text": "基础信息 装备原件机 设备类型 合成制造 耗电功率值 10 占用面积 6x4 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 + 5 5 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1 + 10 10 ▶▶▶▶ 10秒 1"
-        }
-      ]
-    },
-    {
-      "name": "配件机",
-      "url": "https://www.gamekee.com/zmd/692088.html",
-      "deviceType": "基础生产",
-      "power": "20",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "配件机 设备类型 基础生产 耗电功率值 20 占用面积 3x3 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 配件机 设备类型 基础生产 耗电功率值 20 占用面积 3x3 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1"
-        }
-      ]
-    },
-    {
-      "name": "酮化灌木田块",
-      "url": "https://www.gamekee.com/zmd/692137.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "酮化灌木（大量）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "酮化灌木田块 设备类型 种植调配 收获资源 酮化灌木（大量） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "酮化灌木（大量）"
-            }
-          ],
-          "text": "基础信息 酮化灌木田块 设备类型 种植调配 收获资源 酮化灌木（大量） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获酮化灌木"
-        }
-      ]
-    },
-    {
-      "name": "采种机",
-      "url": "https://www.gamekee.com/zmd/692092.html",
-      "deviceType": "基础生产",
-      "power": "10",
-      "purpose": "",
+      "name": "种植机",
+      "url": "https://www.gamekee.com/zmd/692090.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/761591.png",
       "footprint": "5x5",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "基础生产",
       "supplyRange": "",
-      "recommendation": "采种机 设备类型 基础生产 耗电功率值 10 占用面积 5x5 设备使用建议 施工中",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "基础生产"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "5x5"
-            }
-          ],
-          "text": "基础信息 采种机 设备类型 基础生产 耗电功率值 10 占用面积 5x5 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用配方",
-          "attrs": [],
-          "text": "可用配方 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 1 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2 1 ▶▶▶▶ 2秒 2"
-        }
-      ]
-    },
-    {
-      "name": "金石稻田块",
-      "url": "https://www.gamekee.com/zmd/692143.html",
-      "deviceType": "种植调配",
-      "power": "",
-      "purpose": "金石稻",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "金石稻田块 设备类型 种植调配 收获资源 金石稻 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "金石稻"
-            }
-          ],
-          "text": "基础信息 金石稻田块 设备类型 种植调配 收获资源 金石稻 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 喷洒器多次浇水、成长、收获金石稻"
-        }
-      ]
-    },
-    {
-      "name": "铳械塔",
-      "url": "https://www.gamekee.com/zmd/692040.html",
-      "deviceType": "战斗辅助",
-      "power": "5",
       "purpose": "",
-      "footprint": "2x2",
-      "protocolCapacity": "",
       "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "铳械塔 设备类型 战斗辅助 耗电功率值 5 占用面积 2x2 设备使用建议 施工中...",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 铳械塔 设备类型 战斗辅助 耗电功率值 5 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：609 攻击间隔 ：2秒 攻击范围 ：15米 攻击方式 ：持续发射能量弹，对敌人造成物理伤害"
-        }
-      ]
+      "power": "20",
+      "recommendation": "设备类型 基础生产 耗电功率值 20 耗电功率 20 占用面积 5x5",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
     },
     {
-      "name": "锦草田块",
-      "url": "https://www.gamekee.com/zmd/692138.html",
-      "deviceType": "种植调配",
+      "name": "供电桩",
+      "url": "https://www.gamekee.com/zmd/692037.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_191/50248/103682/2026/0/17/932915.png",
+      "footprint": "2x2",
+      "protocolCapacity": "1",
+      "deviceType": "电力供应",
+      "supplyRange": "12x12",
+      "purpose": "",
+      "wireLength": "30m",
       "power": "",
-      "purpose": "锦草（大量） 蓬茸锦草（高概率获得）",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
+      "recommendation": "设备类型 电力供应 占用面积 2x2 协议容量消耗 1 电线长度 30m 供电范围 12x12",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": []
+    },
+    {
+      "name": "息壤供电桩",
+      "url": "https://www.gamekee.com/zmd/692112.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_192/50248/103682/2026/0/17/524972.png",
+      "footprint": "2x2",
+      "protocolCapacity": "1",
+      "deviceType": "电力供应",
+      "supplyRange": "12x12",
+      "purpose": "",
+      "wireLength": "30m（附近有中继器的话相当于80m）",
+      "power": "",
+      "recommendation": "设备类型 电力供应 占用面积 2x2 协议容量消耗 1 电线长度 30m（附近有中继器的话相当于80m） 供电范围 12x12",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "中继器",
+      "url": "https://www.gamekee.com/zmd/692113.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_193/50248/103682/2026/0/17/73239.png",
+      "footprint": "3x3",
+      "protocolCapacity": "1",
+      "deviceType": "电力供应",
+      "supplyRange": "7x7",
+      "purpose": "",
+      "wireLength": "80m",
+      "power": "",
+      "recommendation": "设备类型 电力供应 占用面积 3x3 协议容量消耗 1 电线长度 80m 供电范围 7x7",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": []
+    },
+    {
+      "name": "息壤中继器",
+      "url": "https://www.gamekee.com/zmd/692114.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_194/50248/103682/2026/0/17/590200.png",
+      "footprint": "3x3",
+      "protocolCapacity": "1",
+      "deviceType": "电力供应",
+      "supplyRange": "7x7",
+      "purpose": "",
+      "wireLength": "80m",
+      "power": "",
+      "recommendation": "设备类型 电力供应 占用面积 3x3 协议容量消耗 1 电线长度 80m 供电范围 7x7",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "热能池",
+      "url": "https://www.gamekee.com/zmd/692116.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_191/50248/103682/2026/0/17/990125.png",
+      "footprint": "2x2",
+      "protocolCapacity": "2",
+      "deviceType": "电力供应",
       "supplyRange": "",
-      "recommendation": "锦草田块 设备类型 种植调配 收获资源 锦草（大量） 蓬茸锦草（高概率获得） 设备使用建议 施工中...",
-      "unlock": "简易制作 1 1",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "种植调配"
-            },
-            {
-              "label": "收获资源",
-              "value": "锦草（大量） 蓬茸锦草（高概率获得）"
-            }
-          ],
-          "text": "基础信息 锦草田块 设备类型 种植调配 收获资源 锦草（大量） 蓬茸锦草（高概率获得） 设备使用建议 施工中..."
-        },
-        {
-          "title": "获取方式",
-          "attrs": [],
-          "text": "获取方式 简易制作 1 1"
-        },
-        {
-          "title": "生产作物",
-          "attrs": [],
-          "text": "生产作物 浇水、成长、收获锦草"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 电力供应 占用面积 2x2 协议容量消耗 2",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
+    },
+    {
+      "name": "便携存取站",
+      "url": "https://www.gamekee.com/zmd/692038.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_191/50248/103682/2026/0/17/525321.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
+    },
+    {
+      "name": "留言信标",
+      "url": "https://www.gamekee.com/zmd/692117.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_194/50248/103682/2026/0/17/736790.png",
+      "footprint": "1x1",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 功能设备 耗电功率值 / 耗电功率 / 占用面积 1x1",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
+    },
+    {
+      "name": "滑索架",
+      "url": "https://www.gamekee.com/zmd/692118.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/561576.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
     },
     {
       "name": "长距滑索架",
       "url": "https://www.gamekee.com/zmd/692119.html",
-      "deviceType": "功能设备",
-      "power": "5",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/422258.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "110m",
+      "deviceType": "功能设备",
       "supplyRange": "",
-      "recommendation": "长距滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 110m 设备使用建议 施工中...",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 功能设备 耗电功率值 5 耗电功率 5 占用面积 3x3",
       "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "功能设备"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "链接范围",
-              "value": "110m"
-            }
-          ],
-          "text": "基础信息 长距滑索架 设备类型 功能设备 耗电功率值 5 占用面积 3x3 链接范围 110m 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 长距滑索架是一种改良后的滑索架。长距滑索架不仅可以增加传输距离，而且可支持一次性通过多个长距滑索架。"
-        }
-      ]
+      "sections": []
+    },
+    {
+      "name": "洒水机",
+      "url": "https://www.gamekee.com/zmd/692120.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_191/50248/103682/2026/0/17/839156.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 功能设备 耗电功率值 10 耗电功率 10 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "给水器",
+      "url": "https://www.gamekee.com/zmd/692121.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_188/50248/103682/2026/0/17/799543.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "功能设备",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 功能设备 耗电功率值 10 耗电功率 10 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "医疗塔",
+      "url": "https://www.gamekee.com/zmd/692123.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_190/50248/103682/2026/0/17/6165.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": []
+    },
+    {
+      "name": "榴弹塔",
+      "url": "https://www.gamekee.com/zmd/692124.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_193/50248/103682/2026/0/17/714730.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 10 耗电功率 10 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业二期",
+      "sections": []
+    },
+    {
+      "name": "扩装铳械塔",
+      "url": "https://www.gamekee.com/zmd/692126.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_190/50248/103682/2026/0/17/913047.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": []
+    },
+    {
+      "name": "全向声波塔",
+      "url": "https://www.gamekee.com/zmd/692127.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_190/50248/103682/2026/0/17/993453.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": []
+    },
+    {
+      "name": "射线塔",
+      "url": "https://www.gamekee.com/zmd/692128.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/877866.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "10",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 10 耗电功率 10 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": []
+    },
+    {
+      "name": "电涌塔",
+      "url": "https://www.gamekee.com/zmd/692129.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_183/h_192/50248/103682/2026/0/17/614527.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": []
+    },
+    {
+      "name": "哨戒塔",
+      "url": "https://www.gamekee.com/zmd/692130.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_183/h_192/50248/103682/2026/0/17/230177.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【四号谷地】基础工业三期",
+      "sections": []
     },
     {
       "name": "高爆榴弹塔",
       "url": "https://www.gamekee.com/zmd/692131.html",
-      "deviceType": "战斗辅助",
-      "power": "20",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_192/50248/103682/2026/0/17/558894.png",
       "footprint": "2x2",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "战斗辅助",
       "supplyRange": "",
-      "recommendation": "高爆榴弹塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中...",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
       "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "战斗辅助"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "20"
-            },
-            {
-              "label": "占用面积",
-              "value": "2x2"
-            }
-          ],
-          "text": "基础信息 高爆榴弹塔 设备类型 战斗辅助 耗电功率值 20 占用面积 2x2 设备使用建议 施工中..."
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "战斗性能",
-          "attrs": [],
-          "text": "战斗性能 攻击力 ：5585 攻击间隔 ：3秒 攻击范围 ：12.5米 攻击方式 ：以抛物线发射I级榴弹攻击敌人，榴弹会在敌人附近地面爆炸并造成范围灼热伤害，同时在地面留下一片燃烧区域对敌人造成伤害。"
-        }
-      ]
+      "sections": []
+    },
+    {
+      "name": "“毒沼”MK-I",
+      "url": "https://www.gamekee.com/zmd/692132.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_183/h_191/50248/103682/2026/0/17/101381.png",
+      "footprint": "2x2",
+      "protocolCapacity": "",
+      "deviceType": "战斗辅助",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "20",
+      "recommendation": "设备类型 战斗辅助 耗电功率值 20 耗电功率 20 占用面积 2x2",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "荞花田块",
+      "url": "https://www.gamekee.com/zmd/692042.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/761179.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实田块",
+      "url": "https://www.gamekee.com/zmd/692133.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/163123.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "砂叶田块",
+      "url": "https://www.gamekee.com/zmd/692136.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/725317.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "酮化灌木田块",
+      "url": "https://www.gamekee.com/zmd/692137.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_194/50248/103682/2026/0/17/592639.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦草田块",
+      "url": "https://www.gamekee.com/zmd/692138.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_192/50248/103682/2026/0/17/582451.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针田块",
+      "url": "https://www.gamekee.com/zmd/692139.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/981637.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "苦叶椒田块",
+      "url": "https://www.gamekee.com/zmd/692141.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_190/50248/103682/2026/0/17/953263.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "琼叶参田块",
+      "url": "https://www.gamekee.com/zmd/692142.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_182/h_191/50248/103682/2026/0/17/130257.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "金石稻田块",
+      "url": "https://www.gamekee.com/zmd/692143.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_192/50248/103682/2026/0/17/268769.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "种植调配",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 种植调配",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赫铜装备原件",
+      "url": "https://www.gamekee.com/zmd/702426.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_185/50248/103682/2026/3/18/163782.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赫铜零件",
+      "url": "https://www.gamekee.com/zmd/702425.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_183/h_185/50248/103682/2026/3/18/479599.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赫铜溶液",
+      "url": "https://www.gamekee.com/zmd/702416.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_188/50248/103682/2026/3/18/261145.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜溶液",
+      "url": "https://www.gamekee.com/zmd/702415.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_183/h_187/50248/103682/2026/3/18/114271.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赫铜块",
+      "url": "https://www.gamekee.com/zmd/702417.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_186/h_189/50248/103682/2026/3/18/881640.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赫铜瓶",
+      "url": "https://www.gamekee.com/zmd/702419.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_186/50248/103682/2026/3/18/97447.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "重息壤",
+      "url": "https://www.gamekee.com/zmd/702418.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_185/50248/103682/2026/3/18/267485.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "液化重息壤",
+      "url": "https://www.gamekee.com/zmd/702420.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_187/h_190/50248/103682/2026/3/18/844943.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中容武陵电池",
+      "url": "https://www.gamekee.com/zmd/697589.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_141/h_143/50248/103682/2026/2/13/531958.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜装备原件",
+      "url": "https://www.gamekee.com/zmd/696988.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_142/h_142/50248/103682/2026/2/13/528030.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜零件",
+      "url": "https://www.gamekee.com/zmd/697582.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_141/h_141/50248/103682/2026/2/13/451036.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜块",
+      "url": "https://www.gamekee.com/zmd/697584.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_140/h_142/50248/103682/2026/2/13/869803.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜矿",
+      "url": "https://www.gamekee.com/zmd/696989.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_185/h_188/50248/103682/2026/2/13/980001.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "壤晶",
+      "url": "https://www.gamekee.com/zmd/697588.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_141/h_144/50248/103682/2026/2/13/527330.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜粉末",
+      "url": "https://www.gamekee.com/zmd/697585.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_140/h_142/50248/103682/2026/2/13/149304.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "赤铜瓶",
+      "url": "https://www.gamekee.com/zmd/697586.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_138/h_142/50248/103682/2026/2/13/226590.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "污水",
+      "url": "https://www.gamekee.com/zmd/697592.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_140/h_143/50248/103682/2026/2/13/389342.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "惰性壤晶废液",
+      "url": "https://www.gamekee.com/zmd/697591.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_142/h_143/50248/103682/2026/2/13/196561.png",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高级作战记录",
+      "url": "https://www.gamekee.com/zmd/692225.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "初级认知载体",
+      "url": "https://www.gamekee.com/zmd/692226.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高级认知载体",
+      "url": "https://www.gamekee.com/zmd/692228.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "协议圆盘",
+      "url": "https://www.gamekee.com/zmd/692230.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "协议棱柱",
+      "url": "https://www.gamekee.com/zmd/692232.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "协议棱柱组",
+      "url": "https://www.gamekee.com/zmd/692233.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "D96钢样品四",
+      "url": "https://www.gamekee.com/zmd/692235.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "快子遴捡晶格",
+      "url": "https://www.gamekee.com/zmd/692236.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "象限拟合液",
+      "url": "https://www.gamekee.com/zmd/692237.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "三相纳米片",
+      "url": "https://www.gamekee.com/zmd/692238.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "存续的痕迹",
+      "url": "https://www.gamekee.com/zmd/692239.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武器检查装置",
+      "url": "https://www.gamekee.com/zmd/692241.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武器检查套组",
+      "url": "https://www.gamekee.com/zmd/692242.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "强固模具",
+      "url": "https://www.gamekee.com/zmd/692243.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "重型强固模具",
+      "url": "https://www.gamekee.com/zmd/692244.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "冷却脂",
+      "url": "https://www.gamekee.com/zmd/692246.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "谷地刻写券",
+      "url": "https://www.gamekee.com/zmd/692247.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵刻写券",
+      "url": "https://www.gamekee.com/zmd/692248.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "协议化武器原型",
+      "url": "https://www.gamekee.com/zmd/693108.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "紫晶矿",
+      "url": "https://www.gamekee.com/zmd/692250.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "蓝铁矿",
+      "url": "https://www.gamekee.com/zmd/692251.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实",
+      "url": "https://www.gamekee.com/zmd/692256.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实种子",
+      "url": "https://www.gamekee.com/zmd/692257.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "砂叶",
+      "url": "https://www.gamekee.com/zmd/692513.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "砂叶种子",
+      "url": "https://www.gamekee.com/zmd/692514.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "酮化灌木",
+      "url": "https://www.gamekee.com/zmd/692515.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "酮化树种",
+      "url": "https://www.gamekee.com/zmd/692516.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦草种子",
+      "url": "https://www.gamekee.com/zmd/692518.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针",
+      "url": "https://www.gamekee.com/zmd/692519.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针种子",
+      "url": "https://www.gamekee.com/zmd/692520.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "原木",
+      "url": "https://www.gamekee.com/zmd/692521.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "清水",
+      "url": "https://www.gamekee.com/zmd/692522.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "映火荞花",
+      "url": "https://www.gamekee.com/zmd/692523.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "黯银柑实",
+      "url": "https://www.gamekee.com/zmd/692524.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "蓬茸锦草",
+      "url": "https://www.gamekee.com/zmd/692525.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荆棘芽针",
+      "url": "https://www.gamekee.com/zmd/692527.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "灰芦麦",
+      "url": "https://www.gamekee.com/zmd/692531.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "琼叶参",
+      "url": "https://www.gamekee.com/zmd/692533.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "金石稻",
+      "url": "https://www.gamekee.com/zmd/692535.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "灰芦麦种子",
+      "url": "https://www.gamekee.com/zmd/692536.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "苦叶椒种子",
+      "url": "https://www.gamekee.com/zmd/692537.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "琼叶参种子",
+      "url": "https://www.gamekee.com/zmd/692538.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "金石稻种子",
+      "url": "https://www.gamekee.com/zmd/692539.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荧壳虫",
+      "url": "https://www.gamekee.com/zmd/692170.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "灼壳虫",
+      "url": "https://www.gamekee.com/zmd/692541.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "驮兽粪便",
+      "url": "https://www.gamekee.com/zmd/692542.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "坚硬异香石",
+      "url": "https://www.gamekee.com/zmd/692543.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高能异香石",
+      "url": "https://www.gamekee.com/zmd/692544.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "草籽干粉",
+      "url": "https://www.gamekee.com/zmd/692545.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "刺鼻干肉",
+      "url": "https://www.gamekee.com/zmd/692546.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "新笋",
+      "url": "https://www.gamekee.com/zmd/692547.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "兽肉",
+      "url": "https://www.gamekee.com/zmd/692548.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "虫肉",
+      "url": "https://www.gamekee.com/zmd/692549.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "苦涩麦粉",
+      "url": "https://www.gamekee.com/zmd/692551.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中空异香石",
+      "url": "https://www.gamekee.com/zmd/692552.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "坚韧的水",
+      "url": "https://www.gamekee.com/zmd/692553.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "天然气泡水",
+      "url": "https://www.gamekee.com/zmd/692555.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "水灯虫的灯坠",
+      "url": "https://www.gamekee.com/zmd/692556.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "虬兽的须",
+      "url": "https://www.gamekee.com/zmd/692557.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "软骨碎屑",
+      "url": "https://www.gamekee.com/zmd/692558.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "异色油脂",
+      "url": "https://www.gamekee.com/zmd/692559.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "竹林虫蛹",
+      "url": "https://www.gamekee.com/zmd/697456.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "甜腻黑水",
+      "url": "https://www.gamekee.com/zmd/692560.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "球刺兽的肝脏",
+      "url": "https://www.gamekee.com/zmd/692561.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "崩碎斧刃",
+      "url": "https://www.gamekee.com/zmd/692562.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "浸雾大弩",
+      "url": "https://www.gamekee.com/zmd/692563.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "导能肖像石",
+      "url": "https://www.gamekee.com/zmd/692564.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "清波竹铃",
+      "url": "https://www.gamekee.com/zmd/697580.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "大斧角",
+      "url": "https://www.gamekee.com/zmd/692566.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "破城者拳甲",
+      "url": "https://www.gamekee.com/zmd/692568.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "彪兽的长绒",
+      "url": "https://www.gamekee.com/zmd/692569.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "天然晶城锭",
+      "url": "https://www.gamekee.com/zmd/693110.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "速成陈酿",
+      "url": "https://www.gamekee.com/zmd/693109.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "轻红柱状菌",
+      "url": "https://www.gamekee.com/zmd/692169.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "轻红柱状菌块",
+      "url": "https://www.gamekee.com/zmd/692266.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中红柱状菌",
+      "url": "https://www.gamekee.com/zmd/692267.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中红柱状菌块",
+      "url": "https://www.gamekee.com/zmd/692268.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "重红柱状菌块",
+      "url": "https://www.gamekee.com/zmd/692270.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "晶化多齿叶",
+      "url": "https://www.gamekee.com/zmd/692271.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "晶化多齿叶根茎",
+      "url": "https://www.gamekee.com/zmd/692274.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "纯晶多齿叶",
+      "url": "https://www.gamekee.com/zmd/692286.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "纯晶多齿叶根茎",
+      "url": "https://www.gamekee.com/zmd/692275.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "至晶多齿叶",
+      "url": "https://www.gamekee.com/zmd/692288.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "至晶多齿叶根茎",
+      "url": "https://www.gamekee.com/zmd/692276.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "轻黯石",
+      "url": "https://www.gamekee.com/zmd/692273.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "轻黯石子簇",
+      "url": "https://www.gamekee.com/zmd/692277.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中黯石",
+      "url": "https://www.gamekee.com/zmd/692287.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "中黯石子簇",
+      "url": "https://www.gamekee.com/zmd/692278.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "重黯石",
+      "url": "https://www.gamekee.com/zmd/692289.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "重黯石子簇",
+      "url": "https://www.gamekee.com/zmd/692279.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "血菌",
+      "url": "https://www.gamekee.com/zmd/692290.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "血菌块",
+      "url": "https://www.gamekee.com/zmd/692280.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "受蚀玉化叶",
+      "url": "https://www.gamekee.com/zmd/692291.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "燎石",
+      "url": "https://www.gamekee.com/zmd/692293.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "岩天使叶",
+      "url": "https://www.gamekee.com/zmd/692295.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "岩天使叶根茎",
+      "url": "https://www.gamekee.com/zmd/692284.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵石",
+      "url": "https://www.gamekee.com/zmd/692296.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵石子簇",
+      "url": "https://www.gamekee.com/zmd/692285.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针溶液",
+      "url": "https://www.gamekee.com/zmd/692570.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "液化息壤",
+      "url": "https://www.gamekee.com/zmd/692571.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "晶体外壳",
+      "url": "https://www.gamekee.com/zmd/693112.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "蓝铁块",
+      "url": "https://www.gamekee.com/zmd/693116.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "稳定碳块",
+      "url": "https://www.gamekee.com/zmd/693117.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "密制晶体",
+      "url": "https://www.gamekee.com/zmd/693118.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高晶纤维",
+      "url": "https://www.gamekee.com/zmd/693119.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "钢块",
+      "url": "https://www.gamekee.com/zmd/693120.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "膨地啪",
+      "url": "https://www.gamekee.com/zmd/693121.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "碳粉末",
+      "url": "https://www.gamekee.com/zmd/693124.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "源石粉末",
+      "url": "https://www.gamekee.com/zmd/693126.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "晶体外壳粉末",
+      "url": "https://www.gamekee.com/zmd/693127.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "紫晶粉末",
+      "url": "https://www.gamekee.com/zmd/693128.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "砂叶粉末",
+      "url": "https://www.gamekee.com/zmd/693131.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "酮化灌木粉末",
+      "url": "https://www.gamekee.com/zmd/693132.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "细磨荞花粉末",
+      "url": "https://www.gamekee.com/zmd/693134.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "细磨柑实粉末",
+      "url": "https://www.gamekee.com/zmd/693135.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "致密碳粉末",
+      "url": "https://www.gamekee.com/zmd/693136.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "致密晶体粉末",
+      "url": "https://www.gamekee.com/zmd/693140.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高晶粉末",
+      "url": "https://www.gamekee.com/zmd/693141.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "致密蓝铁粉末",
+      "url": "https://www.gamekee.com/zmd/693142.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高晶质瓶",
+      "url": "https://www.gamekee.com/zmd/693146.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "钢质瓶",
+      "url": "https://www.gamekee.com/zmd/693147.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "铁质零件",
+      "url": "https://www.gamekee.com/zmd/693150.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高晶零件",
+      "url": "https://www.gamekee.com/zmd/693151.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "钢制零件",
+      "url": "https://www.gamekee.com/zmd/693152.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "紫晶装备原件",
+      "url": "https://www.gamekee.com/zmd/693153.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "蓝铁装备原件",
+      "url": "https://www.gamekee.com/zmd/693154.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "息壤装备原件",
+      "url": "https://www.gamekee.com/zmd/693157.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高容谷地电池",
+      "url": "https://www.gamekee.com/zmd/693160.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "低容武陵电池",
+      "url": "https://www.gamekee.com/zmd/693161.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "高级航天建材",
+      "url": "https://www.gamekee.com/zmd/692259.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "基础工业点数",
+      "url": "https://www.gamekee.com/zmd/692260.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵工业点数",
+      "url": "https://www.gamekee.com/zmd/692261.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "谷地调度券",
+      "url": "https://www.gamekee.com/zmd/692262.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵调度券",
+      "url": "https://www.gamekee.com/zmd/692263.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "基础拓展核心",
+      "url": "https://www.gamekee.com/zmd/692264.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "武陵拓展核心",
+      "url": "https://www.gamekee.com/zmd/697419.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "扩容演算芯片",
+      "url": "https://www.gamekee.com/zmd/692265.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "优质芽针针剂",
+      "url": "https://www.gamekee.com/zmd/697578.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "优质锦草软饮",
+      "url": "https://www.gamekee.com/zmd/697577.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "潘师傅蛋羹",
+      "url": "https://www.gamekee.com/zmd/697532.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荞花粉末",
+      "url": "https://www.gamekee.com/zmd/690518.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实粉末",
+      "url": "https://www.gamekee.com/zmd/690641.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦草粉末",
+      "url": "https://www.gamekee.com/zmd/690644.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针粉末",
+      "url": "https://www.gamekee.com/zmd/690645.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荞愈药粉",
+      "url": "https://www.gamekee.com/zmd/690649.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实冲剂",
+      "url": "https://www.gamekee.com/zmd/690650.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "莲茸锦草粉末",
+      "url": "https://www.gamekee.com/zmd/690651.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荆棘芽针粉末",
+      "url": "https://www.gamekee.com/zmd/690652.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "荞愈胶囊",
+      "url": "https://www.gamekee.com/zmd/690653.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "优质荞愈胶囊",
+      "url": "https://www.gamekee.com/zmd/690655.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "柑实罐头",
+      "url": "https://www.gamekee.com/zmd/690664.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "优质柑实罐头",
+      "url": "https://www.gamekee.com/zmd/690665.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦草软饮",
+      "url": "https://www.gamekee.com/zmd/690668.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针针剂",
+      "url": "https://www.gamekee.com/zmd/690669.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "精选荞愈胶囊",
+      "url": "https://www.gamekee.com/zmd/690670.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "精选柑实罐头",
+      "url": "https://www.gamekee.com/zmd/690671.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "小瓶荞复锭剂",
+      "url": "https://www.gamekee.com/zmd/690672.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "大瓶荞复锭剂",
+      "url": "https://www.gamekee.com/zmd/690673.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "小瓶柑实冲剂",
+      "url": "https://www.gamekee.com/zmd/690674.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "大瓶柑实冲剂",
+      "url": "https://www.gamekee.com/zmd/690676.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦草凉茶",
+      "url": "https://www.gamekee.com/zmd/690677.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "芽针喷剂",
+      "url": "https://www.gamekee.com/zmd/690679.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "精选荞复锭剂",
+      "url": "https://www.gamekee.com/zmd/690680.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "精选柑实冲剂",
+      "url": "https://www.gamekee.com/zmd/690682.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "大碗锦草凉茶",
+      "url": "https://www.gamekee.com/zmd/690683.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "大瓶芽针喷剂",
+      "url": "https://www.gamekee.com/zmd/690684.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "仿荤烩荞花",
+      "url": "https://www.gamekee.com/zmd/690690.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "速食骨汤",
+      "url": "https://www.gamekee.com/zmd/690694.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "软骨饼干",
+      "url": "https://www.gamekee.com/zmd/690701.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "星融果冻",
+      "url": "https://www.gamekee.com/zmd/690705.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "秘方醒神茶",
+      "url": "https://www.gamekee.com/zmd/690711.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "怪味肉酱",
+      "url": "https://www.gamekee.com/zmd/690713.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "锦素炒饭",
+      "url": "https://www.gamekee.com/zmd/690715.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "枢纽区应急餐",
+      "url": "https://www.gamekee.com/zmd/690716.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "爆辣腌渍水果",
+      "url": "https://www.gamekee.com/zmd/690717.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "手撕虫肉",
+      "url": "https://www.gamekee.com/zmd/690718.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "龙泡泡蔬果冻",
+      "url": "https://www.gamekee.com/zmd/690719.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "谷地馅饼",
+      "url": "https://www.gamekee.com/zmd/690723.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "辣炒肉丁",
+      "url": "https://www.gamekee.com/zmd/690724.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
+    },
+    {
+      "name": "炝炒时蔬",
+      "url": "https://www.gamekee.com/zmd/692214.html",
+      "image_url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "footprint": "",
+      "protocolCapacity": "",
+      "deviceType": "",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "",
+      "unlock": "",
+      "sections": []
     }
   ]
 }

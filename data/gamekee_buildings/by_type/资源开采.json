@@ -1,243 +1,36 @@
 {
-  "source": "https://www.gamekee.com/zmd/second/204958",
   "category": "资源开采",
-  "count": 5,
+  "count": 2,
   "buildings": [
-    {
-      "name": "二型电驱矿机",
-      "url": "https://www.gamekee.com/zmd/690571.html",
-      "deviceType": "资源开采",
-      "power": "10",
-      "purpose": "",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "二型电驱矿机 设备类型 资源开采 耗电功率值 10 占用面积 3x3 设备使用建议 二型电驱矿机是电驱矿机加强版，能够采集源矿/紫晶矿/蓝铁矿 电驱矿机是一种地区采矿设备，其作用是将矿物采集后自动运回主核心，收集各种矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作",
-      "unlock": "【四号谷地】基础工业三期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 二型电驱矿机 设备类型 资源开采 耗电功率值 10 占用面积 3x3 设备使用建议 二型电驱矿机是电驱矿机加强版，能够采集源矿/紫晶矿/蓝铁矿 电驱矿机是一种地区采矿设备，其作用是将矿物采集后自动运回主核心，收集各种矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业三期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿 紫晶矿 蓝铁矿"
-        }
-      ]
-    },
-    {
-      "name": "便捷源石矿机",
-      "url": "https://www.gamekee.com/zmd/690574.html",
-      "deviceType": "资源开采",
-      "power": "/",
-      "purpose": "",
-      "footprint": "1x1",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "便携源石矿机 设备类型 资源开采 耗电功率值 / 占用面积 1x1 设备使用建议 便捷式原石矿机是一种地区采矿设备，其作用是将矿物手动采集后运回主核心，收集原矿作为生产零件的原材料 这个设备不需要连接电缆就能启动，但也只能用于采集源矿，并且需要手动去矿点收回采集的材料 （前期不建议放多了，后期解锁电驱矿机后矿物会自动输送到仓库中，便捷源石矿机则是手动运回）",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "1x1"
-            }
-          ],
-          "text": "基础信息 便携源石矿机 设备类型 资源开采 耗电功率值 / 占用面积 1x1 设备使用建议 便捷式原石矿机是一种地区采矿设备，其作用是将矿物手动采集后运回主核心，收集原矿作为生产零件的原材料 这个设备不需要连接电缆就能启动，但也只能用于采集源矿，并且需要手动去矿点收回采集的材料 （前期不建议放多了，后期解锁电驱矿机后矿物会自动输送到仓库中，便捷源石矿机则是手动运回）"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 5"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿"
-        }
-      ]
-    },
-    {
-      "name": "水泵",
-      "url": "https://www.gamekee.com/zmd/690576.html",
-      "deviceType": "资源开采",
-      "power": "10",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "水泵 设备类型 资源开采 耗电功率值 10 占用面积 3×3 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "10"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            }
-          ],
-          "text": "基础信息 水泵 设备类型 资源开采 耗电功率值 10 占用面积 3×3 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间1秒 芽针溶液 锦草溶液 液化息壤 清水"
-        }
-      ]
-    },
     {
       "name": "水驱矿机",
       "url": "https://www.gamekee.com/zmd/697595.html",
-      "deviceType": "资源开采",
-      "power": "",
-      "purpose": "",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_141/h_145/50248/103682/2026/2/13/346480.png",
       "footprint": "3x3",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "资源开采",
       "supplyRange": "",
-      "recommendation": "水驱矿机 设备类型 资源开采 占用面积 3x3",
+      "purpose": "",
+      "wireLength": "",
+      "power": "",
+      "recommendation": "设备类型 资源开采 占用面积 3x3",
       "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            }
-          ],
-          "text": "基础信息 水驱矿机 设备类型 资源开采 占用面积 3x3"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 10"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集 1 + 源矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 紫晶矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 蓝铁矿矿点 ▶▶▶▶ 3秒 1 采集 1 + 赤铜矿矿点 ▶▶▶▶ 3秒 1"
-        }
-      ]
+      "sections": []
     },
     {
-      "name": "电驱矿机",
-      "url": "https://www.gamekee.com/zmd/690431.html",
-      "deviceType": "资源开采",
-      "power": "5",
-      "purpose": "3×3",
-      "footprint": "",
+      "name": "old",
+      "url": "https://www.gamekee.com/zmd/690574.html",
+      "image_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAaCAYAAADi4p8jAAAFB0lEQVR4AdSXf0yVZRTH79qgjUAb987JjwzXciMhAQdXujDmpWi1e10DU3At8Y9ACmt0bSaL4UaDrY1oS0N0KTi3lq7WhDL7tVX8SM1hC6VuEXj7Qbl7XfxyAf/0fF59Xi+v73vvKzBB9px7nnOe85xzvs95nx/cZQn/Fy9M1gpyCyoRVLbAtFXEJ5dHBLcJCtlCAQQYjlzCAwDjBI8RtNDtbpEAuaQIXiiIHMlVdG9uegBxkC1MAYYj0V3UjRzJlZzJfUayWoBUCOPUGVZ3hkDO5A4GNeNggKAvECNWQaaa3e4wbWvK4dyNyAcMYFG8BQPMEBoMBDNuW7eVrTr5eafnbK+3qeXdo/Xn+wZbvvrmbM3e5kNue7Y+4MNtxzYxB8rKcoQ8GFwbChOx09JHHV9UvNG4z2kUIyhjMIBFUUmAbFJKrCiNft473l5a5dntiYtLWBUREREl7WJjbYk5uetdbzbt9+glsDw+/j7mQHKOEbdabVHYaSkp6YG0gsef3Nxy8Gg9i2kJ/QcWMFkkQE7JkFP2Nre6k5NT2MiK3fDwn96uzq/bf+q/0D0xPh5AeU90tBWQK5KSVPDoZ0v4JUb/xb4e+tIPi8lXIWUDrmACIJ8MJ5GBncVCVXJy89jAis2pTz8+9sRjOY0vbC/tKH7a1fZy1fZGmQAgd71a61QM5/gzOjYSIEbJJnerY11qNXGly/S1mflsFynrcDDFA/BBncEZqqKNW9ZIRf/FCz27dlZ+KWX46Z6uwIGWt1vpQ1l2Rz58vom4VFT6Ld7yLHegFPV4HACpoN6gqkt9eE26FL473dkr+8G87fAB7/T09FV07M9whwl2s6EjbQd75DybbVmi7BtwpYKcOgbj19RLlt4be61nsQz84lX2m5SD+djoyBUpJ69erc6RuvngfC23sJDRVDDyVgJf/vuf/4zsJ6cmlQoyvuL+lWEXDrvZ0NT0lBonzPwYAIaxmd2w79KgYaVn5/HGrMiISNOnNADHbkzV742O/Kt+etm5uQn6VhZL8J4IBPxmV9nIna6eE509ziCf6pkzXX76BjQFwHGDQVX928CvP0thnd2hHjhSB+fIloG5MjpOfPgH+vmmwqKSNOnT778cLkYAgH/JCUb85CcnfpBjyQ+lZANGynAu9rLyHaX0IZ/vkhc+30RcZ36Beh93d33bHSaGAnA4jJFFVOP33nPfq3df5Ys7Kw4deX8zAWv2NGS3th33cMHjh+q91dTQTl+PKna85Ny3v9WlJRZJa78kZqkV/7xBeZvyTJRfCS+puj271StDO/e67JUVDAuytuaVjisBv/JJECQjI8tJwKKNxaWxVptyH7EnGupr3+Eovx7gJpaenpnvyMlza2n5soQorTGLhn/eoLxN5Tjgyp97plnKBhxMfgAyfo6fUOTzDV115mXW8ZKgSlpbglY+v+11UW1lEbTjc5UnJsYDQ4MD55saGxp5JvqGhsIdYgomCZB9+KOZJHgb8i58rdpTRzD4Btf6KoIaVY6xtJSV5aFInoa8iPTsHPbU6qfcjzYzbiLPPmEDJvW/CSFbQGz67qJSBIObWE383y7iSgOLEk9WEGFK/HwmyDRIYbvYGuBOiaQmBSktGCAKLn1OQFOfKxMWEfFZkjsY1LS0ABmgkhy/HULgJBJsUTdyJFfuRLVyMmM9gHKMTcqKfCAUrA6OAC/EBW1UiFzYZwAjR3LVTep/AAAA//8Ad3UiAAAABklEQVQDAOi+5PGawSXBAAAAAElFTkSuQmCC",
+      "footprint": "1x1",
       "protocolCapacity": "",
-      "wireLength": "",
+      "deviceType": "资源开采",
       "supplyRange": "",
-      "recommendation": "电驱矿机 设备类型 资源开采 耗电功率值 5 占用面积 3×3 设备使用建议 电驱矿机是一种地区采矿设备，其作用是将矿物采集后运回主核心，收集矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 资源开采 耗电功率值 / 耗电功率 / 占用面积 1x1",
       "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "资源开采"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            }
-          ],
-          "text": "基础信息 电驱矿机 设备类型 资源开采 耗电功率值 5 占用面积 3×3 设备使用建议 电驱矿机是一种地区采矿设备，其作用是将矿物采集后运回主核心，收集矿石作为生产零件的原材料 注意要连接电缆供电才能使用，未连接供电设备处于断电状态，则不运作"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 1 5"
-        },
-        {
-          "title": "可采集资源",
-          "attrs": [],
-          "text": "可采集资源 采集时间3秒 源矿 紫晶矿"
-        }
-      ]
+      "sections": []
     }
   ]
 }
