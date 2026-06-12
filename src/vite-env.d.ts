@@ -12,3 +12,19 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv
 }
+
+declare module '@qrcode/core' {
+  export function create(
+    text: string,
+    options?: {
+      errorCorrectionLevel?: 'L' | 'M' | 'Q' | 'H' | 'low' | 'medium' | 'quartile' | 'high'
+      version?: number
+      maskPattern?: number
+    },
+  ): {
+    modules: {
+      size: number
+      get(row: number, column: number): boolean | number
+    }
+  }
+}

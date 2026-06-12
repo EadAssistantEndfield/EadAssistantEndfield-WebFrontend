@@ -1,9 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('qrcode', () => ({
-  default: {
-    toDataURL: vi.fn(async (text: string) => `qr:${text}`),
-  },
+vi.mock('@qrcode/core', () => ({
+  create: vi.fn(() => ({
+    modules: {
+      size: 1,
+      get: vi.fn(() => true),
+    },
+  })),
 }))
 
 const cacheMocks = vi.hoisted(() => ({

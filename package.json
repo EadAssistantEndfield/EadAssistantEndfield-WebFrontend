@@ -32,13 +32,12 @@
     "version:bump": "node scripts/release/bump-version.js"
   },
   "dependencies": {
+    "@qrcode/core": "^1.0.0-beta.3",
     "@supabase/supabase-js": "^2.107.0",
-    "qrcode": "^1.5.4",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",
-    "@types/qrcode": "^1.5.6",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitest/coverage-v8": "4.1.7",
     "oxlint": "^1.68.0",
