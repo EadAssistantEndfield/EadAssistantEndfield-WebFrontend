@@ -186,14 +186,6 @@ python scripts/data/fetch_gamekee_data.py
 - `npm run test:coverage`
 - `npm run build`
 
-同时还提供了独立的 Qodana 工作流 [`qodana.yml`](./.github/workflows/qodana.yml)：
-
-- `pull_request` 走 `pr-mode`，优先聚焦本次改动
-- `push` 到 `main` 时执行完整扫描
-- 会上传 Qodana 分析结果 artifact，避免把静态分析和普通测试绑在同一个 job
-
-如果仓库启用了 Qodana Cloud 或当前镜像需要鉴权，请在 GitHub Actions Secrets 中配置 `QODANA_TOKEN`。
-
 ## 版本号
 
 仓库提供 [`version.yml`](./.github/workflows/version.yml)，用于自动更新版本号、`CHANGELOG.md` 和 [`public/version.json`](./public/version.json)。

@@ -35,7 +35,7 @@
 - **版本系统**：参考 `qq-music-api` 的脚本结构，新增自动版本号、CHANGELOG 和 `public/version.json`，但删除所有 npm publish / registry / dist-tag / workspace 同步逻辑。
 - **版本触发**：启用 `workflow_dispatch` 和 `push main` 自动 bump，但必须加 bot 防循环和 paths 过滤，避免文档、测试、版本提交自己反复触发。
 - **Codecov**：彻底移除 GitHub Actions 上传和 `codecov.yml`，但保留 `npm run test:coverage` 作为本地和 CI 覆盖率报告。
-- **Qodana**：保留 Qodana，作为 Oxlint 之外的补充静态分析信号。
+- **Qodana**：删除 Qodana 工作流和配置，静态检查收敛到 Oxlint、Stylelint、vue-tsc 和测试。
 - **部署**：Vercel 继续使用 `npm run build`，因为 `build` 最终会走 `vue-tsc -b && npm run vp -- build`；同时确保 Vercel Node 版本满足 Vite 8/Vite+ 要求。
 - **结构整理**：完成必要收口后，继续把蓝图业务迁入 `src/features/blueprint/`：入口放 `src/app/`，蓝图组件、composables、domain、i18n、services 和测试按 feature 边界组织。
 
@@ -85,7 +85,6 @@
 
 ```text
 .github/workflows/test.yml          # Node 24、无 Codecov、继续 lint/style/test/build
-.github/workflows/qodana.yml        # 分支策略与 main 对齐
 .github/workflows/version.yml       # 自动版本号、CHANGELOG、version.json，不发布 npm
 .oxlintrc.json                      # Oxlint 配置
 package.json                        # Vite 8 / Vite+ / Oxlint / scripts / engines / packageManager
@@ -124,9 +123,9 @@ fetch_gamekee_data.py               # 根目录旧位置
   - `test:ci`：`npm run lint && npm run check:i18n && npm run test:coverage && npm run build`
 - 当前 CI 会在 `.github/workflows/test.yml` 中上传覆盖率到 Codecov。
 - 当前 Codecov 配置文件是 `codecov.yml`。
-- 当前 GitHub Actions 的 Test / Qodana workflow 都监听 `main` 和 `master`，但本地/远端分支主线显示为 `main`。本次推荐把 workflow 收敛到 `main`，如外部保护规则仍依赖 `master`，先迁移保护规则。
+- 当前 GitHub Actions 的 Test workflow 曾监听 `main` 和 `master`，但本地/远端分支主线显示为 `main`。本次推荐把 workflow 收敛到 `main`，如外部保护规则仍依赖 `master`，先迁移保护规则。
 - 当前 `vercel.json` 明确使用 `npm run build` 和 `dist` 输出，并把 `/api/:path*` rewrite 到 `https://beta-api.ead.jamyido.cn/api/:path*`。
-- 当前 `qodana.yaml` 使用 `jetbrains/qodana-js:2025.3`，并排除了 `data`、`coverage`、`dist`、`node_modules` 等目录。移除 ESLint 后，Qodana 仍是独立静态分析信号。
+- 当前 `qodana.yaml` 和 `.github/workflows/qodana.yml` 已纳入移除范围，避免保留第二套静态分析配置。
 - 写计划前的本地验证结果：
   - `npm run lint`：通过
   - `npm run lint:style`：通过
@@ -666,24 +665,23 @@ npm run build
 
 ### 分支触发策略
 
-当前 Test / Qodana workflow 同时监听 `main` 和 `master`，但仓库主线实际是 `main`。
+当前 Test workflow 曾同时监听 `main` 和 `master`，但仓库主线实际是 `main`。
 
 建议：
 
-- Test、Qodana、Version workflow 都收敛到 `main`。
+- Test 和 Version workflow 都收敛到 `main`。
 - `pull_request` 继续保留，不限制来源分支。
 - 如果 GitHub 分支保护或外部平台仍引用 `master`，先迁移保护规则，再删除 workflow 中的 `master`。
 
-### Qodana 与 Oxlint 的关系
+### 静态检查边界
 
-移除 ESLint 不等于移除静态分析。迁移后建议把 Qodana 定位为“独立的 IDE 级补充信号”，Oxlint 定位为“本地和 CI 快速 lint”。
+移除 ESLint 和 Qodana 后，静态检查边界收敛为 Oxlint、Stylelint、vue-tsc 和单元测试。Oxlint 负责 JS/TS 快速基础检查，Stylelint 负责样式，vue-tsc 负责 Vue SFC 与模板类型检查。
 
 需要检查：
 
-- Qodana 在没有 `eslint.config.js` 后是否仍能稳定扫描 Vue/TS 项目。
-- `qodana.yaml` 是否需要继续排除新增的生成文件，例如 `public/version.json`、`src/generated/**`、`scripts/release/**`。
-- 如果版本脚本生成 `CHANGELOG.md`，通常不需要从 Qodana 排除；如果生成大型 JSON，则应排除。
-- Qodana workflow 是否仍需要 `post-pr-comment: true`，避免工具链迁移期间 PR 评论噪音过多。
+- `.github/workflows/qodana.yml` 和 `qodana.yaml` 均已删除。
+- README、CI、计划文档不再把 Qodana 描述为活跃检查链路。
+- `npm run test:ci` 覆盖 lint、stylelint、i18n、coverage 和 build。
 
 ### Vercel 部署
 
@@ -850,17 +848,17 @@ npm run dev
 - `VITE_PUBLIC_BASE_PATH=/` 构建产物可在根路径访问。
 - `VITE_PUBLIC_BASE_PATH=/blueprint_analysis/` 构建产物资源路径正确。
 
-Qodana / CI 配置检查：
+CI 配置检查：
 
 ```bash
-rg -n "main|master|CODECOV|codecov|eslint|oxlint|version:bump" .github qodana.yaml package.json README.md
+rg -n "main|master|CODECOV|codecov|eslint|oxlint|qodana|Qodana|version:bump" .github package.json README.md docs
 ```
 
 检查：
 
 - Codecov 已无活跃引用。
-- Test / Qodana / Version workflow 的分支策略统一到 `main`。
-- Qodana 没有依赖已删除的 ESLint 配置。
+- Test / Version workflow 的分支策略统一到 `main`。
+- 没有残留 Qodana workflow 或 `qodana.yaml`。
 - `test:ci` 包含 `lint:style`，避免只在 workflow 中检查样式。
 
 迁移 Vite 8 后补充资源和体积观察：
@@ -899,7 +897,6 @@ npm run dev
 - Oxlint 不是 ESLint 的一比一替代品，尤其是 Vue 专用 lint 规则。需要用 `vue-tsc`、测试和重点 review 补上缺口。
 - 每次 push 到 `main` 自动 bump 版本可能产生额外提交，因此 `[skip ci]` 和 bot actor guard 必须保留。
 - 移除 Codecov 不应顺手移除本地 coverage。
-- Qodana 在 ESLint 配置删除后可能给出不同类型的 JS/Vue 检查结果，需要把它视为独立信号重新观察。
 - Vercel 如果使用不兼容 Node 版本，可能本地和 CI 都通过但部署失败。
 - `public/version.json` 如果包含每次生成都会变化的时间戳，可能导致版本 workflow 之外出现噪音 diff。
 - TypeScript 6 如果和 Vite 8 同提交升级，会增加问题定位难度。

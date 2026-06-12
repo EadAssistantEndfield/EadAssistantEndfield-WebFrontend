@@ -442,7 +442,6 @@ npm run test:ci
 <li><code>vue-tsc</code>：Vue SFC 与模板类型检查</li>
 <li><code>stylelint</code>：样式检查</li>
 <li><code>prettier</code>：格式化</li>
-<li><code>qodana</code>：额外静态分析信号</li>
 </ul>
 <p>这个分工比「用某一个工具包打天下」更适合当前项目。</p>
 <h3>4. 测试：Vitest vs Jest / Playwright</h3>
@@ -488,7 +487,7 @@ npm run test:ci
 <p>这是正确姿势。</p>
 <h3>5. 三个未来剧本</h3>
 <h4>最可能的剧本</h4>
-<p>项目继续保持 Vue + Vite 8 主线，Vite+ 保守 pin，Oxlint 负责快速 lint，Qodana 作为补充。依赖升级以 patch/minor 为主，每次升级跑 <code>npm run test:ci</code>。这是最稳的路线。</p>
+<p>项目继续保持 Vue + Vite 8 主线，Vite+ 保守 pin，Oxlint 负责快速 lint，Stylelint 和 vue-tsc 补齐样式与类型检查。依赖升级以 patch/minor 为主，每次升级跑 <code>npm run test:ci</code>。这是最稳的路线。</p>
 <h4>最危险的剧本</h4>
 <p>为了追最新，把 <code>vite-plus</code>、<code>vitest</code>、<code>coverage-v8</code> 一起放宽到 caret，结果某个 peer 版本在 registry 上没完全发布，CI 或新机器安装失败。这个风险已经出现过一次，不能当成理论风险。</p>
 <h4>最乐观的剧本</h4>
