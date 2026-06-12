@@ -17,6 +17,7 @@ exclude:
       - node_modules
       - .vite_cache
       - HTML
+      - public/version.json
 
       # 大体量静态数据和资源，不参与源码级静态分析
       - data
@@ -32,6 +33,7 @@ include:
 
 bootstrap: |
   export CI=true
+  npm install -g npm@11.16.0
   npm ci --prefer-offline --no-audit
 
 linter: jetbrains/qodana-js:2025.3

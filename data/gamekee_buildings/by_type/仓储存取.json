@@ -1,431 +1,81 @@
 {
-  "source": "https://www.gamekee.com/zmd/second/204958",
   "category": "仓储存取",
-  "count": 8,
+  "count": 5,
   "buildings": [
     {
-      "name": "仓库取货口",
-      "url": "https://www.gamekee.com/zmd/690854.html",
+      "name": "暗管出口",
+      "url": "https://www.gamekee.com/zmd/697599.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_142/h_143/50248/103682/2026/2/13/14744.png",
+      "footprint": "3×3",
+      "protocolCapacity": "",
       "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
       "power": "/",
-      "purpose": "原料取出",
-      "footprint": "3x1",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库取货口 设备类型 仓储存取 耗电功率值 / 占用面积 3x1 用途 原料取出 设备使用建议 仓库取货口是一种产物取出装置，其作用是连接仓库存取线取出基建产物",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x1"
-            },
-            {
-              "label": "用途",
-              "value": "原料取出"
-            }
-          ],
-          "text": "基础信息 仓库取货口 设备类型 仓储存取 耗电功率值 / 占用面积 3x1 用途 原料取出 设备使用建议 仓库取货口是一种产物取出装置，其作用是连接仓库存取线取出基建产物"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 可使用仓库取货口选择仓库中的物品，连接传送带后，就会从仓库中自动输出。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存取线基段",
-      "url": "https://www.gamekee.com/zmd/692084.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "8×4",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存取线基段 设备类型 仓储存取 耗电功率值 / 占用面积 8×4 用途 输出原料 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "8×4"
-            },
-            {
-              "label": "用途",
-              "value": "输出原料"
-            }
-          ],
-          "text": "基础信息 仓库存取线基段 设备类型 仓储存取 耗电功率值 / 占用面积 8×4 用途 输出原料 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 仓库存取线基段和仓库存取线源桩或其他生效的仓库存取线基段相连后，其上可贴靠放置仓库存货口和仓库取货口。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存取线源桩",
-      "url": "https://www.gamekee.com/zmd/692085.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "存取基段核心",
-      "footprint": "4x4",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存取线源桩 设备类型 仓储存取 耗电功率值 / 占用面积 4x4 用途 存取基段核心 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "4x4"
-            },
-            {
-              "label": "用途",
-              "value": "存取基段核心"
-            }
-          ],
-          "text": "基础信息 仓库存取线源桩 设备类型 仓储存取 耗电功率值 / 占用面积 4x4 用途 存取基段核心 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 50"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 可以在集成核心区域放置仓库存取线源桩，仓库存取线基段和仓库存取线源桩或其他生效的仓库存取线基段相连后，其上可贴靠放置仓库存货口和仓库取货口。"
-        }
-      ]
-    },
-    {
-      "name": "仓库存货口",
-      "url": "https://www.gamekee.com/zmd/690853.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "3×1",
-      "footprint": "",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "仓库存货口 设备类型 仓储存取 耗电功率值 / 占用面积 3×1 用途 产物回收 设备使用建议 仓库存货口是一种产物回收装置 ，其作用是连接仓库存取线回收基建产物",
-      "unlock": "【四号谷地】基础工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×1"
-            },
-            {
-              "label": "用途",
-              "value": "产物回收"
-            }
-          ],
-          "text": "基础信息 仓库存货口 设备类型 仓储存取 耗电功率值 / 占用面积 3×1 用途 产物回收 设备使用建议 仓库存货口是一种产物回收装置 ，其作用是连接仓库存取线回收基建产物"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 将物品通过传送带输入进仓库存货口后，物品就会存放进仓库。"
-        }
-      ]
-    },
-    {
-      "name": "储液罐",
-      "url": "https://www.gamekee.com/zmd/692081.html",
-      "deviceType": "仓储存取",
-      "power": "/",
-      "purpose": "储存/运输",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "储液罐 设备类型 仓储存取 耗电功率值 / 占用面积 3x3 用途 储存/运输 设备使用建议 施工中",
-      "unlock": "【武陵】武陵工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "用途",
-              "value": "储存/运输"
-            }
-          ],
-          "text": "基础信息 储液罐 设备类型 仓储存取 耗电功率值 / 占用面积 3x3 用途 储存/运输 设备使用建议 施工中"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 10"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 储液罐可储存管道输入的单一类型液体。"
-        }
-      ]
-    },
-    {
-      "name": "协议储存箱",
-      "url": "https://www.gamekee.com/zmd/690851.html",
-      "deviceType": "仓储存取",
-      "power": "5",
-      "purpose": "储存/运输",
-      "footprint": "3x3",
-      "protocolCapacity": "",
-      "wireLength": "",
-      "supplyRange": "",
-      "recommendation": "协议储存箱 设备类型 仓储存取 耗电功率值 5 占用面积 3x3 用途 储存/运输 设备使用建议 协议储存箱是一种资源回收和资源储存设施，其作用是将产物储存或自动回收核心 协议储存箱可以储存6格产物，可以设置回收开关每三秒协议储存箱的产物会自动回收回主核心，若主核心产物已满或关闭回收开关后，产物会储存在协议储存箱内。",
-      "unlock": "【四号谷地】基础工业一期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "5"
-            },
-            {
-              "label": "占用面积",
-              "value": "3x3"
-            },
-            {
-              "label": "用途",
-              "value": "储存/运输"
-            }
-          ],
-          "text": "基础信息 协议储存箱 设备类型 仓储存取 耗电功率值 5 占用面积 3x3 用途 储存/运输 设备使用建议 协议储存箱是一种资源回收和资源储存设施，其作用是将产物储存或自动回收核心 协议储存箱可以储存6格产物，可以设置回收开关每三秒协议储存箱的产物会自动回收回主核心，若主核心产物已满或关闭回收开关后，产物会储存在协议储存箱内。"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【四号谷地】基础工业一期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 30"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 协议储存箱可存放物品，并在通电后可以将储存物品以一定间隔传输回仓库。"
-        }
-      ]
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3×3",
+      "unlock": "【武陵】武陵工业二期",
+      "sections": []
     },
     {
       "name": "暗管入口",
       "url": "https://www.gamekee.com/zmd/697600.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_139/h_144/50248/103682/2026/2/13/893476.png",
+      "footprint": "3×3",
+      "protocolCapacity": "",
       "deviceType": "仓储存取",
-      "power": "",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "/",
-      "wireLength": "200m",
       "supplyRange": "",
-      "recommendation": "暗管入口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3×3",
       "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            },
-            {
-              "label": "用途",
-              "value": "远距离输送液体"
-            },
-            {
-              "label": "运输长度",
-              "value": "200m"
-            }
-          ],
-          "text": "基础信息 暗管入口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 使用暗管，可将液体自动从暗管入口输送到对应的暗管出口，能够更方便的进行远距离的液体输送。"
-        }
-      ]
+      "sections": []
     },
     {
-      "name": "暗管出口",
-      "url": "https://www.gamekee.com/zmd/697599.html",
+      "name": "协议储存箱",
+      "url": "https://www.gamekee.com/zmd/690851.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_188/h_194/50248/103682/2026/0/17/444299.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
       "deviceType": "仓储存取",
-      "power": "",
-      "purpose": "3×3",
-      "footprint": "",
-      "protocolCapacity": "/",
-      "wireLength": "200m",
       "supplyRange": "",
-      "recommendation": "暗管出口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m",
-      "unlock": "【武陵】武陵工业二期",
-      "sections": [
-        {
-          "title": "基础信息",
-          "attrs": [
-            {
-              "label": "设备类型",
-              "value": "仓储存取"
-            },
-            {
-              "label": "耗电功率值",
-              "value": "/"
-            },
-            {
-              "label": "占用面积",
-              "value": "3×3"
-            },
-            {
-              "label": "用途",
-              "value": "远距离输送液体"
-            },
-            {
-              "label": "运输长度",
-              "value": "200m"
-            }
-          ],
-          "text": "基础信息 暗管出口 设备类型 仓储存取 耗电功率值 / 占用面积 3×3 用途 远距离输送液体 运输长度 200m"
-        },
-        {
-          "title": "解锁条件",
-          "attrs": [],
-          "text": "解锁条件 【武陵】武陵工业二期"
-        },
-        {
-          "title": "制造设备及所需材料",
-          "attrs": [],
-          "text": "制造设备及所需材料 协议核心-设备制造 20"
-        },
-        {
-          "title": "可用功能",
-          "attrs": [],
-          "text": "可用功能 使用暗管，可将液体自动从暗管入口输送到对应的暗管出口，能够更方便的进行远距离的液体输送。"
-        }
-      ]
+      "purpose": "",
+      "wireLength": "",
+      "power": "5",
+      "recommendation": "设备类型 仓储存取 耗电功率值 5 耗电功率 5 占用面积 3x3",
+      "unlock": "【四号谷地】基础工业一期",
+      "sections": []
+    },
+    {
+      "name": "储液罐",
+      "url": "https://www.gamekee.com/zmd/692081.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_189/h_192/50248/103682/2026/0/17/667735.png",
+      "footprint": "3x3",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 3x3",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
+    },
+    {
+      "name": "仓库存取线基段",
+      "url": "https://www.gamekee.com/zmd/692084.html",
+      "image_url": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_184/h_192/50248/103682/2026/0/17/310350.png",
+      "footprint": "8×4",
+      "protocolCapacity": "",
+      "deviceType": "仓储存取",
+      "supplyRange": "",
+      "purpose": "",
+      "wireLength": "",
+      "power": "/",
+      "recommendation": "设备类型 仓储存取 耗电功率值 / 耗电功率 / 占用面积 8×4",
+      "unlock": "【武陵】武陵工业一期",
+      "sections": []
     }
   ]
 }
