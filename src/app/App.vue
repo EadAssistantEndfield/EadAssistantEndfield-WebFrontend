@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import BlueprintHeader from '@/features/blueprint/components/BlueprintHeader.vue'
-import BlueprintJsonEditor from '@/features/blueprint/components/BlueprintJsonEditor.vue'
-import BlueprintLayout from '@/features/blueprint/components/BlueprintLayout.vue'
-import BlueprintNodeTable from '@/features/blueprint/components/BlueprintNodeTable.vue'
-import BlueprintOverview from '@/features/blueprint/components/BlueprintOverview.vue'
-import { useBlueprintI18n } from '@/features/blueprint/composables/useBlueprintI18n'
-import { useBlueprintParser } from '@/features/blueprint/composables/useBlueprintParser'
+import {
+  BlueprintHeader,
+  BlueprintJsonEditor,
+  BlueprintLayout,
+  BlueprintNodeTable,
+  BlueprintOverview,
+  useBlueprintI18n,
+  useBlueprintParser,
+} from '@/features/blueprint'
 
 type BlueprintWorkbenchView = 'json' | 'layout'
 

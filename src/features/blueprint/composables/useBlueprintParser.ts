@@ -10,7 +10,7 @@ import {
 } from '@/features/blueprint/services/cache/blueprintCacheRepository'
 import { INVALID_SHARE_CODE_ERROR, normalizeShareCode } from '@/features/blueprint/services/cache/shareCode'
 import type { BlueprintSummary } from '@/features/blueprint/types'
-import defaultBlueprintData from '@/features/blueprint/domain/defaultBlueprint.json'
+import defaultBlueprintData from '@/features/blueprint/domain/parser/defaultBlueprint.json'
 
 export type { QueryStage } from '@/features/blueprint/composables/useShareQuerySession'
 

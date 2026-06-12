@@ -58,8 +58,14 @@ src/
       components/overview/     # 概览侧栏的局部组件
       composables/             # 蓝图相关 Vue 状态和交互逻辑
       domain/                  # 蓝图解析、布局、路径和模板规则
+      domain/catalog/          # GameKee 建筑目录和本地图片映射
+      domain/layout/           # 布局盒、主题和显示边界
+      domain/parser/           # JSON 解析、节点归一化和 summary 构建
+      domain/path/             # 传送带/管道路径几何和贴边规则
+      domain/template/         # 模板别名、连接点和占地规则
       i18n/                    # 蓝图 UI、物品、建筑翻译
       services/                # 分享码查询等外部服务封装
+      index.ts                 # app 层使用的 feature 公共出口
       types.ts                 # 蓝图领域类型
 ```
 
@@ -71,6 +77,10 @@ tests/
     blueprint/
       composables/
       domain/
+        parser/
+        path/
+        template/
+      services/
 ```
 
 约定：
@@ -79,6 +89,7 @@ tests/
 - composable 负责响应式状态、生命周期、副作用编排。
 - domain 保持纯函数优先，放解析、几何、路径、模板等可测试逻辑。
 - services 负责浏览器存储、API URL、请求数据等外部边界。
+- `data/gamekee_buildings/` 是前端运行时使用的建筑目录；`data/fixtures/` 放本地样例；`data/templates/` 放模板参考资产。
 
 ## 环境变量
 
@@ -160,7 +171,9 @@ GameKee 建筑数据抓取脚本位于：
 python scripts/data/fetch_gamekee_data.py
 ```
 
-脚本会输出到 `data/gamekee_buildings/`，供前端建筑目录和本地图片解析使用。
+脚本依赖 `requests`、`playwright` 和 `Pillow`。抓取到的设备图片会统一转换为 WebP，并输出到 `data/gamekee_buildings/images/`，供前端建筑目录和本地图片解析使用。
+
+本地样例蓝图位于 `data/fixtures/blueprints/`，模板参考文件位于 `data/templates/blueprint-layouts/`。
 
 ## CI
 
@@ -172,14 +185,6 @@ python scripts/data/fetch_gamekee_data.py
 - `npm run check:i18n`
 - `npm run test:coverage`
 - `npm run build`
-
-同时还提供了独立的 Qodana 工作流 [`qodana.yml`](./.github/workflows/qodana.yml)：
-
-- `pull_request` 走 `pr-mode`，优先聚焦本次改动
-- `push` 到 `main` 时执行完整扫描
-- 会上传 Qodana 分析结果 artifact，避免把静态分析和普通测试绑在同一个 job
-
-如果仓库启用了 Qodana Cloud 或当前镜像需要鉴权，请在 GitHub Actions Secrets 中配置 `QODANA_TOKEN`。
 
 ## 版本号
 

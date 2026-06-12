@@ -14,8 +14,10 @@
 import json
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from io import BytesIO
 from pathlib import Path
 
+from PIL import Image, UnidentifiedImageError
 import requests
 from playwright.sync_api import sync_playwright
 
@@ -30,6 +32,9 @@ RETRY_COUNT = 3
 RETRY_DELAY = 2
 REQUEST_TIMEOUT = 30
 DETAIL_PAGE_DELAY = 0.5
+IMAGE_EXTENSION = ".webp"
+WEBP_QUALITY = 90
+WEBP_METHOD = 6
 
 OUTPUT_DIR = Path(__file__).resolve().parents[2] / "data" / "gamekee_buildings"
 
@@ -45,6 +50,7 @@ ATTR_LABEL_MAP = {
 }
 
 KNOWN_ATTR_FIELDS = {"deviceType", "power", "footprint", "protocolCapacity", "wireLength", "supplyRange", "purpose"}
+LEGACY_IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
 
 
 def clean_name(raw: str) -> str:
@@ -147,6 +153,29 @@ def parse_detail_attrs(page) -> dict:
     return result
 
 
+def normalize_image_for_webp(image: Image.Image) -> Image.Image:
+    """将任意源图片模式转换为适合 WebP 保存的 RGB/RGBA。"""
+    has_alpha = image.mode in {"RGBA", "LA"} or (image.mode == "P" and "transparency" in image.info)
+    return image.convert("RGBA" if has_alpha else "RGB")
+
+
+def save_image_as_webp(content: bytes, output_path: Path) -> None:
+    with Image.open(BytesIO(content)) as image:
+        normalized = normalize_image_for_webp(image)
+        normalized.save(output_path, "WEBP", quality=WEBP_QUALITY, method=WEBP_METHOD)
+
+
+def remove_legacy_images(webp_path: Path) -> None:
+    for extension in LEGACY_IMAGE_EXTENSIONS:
+        legacy_path = webp_path.with_suffix(extension)
+        if legacy_path.exists():
+            legacy_path.unlink()
+
+
+def image_output_path(name: str, category: str) -> Path:
+    return OUTPUT_DIR / "images" / category / f"{name}{IMAGE_EXTENSION}"
+
+
 def download_image(name: str, url: str, category: str, session: requests.Session) -> bool:
     if not url:
         return False
@@ -156,18 +185,20 @@ def download_image(name: str, url: str, category: str, session: requests.Session
 
     cat_dir = OUTPUT_DIR / "images" / category
     cat_dir.mkdir(parents=True, exist_ok=True)
-    img_path = cat_dir / f"{name}.png"
+    img_path = image_output_path(name, category)
 
     if img_path.exists() and img_path.stat().st_size > 0:
+        remove_legacy_images(img_path)
         return True
 
     for attempt in range(1, RETRY_COUNT + 1):
         try:
             resp = session.get(url, headers={**HEADERS, "Referer": "https://www.gamekee.com/"}, timeout=REQUEST_TIMEOUT)
             if resp.status_code == 200 and len(resp.content) > 100:
-                img_path.write_bytes(resp.content)
+                save_image_as_webp(resp.content, img_path)
+                remove_legacy_images(img_path)
                 return True
-        except requests.RequestException as exc:
+        except (requests.RequestException, UnidentifiedImageError, OSError) as exc:
             print(f"  图片下载异常 [{attempt}/{RETRY_COUNT}] {name}: {exc}")
         if attempt < RETRY_COUNT:
             time.sleep(RETRY_DELAY)
@@ -240,7 +271,7 @@ def main():
                 failed_downloads += 1
                 print(f"  图片下载失败: {name}")
 
-    existing_images = sum(1 for d in devices if d["image_url"] and (OUTPUT_DIR / f"{d['name']}.png").exists())
+    existing_images = sum(1 for name, _, category in image_tasks if image_output_path(name, category).exists())
     print(f"  图片: {existing_images}/{len(image_tasks)} 已存在或下载成功, {failed_downloads} 失败")
 
     # Step 4: Categorize

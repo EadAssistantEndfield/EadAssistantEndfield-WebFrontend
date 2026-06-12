@@ -1,14 +1,14 @@
 import { computed, type MaybeRefOrGetter, toValue } from 'vue'
 import type { BlueprintRenderLayoutMode, BlueprintSummaryNode } from '@/features/blueprint/types'
 import type { EndpointRole } from '@/features/blueprint/composables/useBlueprintPathTopology'
-import { resolveNodeLayoutBox } from '@/features/blueprint/domain/blueprintLayoutBox'
-import { resolvePathAttachmentCandidate, type BlueprintNodeLayoutBox } from '@/features/blueprint/domain/blueprintPathAttachment'
+import { resolveNodeLayoutBox } from '@/features/blueprint/domain/layout/blueprintLayoutBox'
+import { resolvePathAttachmentCandidate, type BlueprintNodeLayoutBox } from '@/features/blueprint/domain/path/blueprintPathAttachment'
 import {
   buildRenderedPathPixels,
   resolveBeltArrowPoints,
   toPolylinePoints,
   type PixelPoint,
-} from '@/features/blueprint/domain/blueprintPathGeometry'
+} from '@/features/blueprint/domain/path/blueprintPathGeometry'
 
 export function useBlueprintPathRendering(
   pathNodesSource: MaybeRefOrGetter<BlueprintSummaryNode[]>,

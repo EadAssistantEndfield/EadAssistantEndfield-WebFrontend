@@ -1,5 +1,5 @@
-export { parseBlueprintFile } from '@/features/blueprint/domain/blueprintParser'
-import { buildBlueprintSummary } from '@/features/blueprint/domain/blueprintSummaryBuilder'
+export { parseBlueprintFile } from '@/features/blueprint/domain/parser/blueprintParser'
+import { buildBlueprintSummary } from '@/features/blueprint/domain/parser/blueprintSummaryBuilder'
 
 export function shortTemplateName(templateId: string): string {
   return templateId
