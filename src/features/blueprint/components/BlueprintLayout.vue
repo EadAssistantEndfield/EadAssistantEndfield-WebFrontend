@@ -7,8 +7,8 @@ import { useBlueprintLayoutScene } from '@/features/blueprint/composables/useBlu
 import { useBlueprintLayoutViewport } from '@/features/blueprint/composables/useBlueprintLayoutViewport'
 import { useBlueprintPathLayer } from '@/features/blueprint/composables/useBlueprintPathLayer'
 import type { BlueprintRenderLayoutMode, BlueprintSummary, BlueprintSummaryNode } from '@/features/blueprint/types'
-import { pathMarkerRadius, pathStrokeDasharray, pathStrokeWidth } from '@/features/blueprint/domain/blueprintPathPresentation'
-import { resolveDisplayBounds } from '@/features/blueprint/domain/blueprintLayoutBox'
+import { pathMarkerRadius, pathStrokeDasharray, pathStrokeWidth } from '@/features/blueprint/domain/path/blueprintPathPresentation'
+import { resolveDisplayBounds } from '@/features/blueprint/domain/layout/blueprintLayoutBox'
 
 const props = defineProps<{
   summary: BlueprintSummary

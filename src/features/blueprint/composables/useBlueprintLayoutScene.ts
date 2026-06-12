@@ -1,8 +1,8 @@
 import { computed, type MaybeRefOrGetter, toValue } from 'vue'
 import type { BlueprintRenderLayoutMode, BlueprintSummary, BlueprintSummaryNode } from '@/features/blueprint/types'
-import { resolveNodeLayoutBox } from '@/features/blueprint/domain/blueprintLayoutBox'
-import { getLayoutTheme } from '@/features/blueprint/domain/layoutTheme'
-import { usesDirectScreenRotation } from '@/features/blueprint/domain/templateRegistry'
+import { resolveNodeLayoutBox } from '@/features/blueprint/domain/layout/blueprintLayoutBox'
+import { getLayoutTheme } from '@/features/blueprint/domain/layout/layoutTheme'
+import { usesDirectScreenRotation } from '@/features/blueprint/domain/template/templateRegistry'
 
 type ItemLabel = (itemId: string) => string
 interface LayoutBounds {

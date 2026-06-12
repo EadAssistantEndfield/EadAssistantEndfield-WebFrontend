@@ -1,5 +1,5 @@
 import type { BlueprintCardinal } from '@/features/blueprint/types'
-import type { EdgeSide } from '@/features/blueprint/domain/templateConnectionRegistry'
+import type { EdgeSide } from '@/features/blueprint/domain/template/templateConnectionRegistry'
 
 export function toSafeNumber(value: number | null | undefined): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : 0

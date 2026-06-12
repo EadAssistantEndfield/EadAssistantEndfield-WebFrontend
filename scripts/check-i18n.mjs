@@ -4,8 +4,11 @@ import ts from 'typescript'
 
 const rootDir = process.cwd()
 const blueprintI18nDir = path.join(rootDir, 'src', 'features', 'blueprint', 'i18n')
-const messagesPath = path.join(blueprintI18nDir, 'messages.ts')
 const buildingMessagesPath = path.join(blueprintI18nDir, 'buildingMessages.ts')
+const itemMessagesPath = path.join(blueprintI18nDir, 'itemMessages.ts')
+const localesPath = path.join(blueprintI18nDir, 'locales.ts')
+const payloadTypeMessagesPath = path.join(blueprintI18nDir, 'payloadTypeMessages.ts')
+const uiMessagesPath = path.join(blueprintI18nDir, 'uiMessages.ts')
 
 /**
  * @param {string} filePath
@@ -133,16 +136,21 @@ function collectIssues(localeMap, locales, section) {
   return issues
 }
 
-const messagesSource = readSourceFile(messagesPath)
 const buildingSource = readSourceFile(buildingMessagesPath)
+const itemSource = readSourceFile(itemMessagesPath)
+const localesSource = readSourceFile(localesPath)
+const payloadTypeSource = readSourceFile(payloadTypeMessagesPath)
+const uiSource = readSourceFile(uiMessagesPath)
 
-const locales = /** @type {string[]} */ (readExportValue(messagesSource, 'supportedLocales'))
-const uiMessages = /** @type {Record<string, Record<string, string>>} */ (readExportValue(messagesSource, 'uiMessages'))
-const itemMessages = /** @type {Record<string, Record<string, string>>} */ (readExportValue(messagesSource, 'itemMessages'))
+const locales = /** @type {string[]} */ (readExportValue(localesSource, 'supportedLocales'))
+const uiMessages = /** @type {Record<string, Record<string, string>>} */ (readExportValue(uiSource, 'uiMessages'))
+const itemMessages = /** @type {Record<string, Record<string, string>>} */ (readExportValue(itemSource, 'itemMessages'))
 const payloadTypeMessages = /** @type {Record<string, Record<string, string>>} */ (
-  readExportValue(messagesSource, 'payloadTypeMessages')
+  readExportValue(payloadTypeSource, 'payloadTypeMessages')
 )
-const buildingMessages = /** @type {Record<string, Record<string, string>>} */ (readExportValue(buildingSource, 'buildingMessages'))
+const buildingMessages = /** @type {Record<string, Record<string, string>>} */ (
+  readExportValue(buildingSource, 'buildingMessages')
+)
 
 const checks = [
   { section: 'uiMessages', localeMap: uiMessages },
